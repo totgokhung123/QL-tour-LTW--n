@@ -48,37 +48,30 @@
             this.button6 = new System.Windows.Forms.Button();
             this.menutimer1 = new System.Windows.Forms.Timer(this.components);
             this.panelMenu = new System.Windows.Forms.FlowLayoutPanel();
-            this.QLNVtimer = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.flpanelKH = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.button13 = new System.Windows.Forms.Button();
-            this.QLKHtimer = new System.Windows.Forms.Timer(this.components);
             this.flpanelQLTOUR = new System.Windows.Forms.FlowLayoutPanel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.button14 = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
             this.button15 = new System.Windows.Forms.Button();
-            this.QLTOURtimer = new System.Windows.Forms.Timer(this.components);
             this.flpanelHOADON = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
             this.button16 = new System.Windows.Forms.Button();
             this.panel16 = new System.Windows.Forms.Panel();
             this.button17 = new System.Windows.Forms.Button();
-            this.QLHOADONtimer = new System.Windows.Forms.Timer(this.components);
             this.flpanelQLDICHVU = new System.Windows.Forms.FlowLayoutPanel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.button18 = new System.Windows.Forms.Button();
             this.panel18 = new System.Windows.Forms.Panel();
             this.button19 = new System.Windows.Forms.Button();
-            this.QLDICHVUtimer = new System.Windows.Forms.Timer(this.components);
             this.flpanelQLHETHONG = new System.Windows.Forms.FlowLayoutPanel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.button20 = new System.Windows.Forms.Button();
@@ -86,6 +79,13 @@
             this.button21 = new System.Windows.Forms.Button();
             this.panel21 = new System.Windows.Forms.Panel();
             this.button22 = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.QLNVtimer = new System.Windows.Forms.Timer(this.components);
+            this.QLKHtimer = new System.Windows.Forms.Timer(this.components);
+            this.QLTOURtimer = new System.Windows.Forms.Timer(this.components);
+            this.QLHOADONtimer = new System.Windows.Forms.Timer(this.components);
+            this.QLDICHVUtimer = new System.Windows.Forms.Timer(this.components);
             this.QLHETHONGtimer = new System.Windows.Forms.Timer(this.components);
             this.TGroichuot = new System.Windows.Forms.Timer(this.components);
             this.TGxoramenu = new System.Windows.Forms.Timer(this.components);
@@ -98,16 +98,15 @@
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panelMenu.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.flpanelKH.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
             this.flpanelQLTOUR.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
             this.flpanelHOADON.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel16.SuspendLayout();
             this.flpanelQLDICHVU.SuspendLayout();
@@ -117,6 +116,7 @@
             this.panel19.SuspendLayout();
             this.panel20.SuspendLayout();
             this.panel21.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelQLNV
@@ -346,73 +346,9 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(183, 510);
             this.panelMenu.TabIndex = 3;
+            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             this.panelMenu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseClick);
             this.panelMenu.MouseLeave += new System.EventHandler(this.panelMenu_MouseLeave);
-            // 
-            // QLNVtimer
-            // 
-            this.QLNVtimer.Interval = 10;
-            this.QLNVtimer.Tick += new System.EventHandler(this.QLNVtimer_Tick);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(175, 40);
-            this.panel1.TabIndex = 1;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.button9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(-5, -9);
-            this.button9.Name = "button9";
-            this.button9.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(184, 54);
-            this.button9.TabIndex = 2;
-            this.button9.Text = "Hóa đơn\r\n";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.button10);
-            this.panel10.Location = new System.Drawing.Point(0, 280);
-            this.panel10.Margin = new System.Windows.Forms.Padding(0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(175, 40);
-            this.panel10.TabIndex = 1;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.button10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(-5, -9);
-            this.button10.Name = "button10";
-            this.button10.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(184, 54);
-            this.button10.TabIndex = 2;
-            this.button10.Text = "Thoát";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.button11);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(175, 40);
-            this.panel3.TabIndex = 1;
             // 
             // flpanelKH
             // 
@@ -425,6 +361,16 @@
             this.flpanelKH.Name = "flpanelKH";
             this.flpanelKH.Size = new System.Drawing.Size(175, 40);
             this.flpanelKH.TabIndex = 4;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.button11);
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(175, 40);
+            this.panel3.TabIndex = 1;
             // 
             // button11
             // 
@@ -487,11 +433,6 @@
             this.button13.UseVisualStyleBackColor = false;
             this.button13.Click += new System.EventHandler(this.button4_Click);
             // 
-            // QLKHtimer
-            // 
-            this.QLKHtimer.Interval = 10;
-            this.QLKHtimer.Tick += new System.EventHandler(this.QLKHtimer_Tick);
-            // 
             // flpanelQLTOUR
             // 
             this.flpanelQLTOUR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
@@ -546,11 +487,6 @@
             this.button15.Text = "Tìm kiếm Tour";
             this.button15.UseVisualStyleBackColor = false;
             // 
-            // QLTOURtimer
-            // 
-            this.QLTOURtimer.Interval = 10;
-            this.QLTOURtimer.Tick += new System.EventHandler(this.QLTOURtimer_Tick);
-            // 
             // flpanelHOADON
             // 
             this.flpanelHOADON.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
@@ -562,6 +498,31 @@
             this.flpanelHOADON.Name = "flpanelHOADON";
             this.flpanelHOADON.Size = new System.Drawing.Size(175, 40);
             this.flpanelHOADON.TabIndex = 4;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.button9);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(175, 40);
+            this.panel1.TabIndex = 1;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.button9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.Location = new System.Drawing.Point(-5, -9);
+            this.button9.Name = "button9";
+            this.button9.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.button9.Size = new System.Drawing.Size(184, 54);
+            this.button9.TabIndex = 2;
+            this.button9.Text = "Hóa đơn\r\n";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // panel15
             // 
@@ -608,11 +569,6 @@
             this.button17.TabIndex = 2;
             this.button17.Text = "Tìm kiếm hóa đơn";
             this.button17.UseVisualStyleBackColor = false;
-            // 
-            // QLHOADONtimer
-            // 
-            this.QLHOADONtimer.Interval = 10;
-            this.QLHOADONtimer.Tick += new System.EventHandler(this.QLHOADON_Tick);
             // 
             // flpanelQLDICHVU
             // 
@@ -672,11 +628,6 @@
             this.button19.TabIndex = 2;
             this.button19.Text = "....................";
             this.button19.UseVisualStyleBackColor = false;
-            // 
-            // QLDICHVUtimer
-            // 
-            this.QLDICHVUtimer.Interval = 10;
-            this.QLDICHVUtimer.Tick += new System.EventHandler(this.QLDICHVU_Tick);
             // 
             // flpanelQLHETHONG
             // 
@@ -756,6 +707,56 @@
             this.button22.UseVisualStyleBackColor = false;
             this.button22.Click += new System.EventHandler(this.button4_Click);
             // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.button10);
+            this.panel10.Location = new System.Drawing.Point(0, 280);
+            this.panel10.Margin = new System.Windows.Forms.Padding(0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(175, 40);
+            this.panel10.TabIndex = 1;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.button10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.Location = new System.Drawing.Point(-5, -9);
+            this.button10.Name = "button10";
+            this.button10.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.button10.Size = new System.Drawing.Size(184, 54);
+            this.button10.TabIndex = 2;
+            this.button10.Text = "Thoát";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // QLNVtimer
+            // 
+            this.QLNVtimer.Interval = 10;
+            this.QLNVtimer.Tick += new System.EventHandler(this.QLNVtimer_Tick);
+            // 
+            // QLKHtimer
+            // 
+            this.QLKHtimer.Interval = 10;
+            this.QLKHtimer.Tick += new System.EventHandler(this.QLKHtimer_Tick);
+            // 
+            // QLTOURtimer
+            // 
+            this.QLTOURtimer.Interval = 10;
+            this.QLTOURtimer.Tick += new System.EventHandler(this.QLTOURtimer_Tick);
+            // 
+            // QLHOADONtimer
+            // 
+            this.QLHOADONtimer.Interval = 10;
+            this.QLHOADONtimer.Tick += new System.EventHandler(this.QLHOADON_Tick);
+            // 
+            // QLDICHVUtimer
+            // 
+            this.QLDICHVUtimer.Interval = 10;
+            this.QLDICHVUtimer.Tick += new System.EventHandler(this.QLDICHVU_Tick);
+            // 
             // QLHETHONGtimer
             // 
             this.QLHETHONGtimer.Interval = 10;
@@ -790,16 +791,15 @@
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.flpanelKH.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.flpanelQLTOUR.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.flpanelHOADON.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.flpanelQLDICHVU.ResumeLayout(false);
@@ -809,6 +809,7 @@
             this.panel19.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
             this.panel21.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -232,12 +232,12 @@ namespace QL_tour_LTW
 
         private void panelMenu_MouseClick(object sender, MouseEventArgs e)
         {
-            TGxoramenu.Start();
+            menutimer1.Start();
         }
 
         private void panelMenu_MouseLeave(object sender, EventArgs e)
         {
-            TGroichuot.Start();
+          //  TGroichuot.Start();
         }
    //     bool TGroichuottime = false;
         private void TGroichuot_Tick(object sender, EventArgs e)
@@ -265,6 +265,11 @@ namespace QL_tour_LTW
                     TGxoramenu.Stop();
                 }
             }
+        }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
