@@ -88,6 +88,7 @@ namespace QL_tour_LTW
                 FillKHACHSANCbb(khachsan);
                 List<TOUR> tourlist = context.TOURs.ToList();
                 Bindinggrid(tourlist);
+                bunifuiOSSwitch1.Value = false;
             }
             catch (Exception ex)
             {
@@ -105,10 +106,8 @@ namespace QL_tour_LTW
         {
             string tentour = txtTENTOUR.Text.Trim();
             string matour = txtMATOUR.Text.Trim();
-            
+
             DateTime ngaydi = dtpNGAYDI.Value;
-          //  string ngaysinh = ngaydi.ToShortDateString();
-            txttesst.Text = ngaydi.ToShortDateString();
             DateTime ngayketthuc = dtpKETTHUC.Value;
             string loaitour;
             if (cbbMALTOUR.SelectedValue != null)
@@ -241,6 +240,24 @@ namespace QL_tour_LTW
                 result = query.ToList();
                 // Hiển thị kết quả tìm kiếm trong DataGridView
                 Bindinggrid(result);
+            }
+        }
+
+        private void bunifuiOSSwitch1_OnValueChange(object sender, EventArgs e)
+        {
+            if(bunifuiOSSwitch1.Value == true)
+            {
+                lbMOTA.Visible = true;
+                lbTRANGTHAI.Visible = true;
+                txtTRANGTHAI.Visible = true;
+                txtMOTA.Visible = true;
+            }
+            else
+            {
+                lbMOTA.Visible = false;
+                lbTRANGTHAI.Visible = false;
+                txtTRANGTHAI.Visible = false;
+                txtMOTA.Visible = false;
             }
         }
     }
