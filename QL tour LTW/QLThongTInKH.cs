@@ -73,48 +73,64 @@ namespace QL_tour_LTW
 
         private void btnTIMKIEM_Click(object sender, EventArgs e)
         {
-            loadfrm();
-            //neu textbox ma kh dc nhap thi se tim kiem
-            if (txtMAKH.Text != "")
+            string maKH = txtMAKH.Text.Trim();
+            string ho = txtHO.Text.Trim();
+            string ten = txtTEN.Text.Trim();
+            string sdt = txtSODT.Text.Trim();
+            string cccd = txtCCCD.Text.Trim();
+            string email = txtEMAIL.Text.Trim();
+            string sl;
+            if (txtSLTV != null)
             {
-                string maKHCanTim = txtMAKH.Text.Trim();
-                var timMaKH = context.KHACHHANGs.Where(id => id.MAKH.Equals(maKHCanTim)).ToList();
-                BindGrid(timMaKH);
+                sl = txtSLTV.Text.Trim();
             }
-            //neu textbox ho dc nhap thi se tim kiem
-            else if (txtHO.Text != "")
+            else
             {
-                string hoCanTim = txtHO.Text.Trim();
-                var timHo = context.KHACHHANGs.Where(h => h.HO.Equals(hoCanTim)).ToList();
-                BindGrid(timHo);
+                sl = "";
             }
-            //neu textbox ten dc nhap thi se tim kiem
-            else if (txtTEN.Text != "")
+            
+            List<KHACHHANG> result = new List<KHACHHANG>();
+
+            QLTOURDBContext context = new QLTOURDBContext();
+
+            IQueryable<KHACHHANG> query = context.KHACHHANGs;
+            if (string.IsNullOrEmpty(maKH) && string.IsNullOrEmpty(ho) && string.IsNullOrEmpty(ten)
+               && string.IsNullOrEmpty(sdt) && string.IsNullOrEmpty(cccd) && string.IsNullOrEmpty(email))
             {
-                string tenCanTim = txtTEN.Text.Trim();
-                var timTen = context.KHACHHANGs.Where(t => t.TEN.Equals(tenCanTim)).ToList();
-                BindGrid(timTen);
+                // Hiển thị danh sách tất cả sinh viên
+                result = context.KHACHHANGs.ToList();
+                BindGrid(result);
             }
-            //neu textbox so dt dc nhap thi se tim kiem
-            else if (txtSODT.Text != "")
+            else
             {
-                string soDTCanTim = txtSODT.Text.Trim();
-                var timSoDT = context.KHACHHANGs.Where(s => s.SDT.Equals(soDTCanTim)).ToList();
-                BindGrid(timSoDT);
-            }
-            //neu textbox cccd dc nhap thi se tim kiem
-            else if (txtCCCD.Text != "")
-            {
-                string cccdCanTim = txtCCCD.Text.Trim();
-                var timCCCD = context.KHACHHANGs.Where(c => c.CCCD.Equals(cccdCanTim)).ToList();
-                BindGrid(timCCCD);
-            }
-            //neu textbox email dc nhap thi se tim kiem
-            else 
-            {
-                string emailCanTim = txtEMAIL.Text.Trim();
-                var timEmail = context.KHACHHANGs.Where(em => em.EMAIL.Equals(emailCanTim)).ToList();
-                BindGrid(timEmail);
+                // Thực hiện tìm kiếm sinh viên dựa trên các điều kiện
+                if (!string.IsNullOrEmpty(maKH))
+                {
+                    query = query.Where(s => s.MAKH.Contains(maKH));
+                }
+                if (!string.IsNullOrEmpty(ho))
+                {
+                    query = query.Where(s => s.HO.Contains(ho));
+                }
+                if (!string.IsNullOrEmpty(ten))
+                {
+                    query = query.Where(s => s.TEN.Contains(ten));
+                }
+                if (!string.IsNullOrEmpty(sdt))
+                {
+                    query = query.Where(s => s.SDT.Contains(sdt));
+                }
+                if (!string.IsNullOrEmpty(cccd))
+                {
+                    query = query.Where(s => s.CCCD.Contains(cccd));
+                }
+                if (!string.IsNullOrEmpty(email))
+                {
+                    query = query.Where(s => s.EMAIL.Contains(email));
+                }
+                result = query.ToList();
+                // Hiển thị kết quả tìm kiếm trong DataGridView
+                BindGrid(result);
             }
         }
         public void clearTextBox()
