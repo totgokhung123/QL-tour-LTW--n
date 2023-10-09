@@ -13,38 +13,117 @@ namespace QL_tour_LTW
 {
     public partial class Form1 : Form
     {
+        QLThongTinNV formQLNV;
         public Form1()
         {
             InitializeComponent();
-           // this.WindowState = FormWindowState.Maximized;
+            mdiprop();
         }
-
+        private void mdiprop()
+        {
+            this.SetBevel(false);
+            Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.FromArgb(232, 234, 237);
+        }
         bool time = true;
         private void menutimer1_Tick(object sender, EventArgs e)
         {
             if (time)
             {
-                panelMenu.Width -= 20;
+                panelMenu.Width -= 5;
                 if (panelMenu.Width == panelMenu.MinimumSize.Width)
                 {
                     time = false;
                     menutimer1.Stop();
+                    panelQLNV.Width = panelMenu.Width;
+                    flpanelKH.Width = panelMenu.Width;
+                    flpanelQLTOUR.Width = panelMenu.Width;
+                    flpanelHOADON.Width = panelMenu.Width;
+                    flpanelQLDICHVU.Width = panelMenu.Width;
+                    flpanelQLHETHONG.Width = panelMenu.Width;                    
+                    panelthoat.Width = panelMenu.Width;
+                    if (panelQLNV.Height >= 143)
+                    {
+                        QLNVtimer.Start();
+                        panelQLNV.Height -= 20;
+                        if (panelQLNV.Height <= 40)
+                        {
+                            QLNVtime = false;
+                            QLNVtimer.Stop();
+                        }
+                    }
+                    if (flpanelKH.Height >= 143)
+                    {
+                        QLKHtimer.Start();
+                        flpanelKH.Height -= 20;
+                        if (flpanelKH.Height <= 40)
+                        {
+                            QLKHtime = false;
+                            QLKHtimer.Stop();
+                        }
+                    }
+                    if (flpanelQLTOUR.Height >= 143)
+                    {
+                        QLTOURtimer.Start();
+                        panelQLNV.Height -= 20;
+                        if (panelQLNV.Height <= 40)
+                        {
+                            QLTOURtime = false;
+                            QLTOURtimer.Stop();
+                        }
+                    }
+                    if (flpanelHOADON.Height >= 143)
+                    {
+                        QLHOADONtimer.Start();
+                        flpanelHOADON.Height -= 20;
+                        if (flpanelHOADON.Height <= 40)
+                        {
+                            QLHOADONtime = false;
+                            QLHOADONtimer.Stop();
+                        }
+                    }
+                    if (flpanelQLDICHVU.Height >= 143)
+                    {
+                        QLDICHVUtimer.Start();
+                        flpanelQLDICHVU.Height -= 20;
+                        if (flpanelQLDICHVU.Height <= 40)
+                        {
+                            QLDICHVUtime = false;
+                            QLDICHVUtimer.Stop();
+                        }
+                    }
+                    if (flpanelQLHETHONG.Height >= 170)
+                    {
+                        QLHETHONGtimer.Start();
+                        flpanelQLHETHONG.Height -= 20;
+                        if (flpanelQLHETHONG.Height <= 40)
+                        {
+                            QLHETHONGtime = false;
+                            QLHETHONGtimer.Stop();
+                        }
+                    }
                 }
             }
             else
             {
-                panelMenu.Width += 20;
+                panelMenu.Width += 5;
                 if (panelMenu.Width == panelMenu.MaximumSize.Width)
                 {
                     time = true;
                     menutimer1.Stop();
+                    panelQLNV.Width = panelMenu.Width;
+                    flpanelKH.Width = panelMenu.Width;
+                    flpanelQLTOUR.Width = panelMenu.Width;
+                    flpanelHOADON.Width = panelMenu.Width;
+                    flpanelQLDICHVU.Width = panelMenu.Width;
+                    flpanelQLHETHONG.Width = panelMenu.Width;
+                    panelthoat.Width = panelMenu.Width;
                 }
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            menutimer1.Start();
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -54,12 +133,41 @@ namespace QL_tour_LTW
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            SetFullScreen();
+           // mdiprop();
         }
+        private void SetFullScreen()
+        {
+            // Thiết lập thuộc tính của form
+            WindowState = FormWindowState.Maximized;
+            FormBorderStyle = FormBorderStyle.Sizable;
 
+            // Đảm bảo rằng form không che phủ taskbar
+            Rectangle workingArea = Screen.GetWorkingArea(this);
+            this.Size = workingArea.Size;
+            this.Location = workingArea.Location;
+        }
         private void button7_Click(object sender, EventArgs e)
         {
+            if(formQLNV == null)
+            {
+                formQLNV = new QLThongTinNV();
+                formQLNV.FormClosed += formQLNV_FormClosed;
+                formQLNV.MdiParent = this;
+                formQLNV.Dock = DockStyle.Fill;
+                formQLNV.ControlBox = false;
+                formQLNV.FormBorderStyle = FormBorderStyle.None;
+                formQLNV.Show();
+            }
+            else
+            {
+                formQLNV.Activate();
+            }
+        }
 
+        private void formQLNV_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            formQLNV = null;
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -70,11 +178,13 @@ namespace QL_tour_LTW
         private void QLNVtimer_Tick(object sender, EventArgs e)
         {
             if (QLNVtime == false)
-            {
+            {               
                 panelQLNV.Height += 10;
                 if (panelQLNV.Height >= 143)
                 {
-                    QLNVtimer.Stop();
+                  //  time = false;
+                  //  menutimer1.Start();
+                    QLNVtimer.Stop();                  
                     QLNVtime = true;
                 }
             }
@@ -270,6 +380,12 @@ namespace QL_tour_LTW
         private void panelMenu_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            menutimer1.Start();
+            
         }
     }
 }
