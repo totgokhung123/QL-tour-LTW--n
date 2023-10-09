@@ -17,7 +17,6 @@ namespace QL_tour_LTW
         public Form1()
         {
             InitializeComponent();
-            // this.WindowState = FormWindowState.Maximized;
             mdiprop();
         }
         private void mdiprop()
@@ -42,6 +41,66 @@ namespace QL_tour_LTW
                     flpanelQLDICHVU.Width = panelMenu.Width;
                     flpanelQLHETHONG.Width = panelMenu.Width;                    
                     panelthoat.Width = panelMenu.Width;
+                    if (panelQLNV.Height >= 143)
+                    {
+                        QLNVtimer.Start();
+                        panelQLNV.Height -= 20;
+                        if (panelQLNV.Height <= 40)
+                        {
+                            QLNVtime = false;
+                            QLNVtimer.Stop();
+                        }
+                    }
+                    if (flpanelKH.Height >= 143)
+                    {
+                        QLKHtimer.Start();
+                        flpanelKH.Height -= 20;
+                        if (flpanelKH.Height <= 40)
+                        {
+                            QLKHtime = false;
+                            QLKHtimer.Stop();
+                        }
+                    }
+                    if (flpanelQLTOUR.Height >= 143)
+                    {
+                        QLTOURtimer.Start();
+                        panelQLNV.Height -= 20;
+                        if (panelQLNV.Height <= 40)
+                        {
+                            QLTOURtime = false;
+                            QLTOURtimer.Stop();
+                        }
+                    }
+                    if (flpanelHOADON.Height >= 143)
+                    {
+                        QLHOADONtimer.Start();
+                        flpanelHOADON.Height -= 20;
+                        if (flpanelHOADON.Height <= 40)
+                        {
+                            QLHOADONtime = false;
+                            QLHOADONtimer.Stop();
+                        }
+                    }
+                    if (flpanelQLDICHVU.Height >= 143)
+                    {
+                        QLDICHVUtimer.Start();
+                        flpanelQLDICHVU.Height -= 20;
+                        if (flpanelQLDICHVU.Height <= 40)
+                        {
+                            QLDICHVUtime = false;
+                            QLDICHVUtimer.Stop();
+                        }
+                    }
+                    if (flpanelQLHETHONG.Height >= 170)
+                    {
+                        QLHETHONGtimer.Start();
+                        flpanelQLHETHONG.Height -= 20;
+                        if (flpanelQLHETHONG.Height <= 40)
+                        {
+                            QLHETHONGtime = false;
+                            QLHETHONGtimer.Stop();
+                        }
+                    }
                 }
             }
             else
@@ -123,7 +182,7 @@ namespace QL_tour_LTW
                 panelQLNV.Height += 10;
                 if (panelQLNV.Height >= 143)
                 {
-                    time = false;
+                  //  time = false;
                   //  menutimer1.Start();
                     QLNVtimer.Stop();                  
                     QLNVtime = true;
@@ -326,6 +385,7 @@ namespace QL_tour_LTW
         private void button23_Click(object sender, EventArgs e)
         {
             menutimer1.Start();
+            
         }
     }
 }
