@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(THONGTINTOUR));
             this.dgvTHONGTINTOUR = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,15 +73,15 @@
             this.btnTHEM = new System.Windows.Forms.Button();
             this.btnXOA = new System.Windows.Forms.Button();
             this.btnSUA = new System.Windows.Forms.Button();
-            this.btnRESET = new System.Windows.Forms.Button();
             this.btnTROVE = new System.Windows.Forms.Button();
             this.btnTIMKIEM = new System.Windows.Forms.Button();
-            this.pcboxANH1 = new System.Windows.Forms.PictureBox();
             this.txttesst = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
-            this.bunifuiOSSwitch1 = new Bunifu.Framework.UI.BunifuiOSSwitch();
+            this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
+            this.bunifuiOSSwitch1 = new Bunifu.Framework.UI.BunifuiOSSwitch();
+            this.pcboxANH1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTHONGTINTOUR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcboxANH1)).BeginInit();
             this.SuspendLayout();
@@ -90,21 +90,21 @@
             // 
             this.dgvTHONGTINTOUR.AllowUserToAddRows = false;
             this.dgvTHONGTINTOUR.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvTHONGTINTOUR.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvTHONGTINTOUR.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
             this.dgvTHONGTINTOUR.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTHONGTINTOUR.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvTHONGTINTOUR.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvTHONGTINTOUR.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTHONGTINTOUR.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTHONGTINTOUR.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTHONGTINTOUR.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.dgvTHONGTINTOUR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTHONGTINTOUR.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -116,14 +116,14 @@
             this.Column7,
             this.Column8,
             this.Column9});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTHONGTINTOUR.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTHONGTINTOUR.DefaultCellStyle = dataGridViewCellStyle25;
             this.dgvTHONGTINTOUR.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvTHONGTINTOUR.DoubleBuffered = true;
             this.dgvTHONGTINTOUR.EnableHeadersVisualStyles = false;
@@ -158,18 +158,18 @@
             // 
             // Column4
             // 
-            dataGridViewCellStyle13.Format = "d";
-            dataGridViewCellStyle13.NullValue = null;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle23.Format = "d";
+            dataGridViewCellStyle23.NullValue = null;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle23;
             this.Column4.HeaderText = "Ngày đi";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
-            dataGridViewCellStyle14.Format = "d";
-            dataGridViewCellStyle14.NullValue = null;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle24.Format = "d";
+            dataGridViewCellStyle24.NullValue = null;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle24;
             this.Column5.HeaderText = "Ngày kết thúc";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
@@ -202,6 +202,7 @@
             // 
             this.txtMATOUR.BackColor = System.Drawing.Color.Gainsboro;
             this.txtMATOUR.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtMATOUR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMATOUR.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMATOUR.Location = new System.Drawing.Point(111, 122);
             this.txtMATOUR.Name = "txtMATOUR";
@@ -245,6 +246,7 @@
             // 
             this.txtTENTOUR.BackColor = System.Drawing.Color.Gainsboro;
             this.txtTENTOUR.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtTENTOUR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTENTOUR.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTENTOUR.Location = new System.Drawing.Point(111, 171);
             this.txtTENTOUR.Name = "txtTENTOUR";
@@ -265,6 +267,7 @@
             // 
             this.txtGIATOUR.BackColor = System.Drawing.Color.Gainsboro;
             this.txtGIATOUR.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtGIATOUR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtGIATOUR.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGIATOUR.Location = new System.Drawing.Point(111, 222);
             this.txtGIATOUR.Name = "txtGIATOUR";
@@ -284,7 +287,7 @@
             // dtpNGAYDI
             // 
             this.dtpNGAYDI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(128)))));
-            this.dtpNGAYDI.BorderRadius = 0;
+            this.dtpNGAYDI.BorderRadius = 5;
             this.dtpNGAYDI.ForeColor = System.Drawing.Color.White;
             this.dtpNGAYDI.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNGAYDI.FormatCustom = null;
@@ -317,7 +320,7 @@
             // dtpKETTHUC
             // 
             this.dtpKETTHUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(128)))));
-            this.dtpKETTHUC.BorderRadius = 0;
+            this.dtpKETTHUC.BorderRadius = 5;
             this.dtpKETTHUC.ForeColor = System.Drawing.Color.White;
             this.dtpKETTHUC.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpKETTHUC.FormatCustom = null;
@@ -507,20 +510,6 @@
             this.btnSUA.Text = "Sửa";
             this.btnSUA.UseVisualStyleBackColor = true;
             // 
-            // btnRESET
-            // 
-            this.btnRESET.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRESET.BackgroundImage")));
-            this.btnRESET.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRESET.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRESET.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRESET.Location = new System.Drawing.Point(47, 378);
-            this.btnRESET.Name = "btnRESET";
-            this.btnRESET.Size = new System.Drawing.Size(96, 36);
-            this.btnRESET.TabIndex = 8;
-            this.btnRESET.Text = "Reset";
-            this.btnRESET.UseVisualStyleBackColor = true;
-            this.btnRESET.Click += new System.EventHandler(this.button4_Click);
-            // 
             // btnTROVE
             // 
             this.btnTROVE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -541,14 +530,6 @@
             this.btnTIMKIEM.Text = "Tìm kiếm";
             this.btnTIMKIEM.UseVisualStyleBackColor = true;
             this.btnTIMKIEM.Click += new System.EventHandler(this.btnTIMKIEM_Click);
-            // 
-            // pcboxANH1
-            // 
-            this.pcboxANH1.Location = new System.Drawing.Point(667, 224);
-            this.pcboxANH1.Name = "pcboxANH1";
-            this.pcboxANH1.Size = new System.Drawing.Size(276, 124);
-            this.pcboxANH1.TabIndex = 9;
-            this.pcboxANH1.TabStop = false;
             // 
             // txttesst
             // 
@@ -576,6 +557,52 @@
             this.label15.TabIndex = 12;
             this.label15.Text = "Tìm kiếm bổ sung:";
             // 
+            // rjTextBox1
+            // 
+            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rjTextBox1.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.DarkSlateBlue;
+            this.rjTextBox1.BorderRadius = 5;
+            this.rjTextBox1.BorderSize = 2;
+            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjTextBox1.Location = new System.Drawing.Point(111, 83);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox1.Multiline = false;
+            this.rjTextBox1.Name = "rjTextBox1";
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox1.PasswordChar = false;
+            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.Gainsboro;
+            this.rjTextBox1.PlaceholderText = "";
+            this.rjTextBox1.Size = new System.Drawing.Size(199, 33);
+            this.rjTextBox1.TabIndex = 16;
+            this.rjTextBox1.Texts = "";
+            this.rjTextBox1.UnderlinedStyle = false;
+            this.rjTextBox1.Enter += new System.EventHandler(this.rjTextBox1_Enter);
+            this.rjTextBox1.Leave += new System.EventHandler(this.rjTextBox1_Leave);
+            // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rjButton1.BackgroundImage")));
+            this.rjButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 10;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton1.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.rjButton1.Location = new System.Drawing.Point(32, 377);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(114, 40);
+            this.rjButton1.TabIndex = 14;
+            this.rjButton1.Text = "Reset";
+            this.rjButton1.TextColor = System.Drawing.Color.LavenderBlush;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            // 
             // bunifuiOSSwitch1
             // 
             this.bunifuiOSSwitch1.BackColor = System.Drawing.Color.Transparent;
@@ -591,26 +618,13 @@
             this.bunifuiOSSwitch1.Value = true;
             this.bunifuiOSSwitch1.OnValueChange += new System.EventHandler(this.bunifuiOSSwitch1_OnValueChange);
             // 
-            // rjButton1
+            // pcboxANH1
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rjButton1.BackgroundImage")));
-            this.rjButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 10;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(282, 377);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(123, 40);
-            this.rjButton1.TabIndex = 14;
-            this.rjButton1.Text = "Reset";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
+            this.pcboxANH1.Location = new System.Drawing.Point(667, 224);
+            this.pcboxANH1.Name = "pcboxANH1";
+            this.pcboxANH1.Size = new System.Drawing.Size(276, 124);
+            this.pcboxANH1.TabIndex = 9;
+            this.pcboxANH1.TabStop = false;
             // 
             // THONGTINTOUR
             // 
@@ -618,6 +632,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(977, 710);
+            this.Controls.Add(this.rjTextBox1);
             this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.bunifuiOSSwitch1);
             this.Controls.Add(this.label15);
@@ -626,7 +641,6 @@
             this.Controls.Add(this.pcboxANH1);
             this.Controls.Add(this.btnTIMKIEM);
             this.Controls.Add(this.btnTROVE);
-            this.Controls.Add(this.btnRESET);
             this.Controls.Add(this.btnSUA);
             this.Controls.Add(this.btnXOA);
             this.Controls.Add(this.btnTHEM);
@@ -700,7 +714,6 @@
         private System.Windows.Forms.Button btnTHEM;
         private System.Windows.Forms.Button btnXOA;
         private System.Windows.Forms.Button btnSUA;
-        private System.Windows.Forms.Button btnRESET;
         private System.Windows.Forms.Button btnTROVE;
         private System.Windows.Forms.Button btnTIMKIEM;
         private System.Windows.Forms.PictureBox pcboxANH1;
@@ -718,5 +731,6 @@
         private System.Windows.Forms.Label label15;
         private Bunifu.Framework.UI.BunifuiOSSwitch bunifuiOSSwitch1;
         private CustomControls.RJControls.RJButton rjButton1;
+        private CustomControls.RJControls.RJTextBox rjTextBox1;
     }
 }

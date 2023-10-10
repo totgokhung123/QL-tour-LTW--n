@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QL_tour_LTW
 {
@@ -16,11 +17,6 @@ namespace QL_tour_LTW
         public THONGTINTOUR()
         {
             InitializeComponent();
-        }
-
-        private void bunifuTileButton1_Click(object sender, EventArgs e)
-        {
-
         }
         private void FillLOAITOURCbb(List<LOAITOUR> loaitourlist)
         {
@@ -259,6 +255,53 @@ namespace QL_tour_LTW
                 txtTRANGTHAI.Visible = false;
                 txtMOTA.Visible = false;
             }
+        }
+
+        private void rjTextBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void rjTextBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void rjTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+           // rjTextBox1.BackColor = Color.Gainsboro;
+        }
+
+        private void rjTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           // rjTextBox1.BackColor = Color.Gainsboro;
+        }
+
+        private void rjTextBox1_Click(object sender, EventArgs e)
+        {
+            rjTextBox1.BackColor = Color.Gainsboro;
+            
+        }
+        private void TextBox_GotFocus(object sender, EventArgs e)
+        {
+            // Thay đổi màu nền khi TextBox được focus
+            rjTextBox1.BackColor = Color.Yellow;
+        }
+
+        private void TextBox_LostFocus(object sender, EventArgs e)
+        {
+            // Quay trở về màu trắng khi TextBox mất focus
+            rjTextBox1.BackColor = Color.White;
+        }
+
+        private void rjTextBox1_Enter(object sender, EventArgs e)
+        {
+            rjTextBox1.BackColor = Color.Gainsboro;
+        }
+
+        private void rjTextBox1_Leave(object sender, EventArgs e)
+        {
+            rjTextBox1.BackColor = Color.White;
         }
     }
 }

@@ -46,6 +46,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -59,7 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="buttonUI\buttonUI.cs">
+    <Compile Include="UIcustom\buttonUI.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CustomParameter.cs" />
@@ -98,6 +99,13 @@
     <Compile Include="THONGTINTOUR.Designer.cs">
       <DependentUpon>THONGTINTOUR.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIcustom\pictureboxUI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UIcustom\RJTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIcustom\RJTextBox.Designer.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +125,7 @@
     <EmbeddedResource Include="THONGTINTOUR.resx">
       <DependentUpon>THONGTINTOUR.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIcustom\RJTextBox.resx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
