@@ -60,6 +60,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MainQLTOUR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainQLTOUR.Designer.cs">
+      <DependentUpon>MainQLTOUR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemTour.Designer.cs">
+      <DependentUpon>ThemTour.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIcustom\buttonUI.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -109,6 +121,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainQLTOUR.resx">
+      <DependentUpon>MainQLTOUR.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -121,6 +136,9 @@
     </Compile>
     <EmbeddedResource Include="QLThongTinNV.resx">
       <DependentUpon>QLThongTinNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemTour.resx">
+      <DependentUpon>ThemTour.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="THONGTINTOUR.resx">
       <DependentUpon>THONGTINTOUR.cs</DependentUpon>
