@@ -498,6 +498,7 @@
             this.btnTHONGTINTOUR.TabIndex = 2;
             this.btnTHONGTINTOUR.Text = "Thông tin Tour";
             this.btnTHONGTINTOUR.UseVisualStyleBackColor = false;
+            this.btnTHONGTINTOUR.Click += new System.EventHandler(this.btnTHONGTINTOUR_Click);
             // 
             // panel14
             // 

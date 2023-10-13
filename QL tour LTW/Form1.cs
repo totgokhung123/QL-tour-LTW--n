@@ -168,6 +168,7 @@ namespace QL_tour_LTW
         private void formQLNV_FormClosed(object sender, FormClosedEventArgs e)
         {
             formQLNV = null;
+            formTOUR = null;
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -386,6 +387,24 @@ namespace QL_tour_LTW
         {
             menutimer1.Start();
             
+        }
+        MainQLTOUR formTOUR;
+        private void btnTHONGTINTOUR_Click(object sender, EventArgs e)
+        {
+            if (formTOUR == null)
+            {
+                formTOUR = new MainQLTOUR();
+                formTOUR.FormClosed += formQLNV_FormClosed;
+                formTOUR.MdiParent = this;
+                formTOUR.Dock = DockStyle.Fill;
+                formTOUR.ControlBox = false;
+                formTOUR.FormBorderStyle = FormBorderStyle.None;
+                formTOUR.Show();
+            }
+            else
+            {
+                formTOUR.Activate();
+            }
         }
     }
 }

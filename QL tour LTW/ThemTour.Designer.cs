@@ -446,9 +446,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(54)))), ((int)(((byte)(159)))));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 30);
+            this.label2.Size = new System.Drawing.Size(118, 30);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Thông Tin Tour";
+            this.label2.Text = "Thêm Tour";
             // 
             // label3
             // 
