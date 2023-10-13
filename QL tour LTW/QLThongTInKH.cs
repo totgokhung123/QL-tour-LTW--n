@@ -256,5 +256,23 @@ namespace QL_tour_LTW
             }
             
         }
+
+        private void txtSLTV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                MessageBox.Show("Vui lòng nhập số!", "thông báo");
+                e.Handled = true;
+            }
+        }
+
+        private void txtHO_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                MessageBox.Show("Vui lòng nhập chữ!", "thông báo");
+                e.Handled = true;
+            }
+        }
     }
 }
