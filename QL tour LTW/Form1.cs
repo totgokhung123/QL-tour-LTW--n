@@ -387,5 +387,24 @@ namespace QL_tour_LTW
             menutimer1.Start();
             
         }
+        GiaoDienQLThongTInKH frmDGKH;
+        private void btnTHONGTINKHACHHANG_Click(object sender, EventArgs e)
+        {
+            if (frmDGKH == null)
+            {
+                frmDGKH = new GiaoDienQLThongTInKH();
+                frmDGKH.FormClosed += formQLNV_FormClosed;
+                frmDGKH.MdiParent = this;
+                frmDGKH.Dock = DockStyle.Fill;
+                frmDGKH.ControlBox = false;
+                frmDGKH.FormBorderStyle = FormBorderStyle.None;
+                frmDGKH.Show();
+                
+            }
+            else
+            {
+                frmDGKH.Activate();
+            }
+        }
     }
 }
