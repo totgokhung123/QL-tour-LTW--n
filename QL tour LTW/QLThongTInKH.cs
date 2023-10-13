@@ -70,6 +70,75 @@ namespace QL_tour_LTW
                 }
             }
         }
+        public void clearTextBox()
+        {
+            txtMAKH.Text = string.Empty;
+            txtHO.Text = string.Empty;
+            txtTEN.Text = string.Empty;
+            txtSODT.Text = string.Empty;
+            txtCCCD.Text = string.Empty;
+            txtEMAIL.Text = string.Empty;
+            txtSLTV.Text = string.Empty;
+        }
+        
+        private void insertKhachHang(int row)
+        {
+            dgvDSKHACHHANG.Rows[row].Cells[0].Value = txtMAKH.Text;
+            dgvDSKHACHHANG.Rows[row].Cells[1].Value = txtHO.Text;
+            dgvDSKHACHHANG.Rows[row].Cells[2].Value = txtTEN.Text;
+            dgvDSKHACHHANG.Rows[row].Cells[3].Value = txtSODT.Text;
+            dgvDSKHACHHANG.Rows[row].Cells[4].Value = txtCCCD.Text;
+            dgvDSKHACHHANG.Rows[row].Cells[5].Value = txtEMAIL.Text;
+            dgvDSKHACHHANG.Rows[row].Cells[6].Value = txtSLTV.Text;
+        }
+        private int GetSelectedRow(string maKH)
+        {
+            try
+            {
+                for (int i = 0; i < dgvDSKHACHHANG.Rows.Count; i++)
+                {
+                    if (dgvDSKHACHHANG.Rows[i].Cells[0].Value.ToString() == maKH)
+                    {
+                        return i;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không tìm thấy khách hàng", "thông báo");
+            }
+            return -1;
+        }
+        
+        private KHACHHANG timKhanhHang(string maKH)
+        {
+            return context.KHACHHANGs.FirstOrDefault(kh => kh.MAKH.ToString() == maKH);
+        }
+        
+
+        private void txtSLTV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                MessageBox.Show("Vui lòng nhập số!", "thông báo");
+                e.Handled = true;
+            }
+        }
+
+        private void txtHO_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                MessageBox.Show("Vui lòng nhập chữ!", "thông báo");
+                e.Handled = true;
+            }
+        }
+
+        private void btnRESET_Click(object sender, EventArgs e)
+        {
+            loadfrm();
+            clearTextBox();
+        }
 
         private void btnTIMKIEM_Click(object sender, EventArgs e)
         {
@@ -88,7 +157,7 @@ namespace QL_tour_LTW
             {
                 sl = "";
             }
-            
+
             List<KHACHHANG> result = new List<KHACHHANG>();
 
             QLTOURDBContext context = new QLTOURDBContext();
@@ -133,59 +202,14 @@ namespace QL_tour_LTW
                 BindGrid(result);
             }
         }
-        public void clearTextBox()
-        {
-            txtMAKH.Text = string.Empty;
-            txtHO.Text = string.Empty;
-            txtTEN.Text = string.Empty;
-            txtSODT.Text = string.Empty;
-            txtCCCD.Text = string.Empty;
-            txtEMAIL.Text = string.Empty;
-            txtSLTV.Text = string.Empty;
-        }
-        private void btnRESET_Click(object sender, EventArgs e)
-        {
-            loadfrm();
-            clearTextBox();
-        }
-        private void insertKhachHang(int row)
-        {
-            dgvDSKHACHHANG.Rows[row].Cells[0].Value = txtMAKH.Text;
-            dgvDSKHACHHANG.Rows[row].Cells[1].Value = txtHO.Text;
-            dgvDSKHACHHANG.Rows[row].Cells[2].Value = txtTEN.Text;
-            dgvDSKHACHHANG.Rows[row].Cells[3].Value = txtSODT.Text;
-            dgvDSKHACHHANG.Rows[row].Cells[4].Value = txtCCCD.Text;
-            dgvDSKHACHHANG.Rows[row].Cells[5].Value = txtEMAIL.Text;
-            dgvDSKHACHHANG.Rows[row].Cells[6].Value = txtSLTV.Text;
-        }
-        private int GetSelectedRow(string maKH)
-        {
-            try
-            {
-                for (int i = 0; i < dgvDSKHACHHANG.Rows.Count; i++)
-                {
-                    if (dgvDSKHACHHANG.Rows[i].Cells[0].Value.ToString() == maKH)
-                    {
-                        return i;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Không tìm thấy khách hàng", "thông báo");
-            }
-            return -1;
-        }
+
         private void btnTHEM_Click(object sender, EventArgs e)
         {
             ThemMoiKH themMoiKH = new ThemMoiKH();
             themMoiKH.ShowDialog();
             loadfrm();
         }
-        private KHACHHANG timKhanhHang(string maKH)
-        {
-            return context.KHACHHANGs.FirstOrDefault(kh => kh.MAKH.ToString() == maKH);
-        }
+
         private void btnXOA_Click(object sender, EventArgs e)
         {
             int seledtedRow = GetSelectedRow(txtMAKH.Text);
@@ -202,6 +226,7 @@ namespace QL_tour_LTW
                     context.SaveChanges();
                 }
             }
+            clearTextBox();
         }
 
         private void btnCAPNHAT_Click(object sender, EventArgs e)
@@ -254,25 +279,11 @@ namespace QL_tour_LTW
             {
                 MessageBox.Show(ex.ToString());
             }
-            
         }
 
-        private void txtSLTV_KeyPress(object sender, KeyPressEventArgs e)
+        private void btnTROVE_Click(object sender, EventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                MessageBox.Show("Vui lòng nhập số!", "thông báo");
-                e.Handled = true;
-            }
-        }
-
-        private void txtHO_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                MessageBox.Show("Vui lòng nhập chữ!", "thông báo");
-                e.Handled = true;
-            }
+            Close();
         }
     }
 }

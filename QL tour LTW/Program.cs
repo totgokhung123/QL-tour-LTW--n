@@ -16,7 +16,7 @@ namespace QL_tour_LTW
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QLThongTinNV());
+            Application.Run(new QLThongTInKH());
         }
     }
 }
