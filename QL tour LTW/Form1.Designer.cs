@@ -240,10 +240,10 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(-5, -9);
+            this.button2.Location = new System.Drawing.Point(-7, -11);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(184, 57);
+            this.button2.Size = new System.Drawing.Size(245, 70);
             this.button2.TabIndex = 2;
             this.button2.Text = "Quản lý khách hàng";
             this.button2.UseVisualStyleBackColor = false;
@@ -412,7 +412,7 @@
             this.button11.ForeColor = System.Drawing.Color.White;
             this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
             this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(-5, -8);
+            this.button11.Location = new System.Drawing.Point(-7, -10);
             this.button11.Margin = new System.Windows.Forms.Padding(0);
             this.button11.Name = "button11";
             this.button11.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
@@ -643,7 +643,7 @@
             // panel16
             // 
             this.panel16.Controls.Add(this.button17);
-            this.panel16.Location = new System.Drawing.Point(0, 80);
+            this.panel16.Location = new System.Drawing.Point(0, 98);
             this.panel16.Margin = new System.Windows.Forms.Padding(0);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(182, 40);
@@ -723,7 +723,7 @@
             // panel21
             // 
             this.panel21.Controls.Add(this.button22);
-            this.panel21.Location = new System.Drawing.Point(0, 120);
+            this.panel21.Location = new System.Drawing.Point(0, 147);
             this.panel21.Margin = new System.Windows.Forms.Padding(0);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(182, 40);
@@ -734,7 +734,8 @@
             this.button22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.button22.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button22.ForeColor = System.Drawing.Color.White;
-            this.button22.Location = new System.Drawing.Point(-5, -9);
+            this.button22.Location = new System.Drawing.Point(-7, -11);
+            this.button22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(193, 54);
             this.button22.TabIndex = 2;
@@ -809,7 +810,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1176, 746);
             this.Controls.Add(this.panelMenu);
