@@ -41,6 +41,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvDSKHACHHANG = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.txtSLTV = new CustomControls.RJControls.RJTextBox();
             this.txtEMAIL = new CustomControls.RJControls.RJTextBox();
@@ -55,13 +62,6 @@
             this.btnTHEM = new CustomControls.RJControls.RJButton();
             this.btnTIMKIEM = new CustomControls.RJControls.RJButton();
             this.btnRESET = new CustomControls.RJControls.RJButton();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSKHACHHANG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -197,6 +197,65 @@
             this.dgvDSKHACHHANG.TabIndex = 28;
             this.dgvDSKHACHHANG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSKHACHHANG_CellClick);
             // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 50F;
+            this.Column1.HeaderText = "Mã KH";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 75;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Họ";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 136;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 50F;
+            this.Column3.HeaderText = "Tên";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 68;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Số ĐT";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 137;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "CCCD";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 136;
+            // 
+            // Column6
+            // 
+            this.Column6.FillWeight = 150F;
+            this.Column6.HeaderText = "Email";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 207;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Số Lượng TV";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 120;
+            // 
             // bunifuSeparator1
             // 
             this.bunifuSeparator1.AutoSize = true;
@@ -206,7 +265,7 @@
             this.bunifuSeparator1.Location = new System.Drawing.Point(0, 29);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(1718, 31);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(1854, 31);
             this.bunifuSeparator1.TabIndex = 31;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
@@ -517,65 +576,6 @@
             this.btnRESET.TextColor = System.Drawing.Color.White;
             this.btnRESET.UseVisualStyleBackColor = false;
             this.btnRESET.Click += new System.EventHandler(this.btnRESET_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 50F;
-            this.Column1.HeaderText = "Mã KH";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 75;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Họ";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 136;
-            // 
-            // Column3
-            // 
-            this.Column3.FillWeight = 50F;
-            this.Column3.HeaderText = "Tên";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 68;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Số ĐT";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 137;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "CCCD";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 136;
-            // 
-            // Column6
-            // 
-            this.Column6.FillWeight = 150F;
-            this.Column6.HeaderText = "Email";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 207;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Số Lượng TV";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 120;
             // 
             // QLThongTInKH
             // 
