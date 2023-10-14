@@ -71,29 +71,29 @@
             this.cbbDIEMDEN = new System.Windows.Forms.ComboBox();
             this.txttesst = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.bunifuiOSSwitch1 = new Bunifu.Framework.UI.BunifuiOSSwitch();
-            this.pcboxANH1 = new System.Windows.Forms.PictureBox();
             this.txtTRANGTHAI = new CustomControls.RJControls.RJTextBox();
             this.txtMOTA = new CustomControls.RJControls.RJTextBox();
             this.txtGIATOUR = new CustomControls.RJControls.RJTextBox();
             this.txtTENTOUR = new CustomControls.RJControls.RJTextBox();
             this.txtMATOUR = new CustomControls.RJControls.RJTextBox();
-            this.btnReset = new CustomControls.RJControls.RJButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnTIMKIEM = new CustomControls.RJControls.RJButton();
-            this.btnTHEM = new CustomControls.RJControls.RJButton();
-            this.btnSUA = new CustomControls.RJControls.RJButton();
-            this.btnXOA = new CustomControls.RJControls.RJButton();
-            this.btnTROVE = new CustomControls.RJControls.RJButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.pcboxANH2 = new System.Windows.Forms.PictureBox();
             this.pcboxANH3 = new System.Windows.Forms.PictureBox();
+            this.pcboxANH2 = new System.Windows.Forms.PictureBox();
+            this.btnTROVE = new CustomControls.RJControls.RJButton();
+            this.btnXOA = new CustomControls.RJControls.RJButton();
+            this.btnSUA = new CustomControls.RJControls.RJButton();
+            this.btnTHEM = new CustomControls.RJControls.RJButton();
+            this.btnTIMKIEM = new CustomControls.RJControls.RJButton();
+            this.btnReset = new CustomControls.RJControls.RJButton();
+            this.bunifuiOSSwitch1 = new Bunifu.Framework.UI.BunifuiOSSwitch();
+            this.pcboxANH1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTHONGTINTOUR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxANH1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxANH2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcboxANH3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcboxANH2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcboxANH1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvTHONGTINTOUR
@@ -486,33 +486,6 @@
             this.label15.TabIndex = 12;
             this.label15.Text = "Tìm kiếm bổ sung:";
             // 
-            // bunifuiOSSwitch1
-            // 
-            this.bunifuiOSSwitch1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuiOSSwitch1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuiOSSwitch1.BackgroundImage")));
-            this.bunifuiOSSwitch1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuiOSSwitch1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuiOSSwitch1.Location = new System.Drawing.Point(672, 75);
-            this.bunifuiOSSwitch1.Name = "bunifuiOSSwitch1";
-            this.bunifuiOSSwitch1.OffColor = System.Drawing.Color.Gray;
-            this.bunifuiOSSwitch1.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(54)))), ((int)(((byte)(159)))));
-            this.bunifuiOSSwitch1.Size = new System.Drawing.Size(43, 25);
-            this.bunifuiOSSwitch1.TabIndex = 13;
-            this.bunifuiOSSwitch1.Value = true;
-            this.bunifuiOSSwitch1.OnValueChange += new System.EventHandler(this.bunifuiOSSwitch1_OnValueChange);
-            // 
-            // pcboxANH1
-            // 
-            this.pcboxANH1.BackColor = System.Drawing.Color.White;
-            this.pcboxANH1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcboxANH1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pcboxANH1.Location = new System.Drawing.Point(2, 2);
-            this.pcboxANH1.Name = "pcboxANH1";
-            this.pcboxANH1.Size = new System.Drawing.Size(293, 147);
-            this.pcboxANH1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcboxANH1.TabIndex = 9;
-            this.pcboxANH1.TabStop = false;
-            // 
             // txtTRANGTHAI
             // 
             this.txtTRANGTHAI.BackColor = System.Drawing.SystemColors.Window;
@@ -643,28 +616,6 @@
             this.txtMATOUR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMATOUR_KeyPress);
             this.txtMATOUR.Leave += new System.EventHandler(this.rjTextBox1_Leave);
             // 
-            // btnReset
-            // 
-            this.btnReset.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnReset.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnReset.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReset.BackgroundImage")));
-            this.btnReset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnReset.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnReset.BorderRadius = 10;
-            this.btnReset.BorderSize = 0;
-            this.btnReset.FlatAppearance.BorderSize = 0;
-            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.btnReset.Location = new System.Drawing.Point(32, 361);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(114, 40);
-            this.btnReset.TabIndex = 14;
-            this.btnReset.Text = "Reset";
-            this.btnReset.TextColor = System.Drawing.Color.LavenderBlush;
-            this.btnReset.UseVisualStyleBackColor = false;
-            this.btnReset.Click += new System.EventHandler(this.rjButton1_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -675,115 +626,6 @@
             this.label2.Size = new System.Drawing.Size(189, 32);
             this.label2.TabIndex = 17;
             this.label2.Text = "Thông Tin Tour";
-            // 
-            // btnTIMKIEM
-            // 
-            this.btnTIMKIEM.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnTIMKIEM.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnTIMKIEM.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTIMKIEM.BackgroundImage")));
-            this.btnTIMKIEM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTIMKIEM.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnTIMKIEM.BorderRadius = 10;
-            this.btnTIMKIEM.BorderSize = 0;
-            this.btnTIMKIEM.FlatAppearance.BorderSize = 0;
-            this.btnTIMKIEM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTIMKIEM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTIMKIEM.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.btnTIMKIEM.Location = new System.Drawing.Point(152, 361);
-            this.btnTIMKIEM.Name = "btnTIMKIEM";
-            this.btnTIMKIEM.Size = new System.Drawing.Size(114, 40);
-            this.btnTIMKIEM.TabIndex = 14;
-            this.btnTIMKIEM.Text = "Tìm Kiếm";
-            this.btnTIMKIEM.TextColor = System.Drawing.Color.LavenderBlush;
-            this.btnTIMKIEM.UseVisualStyleBackColor = false;
-            this.btnTIMKIEM.Click += new System.EventHandler(this.btnTIMKIEM_Click);
-            // 
-            // btnTHEM
-            // 
-            this.btnTHEM.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnTHEM.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnTHEM.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTHEM.BackgroundImage")));
-            this.btnTHEM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTHEM.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnTHEM.BorderRadius = 10;
-            this.btnTHEM.BorderSize = 0;
-            this.btnTHEM.FlatAppearance.BorderSize = 0;
-            this.btnTHEM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTHEM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTHEM.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.btnTHEM.Location = new System.Drawing.Point(676, 360);
-            this.btnTHEM.Name = "btnTHEM";
-            this.btnTHEM.Size = new System.Drawing.Size(114, 40);
-            this.btnTHEM.TabIndex = 14;
-            this.btnTHEM.Text = "Thêm";
-            this.btnTHEM.TextColor = System.Drawing.Color.LavenderBlush;
-            this.btnTHEM.UseVisualStyleBackColor = false;
-            this.btnTHEM.Click += new System.EventHandler(this.btnTHEM_Click_1);
-            // 
-            // btnSUA
-            // 
-            this.btnSUA.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnSUA.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnSUA.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSUA.BackgroundImage")));
-            this.btnSUA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSUA.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSUA.BorderRadius = 10;
-            this.btnSUA.BorderSize = 0;
-            this.btnSUA.FlatAppearance.BorderSize = 0;
-            this.btnSUA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSUA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSUA.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.btnSUA.Location = new System.Drawing.Point(796, 361);
-            this.btnSUA.Name = "btnSUA";
-            this.btnSUA.Size = new System.Drawing.Size(114, 40);
-            this.btnSUA.TabIndex = 14;
-            this.btnSUA.Text = "Sửa";
-            this.btnSUA.TextColor = System.Drawing.Color.LavenderBlush;
-            this.btnSUA.UseVisualStyleBackColor = false;
-            this.btnSUA.Click += new System.EventHandler(this.btnSUA_Click);
-            // 
-            // btnXOA
-            // 
-            this.btnXOA.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnXOA.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnXOA.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXOA.BackgroundImage")));
-            this.btnXOA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnXOA.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnXOA.BorderRadius = 10;
-            this.btnXOA.BorderSize = 0;
-            this.btnXOA.FlatAppearance.BorderSize = 0;
-            this.btnXOA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXOA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXOA.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.btnXOA.Location = new System.Drawing.Point(916, 361);
-            this.btnXOA.Name = "btnXOA";
-            this.btnXOA.Size = new System.Drawing.Size(114, 40);
-            this.btnXOA.TabIndex = 14;
-            this.btnXOA.Text = "Xóa";
-            this.btnXOA.TextColor = System.Drawing.Color.LavenderBlush;
-            this.btnXOA.UseVisualStyleBackColor = false;
-            this.btnXOA.Click += new System.EventHandler(this.btnXOA_Click);
-            // 
-            // btnTROVE
-            // 
-            this.btnTROVE.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnTROVE.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnTROVE.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTROVE.BackgroundImage")));
-            this.btnTROVE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTROVE.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnTROVE.BorderRadius = 10;
-            this.btnTROVE.BorderSize = 0;
-            this.btnTROVE.FlatAppearance.BorderSize = 0;
-            this.btnTROVE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTROVE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTROVE.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.btnTROVE.Location = new System.Drawing.Point(1036, 361);
-            this.btnTROVE.Name = "btnTROVE";
-            this.btnTROVE.Size = new System.Drawing.Size(114, 40);
-            this.btnTROVE.TabIndex = 14;
-            this.btnTROVE.Text = "Trở về";
-            this.btnTROVE.TextColor = System.Drawing.Color.LavenderBlush;
-            this.btnTROVE.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -808,6 +650,18 @@
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
             // 
+            // pcboxANH3
+            // 
+            this.pcboxANH3.BackColor = System.Drawing.Color.White;
+            this.pcboxANH3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcboxANH3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pcboxANH3.Location = new System.Drawing.Point(958, 282);
+            this.pcboxANH3.Name = "pcboxANH3";
+            this.pcboxANH3.Size = new System.Drawing.Size(219, 72);
+            this.pcboxANH3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcboxANH3.TabIndex = 21;
+            this.pcboxANH3.TabStop = false;
+            // 
             // pcboxANH2
             // 
             this.pcboxANH2.BackColor = System.Drawing.Color.White;
@@ -820,17 +674,163 @@
             this.pcboxANH2.TabIndex = 20;
             this.pcboxANH2.TabStop = false;
             // 
-            // pcboxANH3
+            // btnTROVE
             // 
-            this.pcboxANH3.BackColor = System.Drawing.Color.White;
-            this.pcboxANH3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcboxANH3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pcboxANH3.Location = new System.Drawing.Point(958, 282);
-            this.pcboxANH3.Name = "pcboxANH3";
-            this.pcboxANH3.Size = new System.Drawing.Size(219, 72);
-            this.pcboxANH3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcboxANH3.TabIndex = 21;
-            this.pcboxANH3.TabStop = false;
+            this.btnTROVE.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnTROVE.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnTROVE.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTROVE.BackgroundImage")));
+            this.btnTROVE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTROVE.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTROVE.BorderRadius = 10;
+            this.btnTROVE.BorderSize = 0;
+            this.btnTROVE.FlatAppearance.BorderSize = 0;
+            this.btnTROVE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTROVE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTROVE.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.btnTROVE.Location = new System.Drawing.Point(1036, 361);
+            this.btnTROVE.Name = "btnTROVE";
+            this.btnTROVE.Size = new System.Drawing.Size(114, 40);
+            this.btnTROVE.TabIndex = 14;
+            this.btnTROVE.Text = "Trở về";
+            this.btnTROVE.TextColor = System.Drawing.Color.LavenderBlush;
+            this.btnTROVE.UseVisualStyleBackColor = false;
+            // 
+            // btnXOA
+            // 
+            this.btnXOA.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnXOA.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnXOA.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXOA.BackgroundImage")));
+            this.btnXOA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnXOA.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnXOA.BorderRadius = 10;
+            this.btnXOA.BorderSize = 0;
+            this.btnXOA.FlatAppearance.BorderSize = 0;
+            this.btnXOA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXOA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXOA.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.btnXOA.Location = new System.Drawing.Point(916, 361);
+            this.btnXOA.Name = "btnXOA";
+            this.btnXOA.Size = new System.Drawing.Size(114, 40);
+            this.btnXOA.TabIndex = 14;
+            this.btnXOA.Text = "Xóa";
+            this.btnXOA.TextColor = System.Drawing.Color.LavenderBlush;
+            this.btnXOA.UseVisualStyleBackColor = false;
+            this.btnXOA.Click += new System.EventHandler(this.btnXOA_Click);
+            // 
+            // btnSUA
+            // 
+            this.btnSUA.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSUA.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSUA.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSUA.BackgroundImage")));
+            this.btnSUA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSUA.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSUA.BorderRadius = 10;
+            this.btnSUA.BorderSize = 0;
+            this.btnSUA.FlatAppearance.BorderSize = 0;
+            this.btnSUA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSUA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSUA.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.btnSUA.Location = new System.Drawing.Point(796, 361);
+            this.btnSUA.Name = "btnSUA";
+            this.btnSUA.Size = new System.Drawing.Size(114, 40);
+            this.btnSUA.TabIndex = 14;
+            this.btnSUA.Text = "Sửa";
+            this.btnSUA.TextColor = System.Drawing.Color.LavenderBlush;
+            this.btnSUA.UseVisualStyleBackColor = false;
+            this.btnSUA.Click += new System.EventHandler(this.btnSUA_Click);
+            // 
+            // btnTHEM
+            // 
+            this.btnTHEM.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnTHEM.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnTHEM.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTHEM.BackgroundImage")));
+            this.btnTHEM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTHEM.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTHEM.BorderRadius = 10;
+            this.btnTHEM.BorderSize = 0;
+            this.btnTHEM.FlatAppearance.BorderSize = 0;
+            this.btnTHEM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTHEM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTHEM.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.btnTHEM.Location = new System.Drawing.Point(676, 360);
+            this.btnTHEM.Name = "btnTHEM";
+            this.btnTHEM.Size = new System.Drawing.Size(114, 40);
+            this.btnTHEM.TabIndex = 14;
+            this.btnTHEM.Text = "Thêm";
+            this.btnTHEM.TextColor = System.Drawing.Color.LavenderBlush;
+            this.btnTHEM.UseVisualStyleBackColor = false;
+            this.btnTHEM.Click += new System.EventHandler(this.btnTHEM_Click_1);
+            // 
+            // btnTIMKIEM
+            // 
+            this.btnTIMKIEM.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnTIMKIEM.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnTIMKIEM.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTIMKIEM.BackgroundImage")));
+            this.btnTIMKIEM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTIMKIEM.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTIMKIEM.BorderRadius = 10;
+            this.btnTIMKIEM.BorderSize = 0;
+            this.btnTIMKIEM.FlatAppearance.BorderSize = 0;
+            this.btnTIMKIEM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTIMKIEM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTIMKIEM.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.btnTIMKIEM.Location = new System.Drawing.Point(152, 361);
+            this.btnTIMKIEM.Name = "btnTIMKIEM";
+            this.btnTIMKIEM.Size = new System.Drawing.Size(114, 40);
+            this.btnTIMKIEM.TabIndex = 14;
+            this.btnTIMKIEM.Text = "Tìm Kiếm";
+            this.btnTIMKIEM.TextColor = System.Drawing.Color.LavenderBlush;
+            this.btnTIMKIEM.UseVisualStyleBackColor = false;
+            this.btnTIMKIEM.Click += new System.EventHandler(this.btnTIMKIEM_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnReset.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnReset.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReset.BackgroundImage")));
+            this.btnReset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnReset.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnReset.BorderRadius = 10;
+            this.btnReset.BorderSize = 0;
+            this.btnReset.FlatAppearance.BorderSize = 0;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.btnReset.Location = new System.Drawing.Point(32, 361);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(114, 40);
+            this.btnReset.TabIndex = 14;
+            this.btnReset.Text = "Reset";
+            this.btnReset.TextColor = System.Drawing.Color.LavenderBlush;
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.rjButton1_Click);
+            // 
+            // bunifuiOSSwitch1
+            // 
+            this.bunifuiOSSwitch1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuiOSSwitch1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuiOSSwitch1.BackgroundImage")));
+            this.bunifuiOSSwitch1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuiOSSwitch1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuiOSSwitch1.Location = new System.Drawing.Point(672, 75);
+            this.bunifuiOSSwitch1.Name = "bunifuiOSSwitch1";
+            this.bunifuiOSSwitch1.OffColor = System.Drawing.Color.Gray;
+            this.bunifuiOSSwitch1.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(54)))), ((int)(((byte)(159)))));
+            this.bunifuiOSSwitch1.Size = new System.Drawing.Size(43, 25);
+            this.bunifuiOSSwitch1.TabIndex = 13;
+            this.bunifuiOSSwitch1.Value = true;
+            this.bunifuiOSSwitch1.OnValueChange += new System.EventHandler(this.bunifuiOSSwitch1_OnValueChange);
+            // 
+            // pcboxANH1
+            // 
+            this.pcboxANH1.BackColor = System.Drawing.Color.White;
+            this.pcboxANH1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcboxANH1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pcboxANH1.Location = new System.Drawing.Point(2, 2);
+            this.pcboxANH1.Name = "pcboxANH1";
+            this.pcboxANH1.Size = new System.Drawing.Size(293, 147);
+            this.pcboxANH1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcboxANH1.TabIndex = 9;
+            this.pcboxANH1.TabStop = false;
             // 
             // THONGTINTOUR
             // 
@@ -882,10 +882,10 @@
             this.Text = "THONGTINTOUR";
             this.Load += new System.EventHandler(this.THONGTINTOUR_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTHONGTINTOUR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxANH1)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxANH2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcboxANH3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcboxANH2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcboxANH1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

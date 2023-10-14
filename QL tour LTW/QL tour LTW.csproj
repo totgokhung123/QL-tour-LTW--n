@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DANGKYTOUR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANGKYTOUR.Designer.cs">
+      <DependentUpon>DANGKYTOUR.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainQLTOUR.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UIcustom\RJTextBox.Designer.cs" />
+    <EmbeddedResource Include="DANGKYTOUR.resx">
+      <DependentUpon>DANGKYTOUR.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
