@@ -196,6 +196,7 @@
             this.dgvDSKHACHHANG.Size = new System.Drawing.Size(1187, 340);
             this.dgvDSKHACHHANG.TabIndex = 28;
             this.dgvDSKHACHHANG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSKHACHHANG_CellClick);
+            this.dgvDSKHACHHANG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSKHACHHANG_CellContentClick);
             // 
             // Column1
             // 
@@ -265,7 +266,7 @@
             this.bunifuSeparator1.Location = new System.Drawing.Point(0, 29);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(1854, 31);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(1918, 31);
             this.bunifuSeparator1.TabIndex = 31;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;

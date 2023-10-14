@@ -331,5 +331,10 @@ namespace QL_tour_LTW
         {
             this.mainForm = form;
         }
+
+        private void dgvDSKHACHHANG_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
