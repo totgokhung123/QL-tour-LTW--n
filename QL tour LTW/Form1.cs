@@ -64,8 +64,8 @@ namespace QL_tour_LTW
                     if (flpanelQLTOUR.Height >= 143)
                     {
                         QLTOURtimer.Start();
-                        panelQLNV.Height -= 20;
-                        if (panelQLNV.Height <= 40)
+                        flpanelQLTOUR.Height -= 20;
+                        if (flpanelQLTOUR.Height <= 40)
                         {
                             QLTOURtime = false;
                             QLTOURtimer.Stop();
@@ -168,7 +168,7 @@ namespace QL_tour_LTW
         private void formQLNV_FormClosed(object sender, FormClosedEventArgs e)
         {
             formQLNV = null;
-            formTOUR = null;
+           // formTOUR = null;
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)

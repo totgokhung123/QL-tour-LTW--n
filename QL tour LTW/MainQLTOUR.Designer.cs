@@ -45,15 +45,17 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(977, 27);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1223, 27);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panelLoadFormTOUR
             // 
-            this.panelLoadFormTOUR.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelLoadFormTOUR.Location = new System.Drawing.Point(0, 52);
+            this.panelLoadFormTOUR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelLoadFormTOUR.Location = new System.Drawing.Point(0, 30);
             this.panelLoadFormTOUR.Name = "panelLoadFormTOUR";
-            this.panelLoadFormTOUR.Size = new System.Drawing.Size(977, 658);
+            this.panelLoadFormTOUR.Size = new System.Drawing.Size(1220, 680);
             this.panelLoadFormTOUR.TabIndex = 2;
             this.panelLoadFormTOUR.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.panelLoadFormTOUR_ControlAdded);
             // 
@@ -65,7 +67,7 @@
             this.panelLinkLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLinkLabel.Location = new System.Drawing.Point(0, 27);
             this.panelLinkLabel.Name = "panelLinkLabel";
-            this.panelLinkLabel.Size = new System.Drawing.Size(977, 30);
+            this.panelLinkLabel.Size = new System.Drawing.Size(1223, 30);
             this.panelLinkLabel.TabIndex = 3;
             // 
             // lbCACH
@@ -114,10 +116,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(977, 710);
+            this.ClientSize = new System.Drawing.Size(1223, 710);
             this.Controls.Add(this.panelLinkLabel);
-            this.Controls.Add(this.panelLoadFormTOUR);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.panelLoadFormTOUR);
             this.Name = "MainQLTOUR";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainQLTOUR";

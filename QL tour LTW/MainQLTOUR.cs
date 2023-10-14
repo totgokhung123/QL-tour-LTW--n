@@ -24,8 +24,9 @@ namespace QL_tour_LTW
             f.TopLevel = false;
             f.AutoScroll = true;
             f.FormBorderStyle = FormBorderStyle.None;
-            f.Dock = DockStyle.Fill;
-            f.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Bottom | AnchorStyles.Right;
+           // f.Dock = DockStyle.Fill;
+            f.Anchor = AnchorStyles.Top| AnchorStyles.Left | AnchorStyles.Bottom ;
+            //| AnchorStyles.Right
             this.panelLoadFormTOUR.Controls.Add(f);
             f.Show();
 
@@ -33,7 +34,7 @@ namespace QL_tour_LTW
         private void MainQLTOUR_Load(object sender, EventArgs e)
         {
             lbCACH.Visible = false;
-            linklbThemTOUR.Visible = false;            
+            linklbThemTOUR.Visible = false;
             THONGTINTOUR tour = new THONGTINTOUR();
             tour.SetMainForm(this);
             OPENFORM(tour);
@@ -60,19 +61,8 @@ namespace QL_tour_LTW
         ThemTour formthemtour;
         private void linklbThemTOUR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (formthemtour == null)
-            {
-                ThemTour themtour = new ThemTour();
-                OPENFORM(themtour);
                 lbCACH.Visible = true;
                 linklbThemTOUR.Visible = true;
-            }
-            else
-            {
-                formthemtour.Activate();
-                lbCACH.Visible = true;
-                linklbThemTOUR.Visible = true;
-            }
         }
 
         private void panelLoadFormTOUR_ControlAdded(object sender, ControlEventArgs e)
