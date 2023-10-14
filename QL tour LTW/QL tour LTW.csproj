@@ -66,6 +66,20 @@
     <Compile Include="MainQLTOUR.Designer.cs">
       <DependentUpon>MainQLTOUR.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModelQLTOUR\DIEMDEN.cs" />
+    <Compile Include="ModelQLTOUR\DIEMDI.cs" />
+    <Compile Include="ModelQLTOUR\HOADON.cs" />
+    <Compile Include="ModelQLTOUR\KHACHHANG.cs" />
+    <Compile Include="ModelQLTOUR\KHACHSAN.cs" />
+    <Compile Include="ModelQLTOUR\LOAITOUR.cs" />
+    <Compile Include="ModelQLTOUR\NHANVIEN.cs" />
+    <Compile Include="ModelQLTOUR\PHUONGTIEN.cs" />
+    <Compile Include="ModelQLTOUR\QLTOURDBContext.cs" />
+    <Compile Include="ModelQLTOUR\sysdiagram.cs" />
+    <Compile Include="ModelQLTOUR\TAIKHOAN.cs" />
+    <Compile Include="ModelQLTOUR\TAIKHOANEMAIL.cs" />
+    <Compile Include="ModelQLTOUR\TKUSER.cs" />
+    <Compile Include="ModelQLTOUR\TOUR.cs" />
     <Compile Include="ThemTour.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,19 +98,6 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIproperties.cs" />
-    <Compile Include="ModelQLTOUR\DIEMDEN.cs" />
-    <Compile Include="ModelQLTOUR\DIEMDI.cs" />
-    <Compile Include="ModelQLTOUR\HOADON.cs" />
-    <Compile Include="ModelQLTOUR\KHACHHANG.cs" />
-    <Compile Include="ModelQLTOUR\KHACHSAN.cs" />
-    <Compile Include="ModelQLTOUR\LOAITOUR.cs" />
-    <Compile Include="ModelQLTOUR\NHANVIEN.cs" />
-    <Compile Include="ModelQLTOUR\PHUONGTIEN.cs" />
-    <Compile Include="ModelQLTOUR\QLTOURDBContext.cs" />
-    <Compile Include="ModelQLTOUR\sysdiagram.cs" />
-    <Compile Include="ModelQLTOUR\TAIKHOAN.cs" />
-    <Compile Include="ModelQLTOUR\TAIKHOANEMAIL.cs" />
-    <Compile Include="ModelQLTOUR\TOUR.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLThongTinNV.cs">
