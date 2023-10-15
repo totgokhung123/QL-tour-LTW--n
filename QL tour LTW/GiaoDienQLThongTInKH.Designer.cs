@@ -62,24 +62,24 @@
             // lblNgangCach
             // 
             this.lblNgangCach.AutoSize = true;
-            this.lblNgangCach.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNgangCach.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNgangCach.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblNgangCach.Location = new System.Drawing.Point(288, 7);
+            this.lblNgangCach.Location = new System.Drawing.Point(288, 3);
             this.lblNgangCach.Name = "lblNgangCach";
-            this.lblNgangCach.Size = new System.Drawing.Size(18, 25);
+            this.lblNgangCach.Size = new System.Drawing.Size(24, 31);
             this.lblNgangCach.TabIndex = 1;
             this.lblNgangCach.Text = "/";
             // 
             // linklblThemKH
             // 
             this.linklblThemKH.AutoSize = true;
-            this.linklblThemKH.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linklblThemKH.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linklblThemKH.ForeColor = System.Drawing.Color.MidnightBlue;
             this.linklblThemKH.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linklblThemKH.LinkColor = System.Drawing.Color.MidnightBlue;
-            this.linklblThemKH.Location = new System.Drawing.Point(303, 7);
+            this.linklblThemKH.Location = new System.Drawing.Point(303, 3);
             this.linklblThemKH.Name = "linklblThemKH";
-            this.linklblThemKH.Size = new System.Drawing.Size(203, 25);
+            this.linklblThemKH.Size = new System.Drawing.Size(210, 31);
             this.linklblThemKH.TabIndex = 0;
             this.linklblThemKH.TabStop = true;
             this.linklblThemKH.Text = "Thêm Khách Hàng";
@@ -87,13 +87,13 @@
             // linklblTHONGTINKH
             // 
             this.linklblTHONGTINKH.AutoSize = true;
-            this.linklblTHONGTINKH.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linklblTHONGTINKH.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linklblTHONGTINKH.ForeColor = System.Drawing.Color.MidnightBlue;
             this.linklblTHONGTINKH.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linklblTHONGTINKH.LinkColor = System.Drawing.Color.MidnightBlue;
-            this.linklblTHONGTINKH.Location = new System.Drawing.Point(13, 7);
+            this.linklblTHONGTINKH.Location = new System.Drawing.Point(13, 3);
             this.linklblTHONGTINKH.Name = "linklblTHONGTINKH";
-            this.linklblTHONGTINKH.Size = new System.Drawing.Size(250, 25);
+            this.linklblTHONGTINKH.Size = new System.Drawing.Size(259, 31);
             this.linklblTHONGTINKH.TabIndex = 0;
             this.linklblTHONGTINKH.TabStop = true;
             this.linklblTHONGTINKH.Text = "Thông Tin Khách Hàng";

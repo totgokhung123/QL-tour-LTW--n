@@ -13,7 +13,7 @@ namespace QL_tour_LTW
 {
     public partial class Form1 : Form
     {
-        QLThongTinNV formQLNV;
+        GiaoDienDangNhap formQLNV;
         public Form1()
         {
             InitializeComponent();
@@ -151,7 +151,7 @@ namespace QL_tour_LTW
         {
             if(formQLNV == null)
             {
-                formQLNV = new QLThongTinNV();
+                formQLNV = new GiaoDienDangNhap();
                 formQLNV.FormClosed += formQLNV_FormClosed;
                 formQLNV.MdiParent = this;
                 formQLNV.Dock = DockStyle.Fill;

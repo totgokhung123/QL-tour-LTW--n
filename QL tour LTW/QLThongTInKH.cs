@@ -185,16 +185,16 @@ namespace QL_tour_LTW
 
         private void btnTHEM_Click(object sender, EventArgs e)
         {
-            ThemMoiKH themMoiKH = new ThemMoiKH();
-            themMoiKH.ShowDialog();
-            loadfrm();
-            //if(mainForm != null)
-            //{
-            //    ThemMoiKH themmoi = new ThemMoiKH();
-            //    mainForm.openForm(themmoi);
-            //    mainForm.linklblThemKH.Visible = true;
-            //    mainForm.lblNgangCach.Visible = true;
-            //} 
+            //ThemMoiKH themMoiKH = new ThemMoiKH();
+            //themMoiKH.ShowDialog();
+            //loadfrm();
+            if (mainForm != null)
+            {
+                ThemMoiKH themmoi = new ThemMoiKH();
+                mainForm.openForm(themmoi);
+                mainForm.linklblThemKH.Visible = true;
+                mainForm.lblNgangCach.Visible = true;
+            }
         }
 
         private void btnXOA_Click(object sender, EventArgs e)
@@ -220,11 +220,12 @@ namespace QL_tour_LTW
         {
             try
             {
-                if ((txtMAKH.Texts == "" || txtHO.Texts == "" || txtTEN.Texts == "" ||
-                        txtSODT.Texts == "" || txtCCCD.Texts == "" || txtEMAIL.Texts == "") && !checkThongTinKhachHang())
+                if (txtMAKH.Texts == "" || txtHO.Texts == "" || txtTEN.Texts == "" ||
+                        txtSODT.Texts == "" || txtCCCD.Texts == "" || txtEMAIL.Texts == "" )
                     MessageBox.Show("Thiếu thông tin khách hàng!", "thông báo");
                 else
                 {
+                    checkThongTinKhachHang();
                     int seledtedRow = GetSelectedRow(txtMAKH.Texts);
                     if (seledtedRow == -1)
                     {
@@ -291,39 +292,39 @@ namespace QL_tour_LTW
             }
         }
 
-        private bool checkThongTinKhachHang()
+        private void checkThongTinKhachHang()
         {
             if (txtMAKH.Texts.Length > 11)
             {
                 MessageBox.Show("Mã khách hàng không quá 11 ký tự!", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                return;
             }
             else if (txtHO.Texts.Length > 32)
             {
                 MessageBox.Show("Hj của khánh hàng không quá 32 ký tự!", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                return;
             }
             else if (txtTEN.Texts.Length > 11)
             {
                 MessageBox.Show("Tên khách hàng không quá 11 ký tự!", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                return;
             }
             else if (txtSODT.Texts.Length > 13)
             {
                 MessageBox.Show("Số điện thoại không quá 13 số!", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                return;
             }
             else if (txtCCCD.Texts.Length > 13)
             {
                 MessageBox.Show("CCCD không quá 13 số!", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                return;
             }
             else if (txtEMAIL.Texts.Length > 254)
             {
                 MessageBox.Show("Email không quá 254 ký tự!", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                return;
             }
-            return true;
+            
         }
 
         private GiaoDienQLThongTInKH mainForm;
@@ -335,6 +336,125 @@ namespace QL_tour_LTW
         private void dgvDSKHACHHANG_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txtMAKH_Enter(object sender, EventArgs e)
+        {
+            txtMAKH.BackColor = Color.Gainsboro;
+        }
+
+        private void txtMAKH_Leave(object sender, EventArgs e)
+        {
+            txtMAKH.BackColor = Color.White;
+        }
+
+        private void txtHO_Enter(object sender, EventArgs e)
+        {
+            txtHO.BackColor = Color.Gainsboro;
+        }
+
+        private void txtHO_Leave(object sender, EventArgs e)
+        {
+            txtHO.BackColor = Color.White;
+        }
+
+        private void txtTEN_Enter(object sender, EventArgs e)
+        {
+            txtTEN.BackColor = Color.Gainsboro;
+        }
+
+        private void txtTEN_Leave(object sender, EventArgs e)
+        {
+            txtTEN.BackColor = Color.White;
+        }
+
+        private void txtSODT_Enter(object sender, EventArgs e)
+        {
+            txtSODT.BackColor = Color.Gainsboro;
+        }
+
+        private void txtSODT_Leave(object sender, EventArgs e)
+        {
+            txtSODT.BackColor= Color.White;
+        }
+
+        private void txtCCCD_Enter(object sender, EventArgs e)
+        {
+            txtCCCD.BackColor = Color.Gainsboro;
+        }
+
+        private void txtCCCD_Leave(object sender, EventArgs e)
+        {
+            txtCCCD.BackColor= Color.White;
+        }
+
+        private void txtEMAIL_Enter(object sender, EventArgs e)
+        {
+            txtEMAIL.BackColor = Color.Gainsboro;
+        }
+
+        private void txtEMAIL_Leave(object sender, EventArgs e)
+        {
+            txtEMAIL.BackColor = Color.White;
+        }
+
+        private void txtSLTV_Enter(object sender, EventArgs e)
+        {
+            txtSLTV.BackColor = Color.Gainsboro;
+        }
+
+        private void txtSLTV_Leave(object sender, EventArgs e)
+        {
+            txtSLTV.BackColor = Color.White;
+        }
+        private void btnRESET_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnRESET.BorderSize = 0;
+        }
+        private void QLThongTInKH_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnRESET.BorderSize = 0;
+            btnTHEM.BorderSize = 0;
+            btnTIMKIEM.BorderSize = 0;
+            btnXOA.BorderSize = 0;
+            btnCAPNHAT.BorderSize = 0;
+            btnTROVE.BorderSize = 0;
+        }
+
+        private void btnRESET_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnRESET.BorderSize = 3;
+            btnRESET.BorderColor = Color.MidnightBlue;
+        }
+
+        private void btnTIMKIEM_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnTIMKIEM.BorderSize = 3;
+            btnTIMKIEM.BorderColor = Color.MidnightBlue;
+        }
+
+        private void btnTHEM_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnTHEM.BorderSize = 3;
+            btnTHEM.BorderColor = Color.MidnightBlue;
+        }
+
+        private void btnXOA_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnXOA.BorderSize = 3;
+            btnXOA.BorderColor = Color.MidnightBlue;
+        }
+
+        private void btnCAPNHAT_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnCAPNHAT.BorderSize = 3;
+            btnCAPNHAT.BorderColor = Color.MidnightBlue;
+        }
+
+        private void btnTROVE_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnTROVE.BorderSize = 3;
+            btnTROVE.BorderColor = Color.MidnightBlue;
         }
     }
 }

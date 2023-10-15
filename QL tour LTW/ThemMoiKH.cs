@@ -33,11 +33,12 @@ namespace QL_tour_LTW
         {
             try
             {
-                if ((txtMAKH.Texts == "" || txtHO.Texts == "" || txtTEN.Texts == "" ||
-                    txtSODT.Texts == "" || txtCCCD.Texts == "" || txtEMAIL.Texts == "") && !checkThongTinKhachHang())
+                if (txtMAKH.Texts == "" || txtHO.Texts == "" || txtTEN.Texts == "" ||
+                    txtSODT.Texts == "" || txtCCCD.Texts == "" || txtEMAIL.Texts == "")
                     MessageBox.Show("Thiếu thông tin khách hàng!", "thông báo");
                 else
                 {
+                    checkThongTinKhachHang();
                     if(txtSLTV.Texts != "")
                     {
                         KHACHHANG kh = new KHACHHANG()
@@ -86,39 +87,109 @@ namespace QL_tour_LTW
                 Close();
             }
         }
-        private bool checkThongTinKhachHang()
+        private void checkThongTinKhachHang()
         {
             if (txtMAKH.Texts.Length > 11)
             {
                 MessageBox.Show("Mã khách hàng không quá 11 ký tự!", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                return;
             }
             else if (txtHO.Texts.Length > 32)
             {
                 MessageBox.Show("Hj của khánh hàng không quá 32 ký tự!", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                return;
             }
             else if (txtTEN.Texts.Length > 11)
             {
                 MessageBox.Show("Tên khách hàng không quá 11 ký tự!", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                return;
             }
             else if (txtSODT.Texts.Length > 13)
             {
                 MessageBox.Show("Số điện thoại không quá 13 số!", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                return;
             }
             else if (txtCCCD.Texts.Length > 13)
             {
                 MessageBox.Show("CCCD không quá 13 số!", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                return;
             }
             else if (txtEMAIL.Texts.Length > 254)
             {
                 MessageBox.Show("Email không quá 254 ký tự!", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                return;
             }
-            return true;
+            
+        }
+
+        private void txtMAKH_Enter(object sender, EventArgs e)
+        {
+            txtMAKH.BackColor = Color.Gainsboro;
+        }
+
+        private void txtMAKH_Leave(object sender, EventArgs e)
+        {
+            txtMAKH.BackColor = Color.White;
+        }
+
+        private void txtHO_Enter(object sender, EventArgs e)
+        {
+            txtHO.BackColor = Color.Gainsboro;
+        }
+
+        private void txtHO_Leave(object sender, EventArgs e)
+        {
+            txtHO.BackColor = Color.White;
+        }
+
+        private void txtTEN_Enter(object sender, EventArgs e)
+        {
+            txtTEN.BackColor = Color.Gainsboro;
+        }
+
+        private void txtTEN_Leave(object sender, EventArgs e)
+        {
+            txtTEN.BackColor = Color.White;
+        }
+
+        private void txtSODT_Enter(object sender, EventArgs e)
+        {
+            txtSODT.BackColor = Color.Gainsboro;
+        }
+
+        private void txtSODT_Leave(object sender, EventArgs e)
+        {
+            txtSODT.BackColor= Color.White;
+        }
+
+        private void txtCCCD_Enter(object sender, EventArgs e)
+        {
+            txtCCCD.BackColor = Color.Gainsboro;
+        }
+
+        private void txtCCCD_Leave(object sender, EventArgs e)
+        {
+            txtCCCD.BackColor = Color.White;
+        }
+
+        private void txtEMAIL_Enter(object sender, EventArgs e)
+        {
+            txtEMAIL.BackColor = Color.Gainsboro;
+        }
+
+        private void txtEMAIL_Leave(object sender, EventArgs e)
+        {
+            txtEMAIL.BackColor = Color.White;
+        }
+
+        private void txtSLTV_Enter(object sender, EventArgs e)
+        {
+            txtSLTV.BackColor = Color.Gainsboro;
+        }
+
+        private void txtSLTV_Leave(object sender, EventArgs e)
+        {
+            txtSLTV.BackColor = Color.White;
         }
     }
 }
