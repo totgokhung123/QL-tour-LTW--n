@@ -85,6 +85,7 @@
             // linklbThemTOUR
             // 
             this.linklbThemTOUR.AutoSize = true;
+            this.linklbThemTOUR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linklbThemTOUR.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, System.Drawing.FontStyle.Bold);
             this.linklbThemTOUR.ForeColor = System.Drawing.Color.Black;
             this.linklbThemTOUR.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
@@ -101,6 +102,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel1.LinkColor = System.Drawing.Color.MidnightBlue;

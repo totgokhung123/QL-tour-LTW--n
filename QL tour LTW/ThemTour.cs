@@ -151,7 +151,7 @@ namespace QL_tour_LTW
                 {
                     MATOUR = txtMATOUR.Texts,
                     TENTOUR = txtTENTOUR.Texts,
-                    GIATOUR = int.Parse(txtGIATOUR.Texts),
+                    GIATOUR = decimal.Parse(txtGIATOUR.Texts),
                     NGAYDI = dtpNGAYDI.Value,
                     NGAYKETTHUC = dtpKETTHUC.Value,
                     MOTA = mota,
@@ -185,7 +185,7 @@ namespace QL_tour_LTW
             {                
                 update.MATOUR = txtMATOUR.Texts;
                 update.TENTOUR = txtTENTOUR.Texts;
-                update.GIATOUR = int.Parse(txtGIATOUR.Texts);
+                update.GIATOUR = decimal.Parse(txtGIATOUR.Texts);
                 update.NGAYDI = dtpNGAYDI.Value;
                 update.NGAYKETTHUC = dtpKETTHUC.Value;
                 update.MOTA = txtMOTA.Texts;

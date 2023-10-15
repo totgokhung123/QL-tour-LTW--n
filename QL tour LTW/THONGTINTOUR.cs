@@ -114,26 +114,18 @@ namespace QL_tour_LTW
         {
             string tentour = txtTENTOUR.Texts.Trim();
             string matour = txtMATOUR.Texts.Trim();
-
             DateTime ngaydi = DateTime.Parse(dtpNGAYDI.Value.ToString());
-            //txttesst.Text = dtpNGAYDI.Value.ToString();
             DateTime ngayketthuc = DateTime.Parse(dtpKETTHUC.Value.ToString());
-
             string mota = txtMOTA.Texts.Trim();
             string trangthai = txtTRANGTHAI.Texts.Trim();
-            string testcbb = cbbMALTOUR.SelectedText.ToString();
-            string loaitour = cbbMALTOUR.Text != "" ? cbbMALTOUR.SelectedValue.ToString() : "";
-            
+            string loaitour = cbbMALTOUR.Text != "" ? cbbMALTOUR.SelectedValue.ToString() : "";            
             string diemdi = cbbDIEMDI.Text != "" ? cbbDIEMDI.SelectedValue.ToString() : "";
-            txttesst.Text = diemdi;
             string diemden = cbbDIEMDEN.Text != "" ? cbbDIEMDEN.SelectedValue.ToString() : "";
             string phuongtien = cbbMAPT.Text != "" ? cbbMAPT.SelectedValue.ToString() : "";
-            string khachsan = cbbMAKS.Text != "" ? cbbMAKS.SelectedValue.ToString() : "";            
+            string khachsan = cbbMAKS.Text != "" ? cbbMAKS.SelectedValue.ToString() : "";     
+            //
             List<TOUR> result = new List<TOUR>();
-
             QLTOURDBContext context = new QLTOURDBContext();
-
-
             IQueryable<TOUR> query = context.TOURs;
             if (string.IsNullOrEmpty(tentour) && string.IsNullOrEmpty(matour) && string.IsNullOrEmpty(txtGIATOUR.Texts)
                && ngaydi == null && ngayketthuc == null && string.IsNullOrEmpty(cbbMALTOUR.Text)
@@ -316,6 +308,7 @@ namespace QL_tour_LTW
         private string getMaTour ;
         private void btnTHEM_Click_1(object sender, EventArgs e)
         {
+
             if (mainForm != null)
             {
                 getMaTour = txtMATOUR.Texts;
@@ -605,6 +598,51 @@ namespace QL_tour_LTW
         private void dtpKETTHUC_KeyPress(object sender, KeyPressEventArgs e)
         {
             
+        }
+        private void btnReset_MouseClick(object sender, MouseEventArgs e)
+        {
+            btnReset.BorderSize = 2;
+            btnReset.BorderColor = Color.MidnightBlue;
+        }
+
+        private void btnReset_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnReset.BorderSize = 0;          
+            btnTHEM.BorderSize = 0;
+            btnTIMKIEM.BorderSize = 0;
+            btnSUA.BorderSize = 0;
+            btnXOA.BorderSize = 0;
+            btnTROVE.BorderSize = 0;
+        }
+
+        private void btnTHEM_MouseClick(object sender, MouseEventArgs e)
+        {
+            btnTHEM.BorderSize = 2;
+            btnTHEM.BorderColor = Color.MidnightBlue;
+        }
+
+        private void btnTIMKIEM_MouseClick(object sender, MouseEventArgs e)
+        {
+            btnTIMKIEM.BorderSize = 2;
+            btnTIMKIEM.BorderColor = Color.MidnightBlue;
+        }
+
+        private void btnSUA_MouseClick(object sender, MouseEventArgs e)
+        {
+            btnSUA.BorderSize = 2;
+            btnSUA.BorderColor = Color.MidnightBlue;
+        }
+
+        private void btnXOA_MouseClick(object sender, MouseEventArgs e)
+        {
+            btnXOA.BorderSize = 2;
+            btnXOA.BorderColor = Color.MidnightBlue;
+        }
+
+        private void btnTROVE_MouseClick(object sender, MouseEventArgs e)
+        {
+            btnTROVE.BorderSize = 2;
+            btnTROVE.BorderColor = Color.MidnightBlue;
         }
     }
 }
