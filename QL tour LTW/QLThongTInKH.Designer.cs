@@ -265,9 +265,9 @@
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(112)))));
             this.bunifuSeparator1.LineThickness = 5;
             this.bunifuSeparator1.Location = new System.Drawing.Point(0, 30);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(2461, 31);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(2833, 31);
             this.bunifuSeparator1.TabIndex = 31;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
@@ -285,7 +285,7 @@
             this.txtSLTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSLTV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSLTV.Location = new System.Drawing.Point(627, 181);
-            this.txtSLTV.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtSLTV.Margin = new System.Windows.Forms.Padding(5);
             this.txtSLTV.Multiline = true;
             this.txtSLTV.Name = "txtSLTV";
             this.txtSLTV.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
@@ -297,7 +297,7 @@
             this.txtSLTV.Texts = "";
             this.txtSLTV.UnderlinedStyle = false;
             this.txtSLTV.Enter += new System.EventHandler(this.txtSLTV_Enter);
-            this.txtSLTV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCCCD_KeyPress);
+            this.txtSLTV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSODT_KeyPress);
             this.txtSLTV.Leave += new System.EventHandler(this.txtSLTV_Leave);
             // 
             // txtEMAIL
@@ -313,7 +313,7 @@
             this.txtEMAIL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEMAIL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtEMAIL.Location = new System.Drawing.Point(567, 129);
-            this.txtEMAIL.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtEMAIL.Margin = new System.Windows.Forms.Padding(5);
             this.txtEMAIL.Multiline = true;
             this.txtEMAIL.Name = "txtEMAIL";
             this.txtEMAIL.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
@@ -325,6 +325,7 @@
             this.txtEMAIL.Texts = "";
             this.txtEMAIL.UnderlinedStyle = false;
             this.txtEMAIL.Enter += new System.EventHandler(this.txtEMAIL_Enter);
+            this.txtEMAIL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEMAIL_KeyPress);
             this.txtEMAIL.Leave += new System.EventHandler(this.txtEMAIL_Leave);
             // 
             // txtSODT
@@ -340,7 +341,7 @@
             this.txtSODT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSODT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSODT.Location = new System.Drawing.Point(225, 240);
-            this.txtSODT.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtSODT.Margin = new System.Windows.Forms.Padding(5);
             this.txtSODT.Multiline = true;
             this.txtSODT.Name = "txtSODT";
             this.txtSODT.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
@@ -352,7 +353,7 @@
             this.txtSODT.Texts = "";
             this.txtSODT.UnderlinedStyle = false;
             this.txtSODT.Enter += new System.EventHandler(this.txtSODT_Enter);
-            this.txtSODT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCCCD_KeyPress);
+            this.txtSODT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSODT_KeyPress);
             this.txtSODT.Leave += new System.EventHandler(this.txtSODT_Leave);
             // 
             // txtTEN
@@ -368,7 +369,7 @@
             this.txtTEN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTEN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTEN.Location = new System.Drawing.Point(225, 185);
-            this.txtTEN.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTEN.Margin = new System.Windows.Forms.Padding(5);
             this.txtTEN.Multiline = true;
             this.txtTEN.Name = "txtTEN";
             this.txtTEN.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
@@ -380,7 +381,7 @@
             this.txtTEN.Texts = "";
             this.txtTEN.UnderlinedStyle = false;
             this.txtTEN.Enter += new System.EventHandler(this.txtTEN_Enter);
-            this.txtTEN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHO_KeyPress_1);
+            this.txtTEN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTEN_KeyPress);
             this.txtTEN.Leave += new System.EventHandler(this.txtTEN_Leave);
             // 
             // txtHO
@@ -396,7 +397,7 @@
             this.txtHO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHO.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtHO.Location = new System.Drawing.Point(227, 129);
-            this.txtHO.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtHO.Margin = new System.Windows.Forms.Padding(5);
             this.txtHO.Multiline = true;
             this.txtHO.Name = "txtHO";
             this.txtHO.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
@@ -408,7 +409,7 @@
             this.txtHO.Texts = "";
             this.txtHO.UnderlinedStyle = false;
             this.txtHO.Enter += new System.EventHandler(this.txtHO_Enter);
-            this.txtHO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHO_KeyPress_1);
+            this.txtHO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHO_KeyPress);
             this.txtHO.Leave += new System.EventHandler(this.txtHO_Leave);
             // 
             // txtCCCD
@@ -424,7 +425,7 @@
             this.txtCCCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCCCD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtCCCD.Location = new System.Drawing.Point(567, 85);
-            this.txtCCCD.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtCCCD.Margin = new System.Windows.Forms.Padding(5);
             this.txtCCCD.Multiline = true;
             this.txtCCCD.Name = "txtCCCD";
             this.txtCCCD.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
@@ -436,7 +437,7 @@
             this.txtCCCD.Texts = "";
             this.txtCCCD.UnderlinedStyle = false;
             this.txtCCCD.Enter += new System.EventHandler(this.txtCCCD_Enter);
-            this.txtCCCD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCCCD_KeyPress);
+            this.txtCCCD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSODT_KeyPress);
             this.txtCCCD.Leave += new System.EventHandler(this.txtCCCD_Leave);
             // 
             // txtMAKH
@@ -452,7 +453,7 @@
             this.txtMAKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMAKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMAKH.Location = new System.Drawing.Point(227, 78);
-            this.txtMAKH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMAKH.Margin = new System.Windows.Forms.Padding(5);
             this.txtMAKH.Multiline = true;
             this.txtMAKH.Name = "txtMAKH";
             this.txtMAKH.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
@@ -464,6 +465,7 @@
             this.txtMAKH.Texts = "";
             this.txtMAKH.UnderlinedStyle = false;
             this.txtMAKH.Enter += new System.EventHandler(this.txtMAKH_Enter);
+            this.txtMAKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMAKH_KeyPress);
             this.txtMAKH.Leave += new System.EventHandler(this.txtMAKH_Leave);
             // 
             // btnTROVE
@@ -655,7 +657,6 @@
             this.Name = "QLThongTInKH";
             this.Text = "QLThongTInKH";
             this.Load += new System.EventHandler(this.QLThongTInKH_Load);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCCCD_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSKHACHHANG)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
