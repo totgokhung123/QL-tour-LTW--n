@@ -1,4 +1,5 @@
-﻿using QL_tour_LTW.ModelQLTOUR;
+﻿using OfficeOpenXml;
+using QL_tour_LTW.ModelQLTOUR;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -716,6 +717,41 @@ namespace QL_tour_LTW
             {
                 e.Handled = true;
                 return;
+            }
+        }
+
+        private void btnXUATEXCEL_Click(object sender, EventArgs e)
+        {
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "Excel Files|*.xlsx";
+                saveFileDialog.Title = "Save Excel File";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = saveFileDialog.FileName;
+
+                    // Khởi tạo một package Excel
+                    using (ExcelPackage package = new ExcelPackage())
+                    {
+                        // Tạo một worksheet mới
+                        ExcelWorksheet worksheet = package.Workbook.Worksheets.Add("Sheet1");
+
+                        // Xuất dữ liệu từ DataGridView
+                        for (int i = 0; i < dgvDSNV.Rows.Count; i++)
+                        {
+                            for (int j = 0; j < dgvDSNV.Columns.Count; j++)
+                            {
+                                worksheet.Cells[i + 1, j + 1].Value = dgvDSNV.Rows[i].Cells[j].Value;
+                            }
+                        }
+
+                        // Lưu file Excel
+                        package.SaveAs(new FileInfo(filePath));
+                    }
+
+                    MessageBox.Show("Xuất file Excel thành công!");
+                }
             }
         }
     }

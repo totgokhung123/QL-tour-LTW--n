@@ -86,7 +86,7 @@ namespace QL_tour_LTW
         {
 
             bool rememberPassword = GetRememberPasswordStatus();
-            ckbNHOMATKHAU.Checked = rememberPassword;
+            //ckbNHOMATKHAU.Checked = rememberPassword;
 
             if (rememberPassword)
             {

@@ -67,6 +67,7 @@
             this.btXoa = new CustomControls.RJControls.RJButton();
             this.btSửa = new CustomControls.RJControls.RJButton();
             this.btThem = new CustomControls.RJControls.RJButton();
+            this.btnXUATEXCEL = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAnh)).BeginInit();
             this.SuspendLayout();
@@ -339,7 +340,7 @@
             this.bunifuSeparator1.Location = new System.Drawing.Point(4, 38);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(3683, 25);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(3860, 25);
             this.bunifuSeparator1.TabIndex = 56;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
@@ -583,7 +584,7 @@
             this.btXoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btXoa.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoa.ForeColor = System.Drawing.Color.White;
-            this.btXoa.Location = new System.Drawing.Point(885, 363);
+            this.btXoa.Location = new System.Drawing.Point(735, 363);
             this.btXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(115, 46);
@@ -607,7 +608,7 @@
             this.btSửa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btSửa.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSửa.ForeColor = System.Drawing.Color.White;
-            this.btSửa.Location = new System.Drawing.Point(750, 363);
+            this.btSửa.Location = new System.Drawing.Point(600, 363);
             this.btSửa.Margin = new System.Windows.Forms.Padding(2);
             this.btSửa.Name = "btSửa";
             this.btSửa.Size = new System.Drawing.Size(115, 46);
@@ -630,7 +631,7 @@
             this.btThem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btThem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThem.ForeColor = System.Drawing.Color.White;
-            this.btThem.Location = new System.Drawing.Point(617, 363);
+            this.btThem.Location = new System.Drawing.Point(467, 363);
             this.btThem.Margin = new System.Windows.Forms.Padding(2);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(115, 46);
@@ -640,11 +641,35 @@
             this.btThem.UseVisualStyleBackColor = false;
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
+            // btnXUATEXCEL
+            // 
+            this.btnXUATEXCEL.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnXUATEXCEL.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnXUATEXCEL.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXUATEXCEL.BackgroundImage")));
+            this.btnXUATEXCEL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnXUATEXCEL.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnXUATEXCEL.BorderRadius = 10;
+            this.btnXUATEXCEL.BorderSize = 0;
+            this.btnXUATEXCEL.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXUATEXCEL.FlatAppearance.BorderSize = 0;
+            this.btnXUATEXCEL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXUATEXCEL.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXUATEXCEL.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.btnXUATEXCEL.Location = new System.Drawing.Point(866, 365);
+            this.btnXUATEXCEL.Name = "btnXUATEXCEL";
+            this.btnXUATEXCEL.Size = new System.Drawing.Size(119, 43);
+            this.btnXUATEXCEL.TabIndex = 58;
+            this.btnXUATEXCEL.Text = "Xuất Excel";
+            this.btnXUATEXCEL.TextColor = System.Drawing.Color.LavenderBlush;
+            this.btnXUATEXCEL.UseVisualStyleBackColor = false;
+            this.btnXUATEXCEL.Click += new System.EventHandler(this.btnXUATEXCEL_Click);
+            // 
             // QLNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1189, 710);
+            this.Controls.Add(this.btnXUATEXCEL);
             this.Controls.Add(this.dgvDSNV);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.bunifuSeparator1);
@@ -717,5 +742,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column8;
+        private CustomControls.RJControls.RJButton btnXUATEXCEL;
     }
 }

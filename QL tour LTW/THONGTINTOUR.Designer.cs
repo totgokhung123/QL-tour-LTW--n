@@ -28,13 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(THONGTINTOUR));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvTHONGTINTOUR = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -62,22 +78,6 @@
             this.pcboxANH3 = new System.Windows.Forms.PictureBox();
             this.pcboxANH2 = new System.Windows.Forms.PictureBox();
             this.bunifuiOSSwitch1 = new Bunifu.Framework.UI.BunifuiOSSwitch();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.txtTRANGTHAI = new CustomControls.RJControls.RJTextBox();
             this.txtMOTA = new CustomControls.RJControls.RJTextBox();
             this.txtGIATOUR = new CustomControls.RJControls.RJTextBox();
@@ -89,6 +89,7 @@
             this.btnTHEM = new CustomControls.RJControls.RJButton();
             this.btnTIMKIEM = new CustomControls.RJControls.RJButton();
             this.btnReset = new CustomControls.RJControls.RJButton();
+            this.btnXUATEXCEL = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTHONGTINTOUR)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcboxANH1)).BeginInit();
@@ -100,21 +101,21 @@
             // 
             this.dgvTHONGTINTOUR.AllowUserToAddRows = false;
             this.dgvTHONGTINTOUR.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvTHONGTINTOUR.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvTHONGTINTOUR.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvTHONGTINTOUR.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTHONGTINTOUR.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvTHONGTINTOUR.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvTHONGTINTOUR.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTHONGTINTOUR.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTHONGTINTOUR.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTHONGTINTOUR.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvTHONGTINTOUR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTHONGTINTOUR.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -133,14 +134,14 @@
             this.Column14,
             this.Column15,
             this.Column16});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTHONGTINTOUR.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTHONGTINTOUR.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgvTHONGTINTOUR.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvTHONGTINTOUR.DoubleBuffered = true;
             this.dgvTHONGTINTOUR.EnableHeadersVisualStyles = false;
@@ -156,6 +157,117 @@
             this.dgvTHONGTINTOUR.TabIndex = 0;
             this.dgvTHONGTINTOUR.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTHONGTINTOUR_CellClick);
             this.dgvTHONGTINTOUR.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTHONGTINTOUR_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Mã tour";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Tên tour";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Giá tour";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            dataGridViewCellStyle13.Format = "d";
+            dataGridViewCellStyle13.NullValue = null;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle13;
+            this.Column4.HeaderText = "Ngày đi";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            dataGridViewCellStyle14.Format = "d";
+            dataGridViewCellStyle14.NullValue = null;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle14;
+            this.Column5.HeaderText = "Ngày kết thúc";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Mô tả";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Visible = false;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Trạng thái";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Visible = false;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Loại tour";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Visible = false;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Điểm đi";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Điểm đến";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Phương tiện";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Visible = false;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Khách sạn";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Visible = false;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "ANH";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Visible = false;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "ANH2";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            this.Column14.Visible = false;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "ANH3";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            this.Column15.Visible = false;
+            // 
+            // Column16
+            // 
+            this.Column16.FillWeight = 40F;
+            this.Column16.HeaderText = "Xóa";
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
             // 
             // label1
             // 
@@ -469,117 +581,6 @@
             this.bunifuiOSSwitch1.Value = true;
             this.bunifuiOSSwitch1.OnValueChange += new System.EventHandler(this.bunifuiOSSwitch1_OnValueChange);
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Mã tour";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tên tour";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Giá tour";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column4.HeaderText = "Ngày đi";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            dataGridViewCellStyle4.Format = "d";
-            dataGridViewCellStyle4.NullValue = null;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column5.HeaderText = "Ngày kết thúc";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Mô tả";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Visible = false;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Trạng thái";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Visible = false;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Loại tour";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Visible = false;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Điểm đi";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Điểm đến";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Phương tiện";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Visible = false;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Khách sạn";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.Visible = false;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "ANH";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            this.Column13.Visible = false;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "ANH2";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            this.Column14.Visible = false;
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "ANH3";
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
-            this.Column15.Visible = false;
-            // 
-            // Column16
-            // 
-            this.Column16.FillWeight = 40F;
-            this.Column16.HeaderText = "Xóa";
-            this.Column16.Name = "Column16";
-            this.Column16.ReadOnly = true;
-            // 
             // txtTRANGTHAI
             // 
             this.txtTRANGTHAI.BackColor = System.Drawing.SystemColors.Window;
@@ -754,7 +755,7 @@
             this.btnXOA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXOA.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXOA.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.btnXOA.Location = new System.Drawing.Point(916, 361);
+            this.btnXOA.Location = new System.Drawing.Point(787, 361);
             this.btnXOA.Name = "btnXOA";
             this.btnXOA.Size = new System.Drawing.Size(114, 40);
             this.btnXOA.TabIndex = 14;
@@ -780,7 +781,7 @@
             this.btnSUA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSUA.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSUA.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.btnSUA.Location = new System.Drawing.Point(796, 361);
+            this.btnSUA.Location = new System.Drawing.Point(667, 361);
             this.btnSUA.Name = "btnSUA";
             this.btnSUA.Size = new System.Drawing.Size(114, 40);
             this.btnSUA.TabIndex = 14;
@@ -806,7 +807,7 @@
             this.btnTHEM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTHEM.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTHEM.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.btnTHEM.Location = new System.Drawing.Point(676, 361);
+            this.btnTHEM.Location = new System.Drawing.Point(547, 361);
             this.btnTHEM.Name = "btnTHEM";
             this.btnTHEM.Size = new System.Drawing.Size(114, 40);
             this.btnTHEM.TabIndex = 14;
@@ -870,6 +871,32 @@
             this.btnReset.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnReset_MouseClick);
             this.btnReset.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnReset_MouseUp);
             // 
+            // btnXUATEXCEL
+            // 
+            this.btnXUATEXCEL.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnXUATEXCEL.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnXUATEXCEL.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXUATEXCEL.BackgroundImage")));
+            this.btnXUATEXCEL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnXUATEXCEL.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnXUATEXCEL.BorderRadius = 10;
+            this.btnXUATEXCEL.BorderSize = 0;
+            this.btnXUATEXCEL.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXUATEXCEL.FlatAppearance.BorderSize = 0;
+            this.btnXUATEXCEL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXUATEXCEL.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXUATEXCEL.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.btnXUATEXCEL.Location = new System.Drawing.Point(915, 361);
+            this.btnXUATEXCEL.Name = "btnXUATEXCEL";
+            this.btnXUATEXCEL.Size = new System.Drawing.Size(114, 40);
+            this.btnXUATEXCEL.TabIndex = 14;
+            this.btnXUATEXCEL.Text = "Xuất Excel";
+            this.btnXUATEXCEL.TextColor = System.Drawing.Color.LavenderBlush;
+            this.btnXUATEXCEL.UseVisualStyleBackColor = false;
+            this.btnXUATEXCEL.Click += new System.EventHandler(this.btnXUATEXCEL_Click);
+            this.btnXUATEXCEL.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnXOA_MouseClick);
+            this.btnXUATEXCEL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnXOA_MouseClick);
+            this.btnXUATEXCEL.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnReset_MouseUp);
+            // 
             // THONGTINTOUR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -885,6 +912,7 @@
             this.Controls.Add(this.txtTENTOUR);
             this.Controls.Add(this.txtMATOUR);
             this.Controls.Add(this.btnTROVE);
+            this.Controls.Add(this.btnXUATEXCEL);
             this.Controls.Add(this.btnXOA);
             this.Controls.Add(this.btnSUA);
             this.Controls.Add(this.btnTHEM);
@@ -985,5 +1013,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column16;
+        private CustomControls.RJControls.RJButton btnXUATEXCEL;
     }
 }

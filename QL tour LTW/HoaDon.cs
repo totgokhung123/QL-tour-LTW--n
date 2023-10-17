@@ -1,10 +1,12 @@
-﻿using QL_tour_LTW.ModelQLTOUR;
+﻿using OfficeOpenXml;
+using QL_tour_LTW.ModelQLTOUR;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -295,42 +297,30 @@ namespace QL_tour_LTW
         {
             Close();
         }
-
+        private void xoa(string sohd)
+        {
+            HOADON delete = context.HOADONs.FirstOrDefault(p => p.SOHD == sohd);
+            context.HOADONs.Remove(delete);
+            context.SaveChanges();
+            MessageBox.Show("Xóa thành công!", "Thông báo");
+            ResetText();
+        }
         private void btXoa_Click(object sender, EventArgs e)
         {
-            if (dgvDSHD.SelectedRows.Count > 0)
+            for (int i = 0; i < dgvDSHD.Rows.Count; i++)
             {
-                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
+                if (dgvDSHD.Rows[i].Cells[7].Value != null)
                 {
-                    int selectedRowIndex = dgvDSHD.SelectedRows[0].Index;
-                    string soHD = dgvDSHD.Rows[selectedRowIndex].Cells[0].Value.ToString();
-                    dgvDSHD.Rows.RemoveAt(selectedRowIndex);
-
-                    var hoadondl = context.HOADONs.SingleOrDefault(nv => nv.SOHD == soHD);
-                    if (hoadondl != null)
+                    if (MessageBox.Show("Bạn có chắc muốn xóa hóa đơn: " + dgvDSHD.Rows[i].Cells[0].Value.ToString() + " ?", "Xác Nhận Xóa !!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        context.HOADONs.Remove(hoadondl);
-                        context.SaveChanges();
-                        MessageBox.Show("Đã xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.cbbMaNV.Text = string.Empty;
-                        this.txtSoHD.Texts = string.Empty;
-                        this.txtThanhTien.Texts = string.Empty;
-                        this.cbbMaTour.Text = string.Empty;
-                        this.cbbMaKH.Text = string.Empty;
-                        this.txtTrangThai.Texts = string.Empty;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Hóa đơn không tồn tại trong CSDL.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //dgvDSNV.Rows.RemoveAt(i);
+                        xoa(dgvDSHD.Rows[i].Cells[0].Value.ToString());
                     }
                 }
             }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn một dòng để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            QLTOURDBContext context = new QLTOURDBContext();
+            List<HOADON> listNhanVien = context.HOADONs.ToList();
+            BindGridView(listNhanVien);
         }
         private void cbbMaTour_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -480,6 +470,53 @@ namespace QL_tour_LTW
                 listHoaDon = listHoaDon.Where(s => s.TRANGTHAI.Equals(txtTrangThai.Texts)).ToList();
             }
             BindGridView(listHoaDon);
+        }
+
+        private void btnXUATEXCEL_Click(object sender, EventArgs e)
+        {
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "Excel Files|*.xlsx";
+                saveFileDialog.Title = "Save Excel File";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = saveFileDialog.FileName;
+
+                    // Khởi tạo một package Excel
+                    using (ExcelPackage package = new ExcelPackage())
+                    {
+                        // Tạo một worksheet mới
+                        ExcelWorksheet worksheet = package.Workbook.Worksheets.Add("Sheet1");
+
+                        // Xuất dữ liệu từ DataGridView
+                        for (int i = 0; i < dgvDSHD.Rows.Count; i++)
+                        {
+                            for (int j = 0; j < dgvDSHD.Columns.Count; j++)
+                            {
+                                worksheet.Cells[i + 1, j + 1].Value = dgvDSHD.Rows[i].Cells[j].Value;
+                            }
+                        }
+
+                        // Lưu file Excel
+                        package.SaveAs(new FileInfo(filePath));
+                    }
+
+                    MessageBox.Show("Xuất file Excel thành công!");
+                }
+            }
+        }
+
+        private void dgvDSHD_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 7 && e.RowIndex >= 0)
+            {
+                DataGridViewCheckBoxCell cell = (DataGridViewCheckBoxCell)dgvDSHD.Rows[e.RowIndex].Cells[7];
+                bool currentValue = Convert.ToBoolean(cell.Value);
+                cell.Value = !currentValue;
+                dgvDSHD.EndEdit(); // Kết thúc chỉnh sửa ô để cập nhật giá trị
+                // Tiếp tục xử lý logic khác tại đây nếu cần thiết
+            }
         }
     }
 }
