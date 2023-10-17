@@ -87,7 +87,6 @@ namespace QL_tour_LTW
 
             bool rememberPassword = GetRememberPasswordStatus();
             //ckbNHOMATKHAU.Checked = rememberPassword;
-
             if (rememberPassword)
             {
                 // Nếu checkbox đã được chọn, lấy thông tin đăng nhập đã lưu
