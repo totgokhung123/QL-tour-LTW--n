@@ -199,24 +199,56 @@ namespace QL_tour_LTW
             }
         }
 
-        private void btnXOA_Click(object sender, EventArgs e)
+        private void xoa(string makh)
         {
-            int seledtedRow = GetSelectedRow(txtMAKH.Texts);
-            if (seledtedRow == -1)
+            QLTOURDBContext context = new QLTOURDBContext();
+            List<HOADON> hoadonlist = context.HOADONs.ToList();
+            KHACHHANG delete = context.KHACHHANGs.FirstOrDefault(p => p.MAKH.ToString() == makh);
+            foreach (var hoadon in hoadonlist)
             {
-                MessageBox.Show("Không có sinh viên!", "thông báo");
-                return;
-            }
-            else
-            {
-                if (MessageBox.Show("Bạn có muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (hoadon.MAKH.ToString() == makh)
                 {
-                    dgvDSKHACHHANG.Rows.RemoveAt(seledtedRow);
-                    context.KHACHHANGs.Remove(timKhanhHang(txtMAKH.Texts));
-                    context.SaveChanges();
+                    HOADON deletehoadonFKTOUR = context.HOADONs.FirstOrDefault(s => s.MAKH.ToString() == makh);
+                    if (delete != null)
+                    {
+                        context.HOADONs.Remove(deletehoadonFKTOUR);
+
+                        context.SaveChanges();
+                    }
                 }
             }
-            clearTextBox();
+            context.KHACHHANGs.Remove(delete);
+            context.SaveChanges();
+        }
+        private void btnXOA_Click(object sender, EventArgs e)
+        {
+            //int seledtedRow = GetSelectedRow(txtMAKH.Texts);
+            //if (seledtedRow == -1)
+            //{
+            //    MessageBox.Show("Không có sinh viên!", "thông báo");
+            //    return;
+            //}
+            //else
+            //{
+            //    if (MessageBox.Show("Bạn có muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            //    {
+            //        dgvDSKHACHHANG.Rows.RemoveAt(seledtedRow);
+            //        context.KHACHHANGs.Remove(timKhanhHang(txtMAKH.Texts));
+            //        context.SaveChanges();
+            //    }
+            //}
+            //clearTextBox();
+            for (int i = 0; i < dgvDSKHACHHANG.Rows.Count - 1; i++)
+            {
+                if (dgvDSKHACHHANG.Rows[i].Cells[7].Value != null)
+                {
+                    if (MessageBox.Show("Bạn có chắc muốn xóa khách hàng: " + dgvDSKHACHHANG.Rows[i].Cells[0].Value.ToString() + " ?", "Xác Nhận Xóa !!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        dgvDSKHACHHANG.Rows.RemoveAt(i);
+                        xoa(dgvDSKHACHHANG.Rows[i].Cells[0].Value.ToString());
+                    }
+                }
+            }
         }
         
         private void btnCAPNHAT_Click(object sender, EventArgs e)
@@ -414,7 +446,14 @@ namespace QL_tour_LTW
 
         private void dgvDSKHACHHANG_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.ColumnIndex == 7 && e.RowIndex >= 0)
+            {
+                DataGridViewCheckBoxCell cell = (DataGridViewCheckBoxCell)dgvDSKHACHHANG.Rows[e.RowIndex].Cells[7];
+                bool currentValue = Convert.ToBoolean(cell.Value);
+                cell.Value = !currentValue;
+                dgvDSKHACHHANG.EndEdit(); // Kết thúc chỉnh sửa ô để cập nhật giá trị
+                                          // Tiếp tục xử lý logic khác tại đây nếu cần thiết
+            }
         }
 
         private void txtMAKH_Enter(object sender, EventArgs e)
@@ -489,6 +528,13 @@ namespace QL_tour_LTW
         private void txtEMAIL_Leave(object sender, EventArgs e)
         {
             txtEMAIL.BackColor = Color.White;
+            //var checkEmail = context.KHACHHANGs.FirstOrDefault(s => s.EMAIL == txtEMAIL.Texts);
+            //if (checkEmail != null)
+            //{
+            //    MessageBox.Show("CCCD đã tồn tại!", "thông báo");
+
+            //    return;
+            //}
         }
 
         private void txtSLTV_Enter(object sender, EventArgs e)

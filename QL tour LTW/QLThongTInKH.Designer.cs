@@ -62,6 +62,7 @@
             this.btnTHEM = new CustomControls.RJControls.RJButton();
             this.btnTIMKIEM = new CustomControls.RJControls.RJButton();
             this.btnRESET = new CustomControls.RJControls.RJButton();
+            this.Column8 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSKHACHHANG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -172,7 +173,8 @@
             this.Column4,
             this.Column5,
             this.Column6,
-            this.Column7});
+            this.Column7,
+            this.Column8});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -267,7 +269,7 @@
             this.bunifuSeparator1.Location = new System.Drawing.Point(0, 30);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(2833, 31);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(2905, 31);
             this.bunifuSeparator1.TabIndex = 31;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
@@ -625,6 +627,14 @@
             this.btnRESET.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnRESET_MouseDown);
             this.btnRESET.MouseUp += new System.Windows.Forms.MouseEventHandler(this.QLThongTInKH_MouseUp);
             // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Xóa";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 125;
+            // 
             // QLThongTInKH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -694,5 +704,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column8;
     }
 }
