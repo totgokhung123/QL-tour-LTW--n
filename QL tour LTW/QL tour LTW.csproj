@@ -89,6 +89,12 @@
     <Compile Include="QLThongTinNV.Designer.cs">
       <DependentUpon>QLThongTinNV.cs</DependentUpon>
     </Compile>
+    <Compile Include="THONGTINTOUR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="THONGTINTOUR.Designer.cs">
+      <DependentUpon>THONGTINTOUR.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +110,9 @@
     </Compile>
     <EmbeddedResource Include="QLThongTinNV.resx">
       <DependentUpon>QLThongTinNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="THONGTINTOUR.resx">
+      <DependentUpon>THONGTINTOUR.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
