@@ -278,8 +278,7 @@ namespace QL_tour_LTW
             try
             {
                 checktxt();
-                int capnhat = checkMAtour(txtMATOUR.Texts);
-                txttesst.Text = capnhat.ToString();
+                int capnhat = checkMAtour(txtMATOUR.Texts);              
                 if (capnhat == 5)
                 {
                     them();
@@ -486,5 +485,37 @@ namespace QL_tour_LTW
                 return;
             }
         }
+
+        private void rjButton2_MouseDown(object sender, MouseEventArgs e)
+        {
+            rjButton2.BorderSize = 2;
+            rjButton2.BorderColor = Color.MidnightBlue;
+        }
+
+        private void rjButton2_MouseUp(object sender, MouseEventArgs e)
+        {
+            rjButton2.BorderSize = 0;
+            rjButton1.BorderSize = 0;
+        }
+
+        private void rjButton1_MouseDown(object sender, MouseEventArgs e)
+        {
+            rjButton1.BorderSize = 2;
+            rjButton1.BorderColor = Color.MidnightBlue;
+        }
+        private MainQLTOUR mainForm;
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            Close();
+            if (mainForm != null)
+            {
+               // getMaTour = txtMATOUR.Texts;
+                THONGTINTOUR themTourForm = new THONGTINTOUR();
+                mainForm.OPENFORM(themTourForm);
+                mainForm.linklbThemTOUR.Visible = false;
+                mainForm.lbCACH.Visible = false;
+            }
+        }
+        
     }
 }

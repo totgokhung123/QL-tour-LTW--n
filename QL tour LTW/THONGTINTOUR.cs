@@ -10,6 +10,7 @@ using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Security.Cryptography.Pkcs;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -495,9 +496,18 @@ namespace QL_tour_LTW
                 MessageBox.Show(ex.Message);
             }
         }
-
+        private bool ContainsDiacriticOrWhiteSpace(char c)
+        {
+            string diacriticsAndWhiteSpace = "ÀÁÂÃẠĂẮẰẤẦẴẶẤẨẪÈÉÊẺẼẸỀẾỂỄỆÌÍỈĨỊÒÓÔÕỌƠỚỜỢỞỠÙÚỦŨỤƯỨỪỬỮỰỲÝỶỸỴàáâãạăắằấầẵặấẩẫèéêẻẽẹềếểễệìíỉĩịòóôõọơớờợởỡùúủũụưứừửữựỳýỷỹỵ ";
+            return diacriticsAndWhiteSpace.Contains(c);
+        }
         private void txtMATOUR_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (ContainsDiacriticOrWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true; // Ngăn chặn ký tự có dấu và khoảng trắng được nhập vào
+                return;
+            }
             if (e.KeyChar == 22) // 22 là mã ASCII của ký tự Ctrl + V
             {
                 e.Handled = true;

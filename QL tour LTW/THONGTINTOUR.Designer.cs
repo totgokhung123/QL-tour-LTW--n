@@ -478,7 +478,7 @@
             // 
             // txttesst
             // 
-            this.txttesst.Location = new System.Drawing.Point(690, 37);
+            this.txttesst.Location = new System.Drawing.Point(694, 37);
             this.txttesst.Name = "txttesst";
             this.txttesst.Size = new System.Drawing.Size(100, 20);
             this.txttesst.TabIndex = 10;
@@ -501,6 +501,7 @@
             this.txtTRANGTHAI.BorderFocusColor = System.Drawing.Color.DarkSlateBlue;
             this.txtTRANGTHAI.BorderRadius = 5;
             this.txtTRANGTHAI.BorderSize = 2;
+            this.txtTRANGTHAI.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTRANGTHAI.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txtTRANGTHAI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTRANGTHAI.Location = new System.Drawing.Point(753, 165);
@@ -527,6 +528,7 @@
             this.txtMOTA.BorderFocusColor = System.Drawing.Color.DarkSlateBlue;
             this.txtMOTA.BorderRadius = 5;
             this.txtMOTA.BorderSize = 2;
+            this.txtMOTA.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMOTA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMOTA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMOTA.Location = new System.Drawing.Point(753, 99);
@@ -553,6 +555,7 @@
             this.txtGIATOUR.BorderFocusColor = System.Drawing.Color.DarkSlateBlue;
             this.txtGIATOUR.BorderRadius = 5;
             this.txtGIATOUR.BorderSize = 2;
+            this.txtGIATOUR.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGIATOUR.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txtGIATOUR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtGIATOUR.Location = new System.Drawing.Point(116, 204);
@@ -579,6 +582,7 @@
             this.txtTENTOUR.BorderFocusColor = System.Drawing.Color.DarkSlateBlue;
             this.txtTENTOUR.BorderRadius = 5;
             this.txtTENTOUR.BorderSize = 2;
+            this.txtTENTOUR.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTENTOUR.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txtTENTOUR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTENTOUR.Location = new System.Drawing.Point(116, 153);
@@ -605,6 +609,7 @@
             this.txtMATOUR.BorderFocusColor = System.Drawing.Color.DarkSlateBlue;
             this.txtMATOUR.BorderRadius = 5;
             this.txtMATOUR.BorderSize = 2;
+            this.txtMATOUR.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMATOUR.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txtMATOUR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMATOUR.Location = new System.Drawing.Point(116, 107);
@@ -705,7 +710,7 @@
             this.btnTROVE.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTROVE.FlatAppearance.BorderSize = 0;
             this.btnTROVE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTROVE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTROVE.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnTROVE.ForeColor = System.Drawing.Color.LavenderBlush;
             this.btnTROVE.Location = new System.Drawing.Point(1036, 361);
             this.btnTROVE.Name = "btnTROVE";
@@ -730,7 +735,7 @@
             this.btnXOA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXOA.FlatAppearance.BorderSize = 0;
             this.btnXOA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXOA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXOA.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXOA.ForeColor = System.Drawing.Color.LavenderBlush;
             this.btnXOA.Location = new System.Drawing.Point(916, 361);
             this.btnXOA.Name = "btnXOA";
@@ -756,7 +761,7 @@
             this.btnSUA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSUA.FlatAppearance.BorderSize = 0;
             this.btnSUA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSUA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSUA.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSUA.ForeColor = System.Drawing.Color.LavenderBlush;
             this.btnSUA.Location = new System.Drawing.Point(796, 361);
             this.btnSUA.Name = "btnSUA";
@@ -782,7 +787,7 @@
             this.btnTHEM.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTHEM.FlatAppearance.BorderSize = 0;
             this.btnTHEM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTHEM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTHEM.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTHEM.ForeColor = System.Drawing.Color.LavenderBlush;
             this.btnTHEM.Location = new System.Drawing.Point(676, 361);
             this.btnTHEM.Name = "btnTHEM";
@@ -808,7 +813,7 @@
             this.btnTIMKIEM.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTIMKIEM.FlatAppearance.BorderSize = 0;
             this.btnTIMKIEM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTIMKIEM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTIMKIEM.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTIMKIEM.ForeColor = System.Drawing.Color.LavenderBlush;
             this.btnTIMKIEM.Location = new System.Drawing.Point(152, 361);
             this.btnTIMKIEM.Name = "btnTIMKIEM";
@@ -834,7 +839,7 @@
             this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReset.FlatAppearance.BorderSize = 0;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.ForeColor = System.Drawing.Color.LavenderBlush;
             this.btnReset.Location = new System.Drawing.Point(32, 361);
             this.btnReset.Name = "btnReset";

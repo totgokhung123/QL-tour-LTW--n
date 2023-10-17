@@ -13,11 +13,12 @@ namespace QL_tour_LTW
 {
     public partial class Form1 : Form
     {
-        QLThongTinNV formQLNV;
-        public Form1()
+        private string tentaikhoan;
+        public Form1(string tentaikhoan)
         {
             InitializeComponent();
             mdiprop();
+            this.tentaikhoan = tentaikhoan;
         }
         private void mdiprop()
         {
@@ -34,6 +35,7 @@ namespace QL_tour_LTW
                 {
                     time = false;
                     menutimer1.Stop();
+                    panelTRANGCHU.Width = panelMenu.Width;
                     panelQLNV.Width = panelMenu.Width;
                     flpanelKH.Width = panelMenu.Width;
                     flpanelQLTOUR.Width = panelMenu.Width;
@@ -41,61 +43,62 @@ namespace QL_tour_LTW
                     flpanelQLDICHVU.Width = panelMenu.Width;
                     flpanelQLHETHONG.Width = panelMenu.Width;                    
                     panelthoat.Width = panelMenu.Width;
-                    if (panelQLNV.Height >= 143)
+                    panelKhungMENU.Width = panelMenu.Width;
+                    if (panelQLNV.Height >= 106)
                     {
                         QLNVtimer.Start();
                         panelQLNV.Height -= 20;
-                        if (panelQLNV.Height <= 40)
+                        if (panelQLNV.Height <= 49)
                         {
                             QLNVtime = false;
                             QLNVtimer.Stop();
                         }
                     }
-                    if (flpanelKH.Height >= 143)
+                    if (flpanelKH.Height >= 106)
                     {
                         QLKHtimer.Start();
                         flpanelKH.Height -= 20;
-                        if (flpanelKH.Height <= 40)
+                        if (flpanelKH.Height <= 49)
                         {
                             QLKHtime = false;
                             QLKHtimer.Stop();
                         }
                     }
-                    if (flpanelQLTOUR.Height >= 143)
+                    if (flpanelQLTOUR.Height >= 161)
                     {
                         QLTOURtimer.Start();
                         flpanelQLTOUR.Height -= 20;
-                        if (flpanelQLTOUR.Height <= 40)
+                        if (flpanelQLTOUR.Height <= 49)
                         {
                             QLTOURtime = false;
                             QLTOURtimer.Stop();
                         }
                     }
-                    if (flpanelHOADON.Height >= 143)
+                    if (flpanelHOADON.Height >= 160)
                     {
                         QLHOADONtimer.Start();
                         flpanelHOADON.Height -= 20;
-                        if (flpanelHOADON.Height <= 40)
+                        if (flpanelHOADON.Height <= 49)
                         {
                             QLHOADONtime = false;
                             QLHOADONtimer.Stop();
                         }
                     }
-                    if (flpanelQLDICHVU.Height >= 143)
+                    if (flpanelQLDICHVU.Height >= 106)
                     {
                         QLDICHVUtimer.Start();
                         flpanelQLDICHVU.Height -= 20;
-                        if (flpanelQLDICHVU.Height <= 40)
+                        if (flpanelQLDICHVU.Height <= 49)
                         {
                             QLDICHVUtime = false;
                             QLDICHVUtimer.Stop();
                         }
                     }
-                    if (flpanelQLHETHONG.Height >= 170)
+                    if (flpanelQLHETHONG.Height >= 200)
                     {
                         QLHETHONGtimer.Start();
                         flpanelQLHETHONG.Height -= 20;
-                        if (flpanelQLHETHONG.Height <= 40)
+                        if (flpanelQLHETHONG.Height <= 49)
                         {
                             QLHETHONGtime = false;
                             QLHETHONGtimer.Stop();
@@ -117,13 +120,29 @@ namespace QL_tour_LTW
                     flpanelQLDICHVU.Width = panelMenu.Width;
                     flpanelQLHETHONG.Width = panelMenu.Width;
                     panelthoat.Width = panelMenu.Width;
+                    panelTRANGCHU.Width = panelMenu.Width;
+                    panelKhungMENU.Width = panelMenu.Width;
                 }
             }
         }
-
+        TRANGCHU formtrangchu;
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            if (formtrangchu == null || formtrangchu.IsDisposed)
+            {
+                CloseOtherForms(formtrangchu);
+                formtrangchu = new TRANGCHU();
+                //formDICHVU.FormClosed += frmQuanLyDichVu_FormClosed;
+                formtrangchu.MdiParent = this;
+                formtrangchu.Dock = DockStyle.Fill;
+                formtrangchu.ControlBox = false;
+                formtrangchu.FormBorderStyle = FormBorderStyle.None;
+                formtrangchu.Show();
+            }
+            else
+            {
+                formtrangchu.Activate();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -134,7 +153,22 @@ namespace QL_tour_LTW
         private void Form1_Load(object sender, EventArgs e)
         {
             SetFullScreen();
-           // mdiprop();
+            if (formtrangchu == null || formtrangchu.IsDisposed)
+            {
+                CloseOtherForms(formtrangchu);
+                formtrangchu = new TRANGCHU();
+                //formDICHVU.FormClosed += frmQuanLyDichVu_FormClosed;
+                formtrangchu.MdiParent = this;
+                formtrangchu.Dock = DockStyle.Fill;
+                formtrangchu.ControlBox = false;
+                formtrangchu.FormBorderStyle = FormBorderStyle.None;
+                formtrangchu.Show();
+            }
+            else
+            {
+                formtrangchu.Activate();
+            }
+            // mdiprop();
         }
         private void SetFullScreen()
         {
@@ -147,30 +181,42 @@ namespace QL_tour_LTW
             this.Size = workingArea.Size;
             this.Location = workingArea.Location;
         }
+        QLNhanVien formnhanvien;
         private void button7_Click(object sender, EventArgs e)
         {
-            if(formQLNV == null)
+            if (formnhanvien == null || formnhanvien.IsDisposed)
             {
-                formQLNV = new QLThongTinNV();
-                formQLNV.FormClosed += formQLNV_FormClosed;
-                formQLNV.MdiParent = this;
-                formQLNV.Dock = DockStyle.Fill;
-                formQLNV.ControlBox = false;
-                formQLNV.FormBorderStyle = FormBorderStyle.None;
-                formQLNV.Show();
+                CloseOtherForms(formnhanvien);
+                formnhanvien = new QLNhanVien();
+                //formDICHVU.FormClosed += frmQuanLyDichVu_FormClosed;
+                formnhanvien.MdiParent = this;
+                formnhanvien.Dock = DockStyle.Fill;
+                formnhanvien.ControlBox = false;
+                formnhanvien.FormBorderStyle = FormBorderStyle.None;
+                formnhanvien.Show();
             }
             else
             {
-                formQLNV.Activate();
+                formnhanvien.Activate();
             }
         }
 
         private void formQLNV_FormClosed(object sender, FormClosedEventArgs e)
         {
             formQLNV = null;
-           // formTOUR = null;
         }
-
+        private void formQLTOUR_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            formTOUR = null;
+        }
+        private void formQLKH_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            formKH = null;
+        }
+        private void frmQuanLyDichVu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            formDICHVU = null;
+        }
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -181,7 +227,7 @@ namespace QL_tour_LTW
             if (QLNVtime == false)
             {               
                 panelQLNV.Height += 10;
-                if (panelQLNV.Height >= 143)
+                if (panelQLNV.Height >= 106)
                 {
                   //  time = false;
                   //  menutimer1.Start();
@@ -192,7 +238,7 @@ namespace QL_tour_LTW
             else
             {
                 panelQLNV.Height -= 10;
-                if (panelQLNV.Height <= 40)
+                if (panelQLNV.Height <= 49)
                 {
                     QLNVtime = false;
                     QLNVtimer.Stop();
@@ -211,7 +257,7 @@ namespace QL_tour_LTW
             if (QLKHtime == false)
             {
                 flpanelKH.Height += 10;
-                if (flpanelKH.Height >= 143)
+                if (flpanelKH.Height >= 106)
                 {
                     QLKHtimer.Stop();
                     QLKHtime = true;
@@ -220,7 +266,7 @@ namespace QL_tour_LTW
             else
             {
                 flpanelKH.Height -= 10;
-                if (flpanelKH.Height <= 40)
+                if (flpanelKH.Height <= 49)
                 {
                     QLKHtime = false;
                     QLKHtimer.Stop();
@@ -238,7 +284,7 @@ namespace QL_tour_LTW
             if (QLTOURtime == false)
             {
                 flpanelQLTOUR.Height += 10;
-                if (flpanelQLTOUR.Height >= 143)
+                if (flpanelQLTOUR.Height >= 160)
                 {
                     QLTOURtimer.Stop();
                     QLTOURtime = true;
@@ -247,7 +293,7 @@ namespace QL_tour_LTW
             else
             {
                 flpanelQLTOUR.Height -= 10;
-                if (flpanelQLTOUR.Height <= 40)
+                if (flpanelQLTOUR.Height <= 49)
                 {
                     QLTOURtime = false;
                     QLTOURtimer.Stop();
@@ -265,7 +311,7 @@ namespace QL_tour_LTW
             if (QLHOADONtime == false)
             {
                 flpanelHOADON.Height += 10;
-                if (flpanelHOADON.Height >= 143)
+                if (flpanelHOADON.Height >= 160)
                 {
                     QLHOADONtimer.Stop();
                     QLHOADONtime = true;
@@ -274,7 +320,7 @@ namespace QL_tour_LTW
             else
             {
                 flpanelHOADON.Height -= 10;
-                if (flpanelHOADON.Height <= 40)
+                if (flpanelHOADON.Height <= 49)
                 {
                     QLHOADONtime = false;
                     QLHOADONtimer.Stop();
@@ -292,7 +338,7 @@ namespace QL_tour_LTW
             if (QLDICHVUtime == false)
             {
                 flpanelQLDICHVU.Height += 10;
-                if (flpanelQLDICHVU.Height >= 143)
+                if (flpanelQLDICHVU.Height >= 106)
                 {
                     QLDICHVUtimer.Stop();
                     QLDICHVUtime = true;
@@ -301,7 +347,7 @@ namespace QL_tour_LTW
             else
             {
                 flpanelQLDICHVU.Height -= 10;
-                if (flpanelQLDICHVU.Height <= 40)
+                if (flpanelQLDICHVU.Height <= 49)
                 {
                     QLDICHVUtime = false;
                     QLDICHVUtimer.Stop();
@@ -319,7 +365,7 @@ namespace QL_tour_LTW
             if (QLHETHONGtime == false)
             {
                 flpanelQLHETHONG.Height += 10;
-                if (flpanelQLHETHONG.Height >= 170)
+                if (flpanelQLHETHONG.Height >= 200)
                 {
                     QLHETHONGtimer.Stop();
                     QLHETHONGtime = true;
@@ -328,7 +374,7 @@ namespace QL_tour_LTW
             else
             {
                 flpanelQLHETHONG.Height -= 10;
-                if (flpanelQLHETHONG.Height <= 40)
+                if (flpanelQLHETHONG.Height <= 49)
                 {
                     QLHETHONGtime = false;
                     QLHETHONGtimer.Stop();
@@ -387,14 +433,14 @@ namespace QL_tour_LTW
         {
             menutimer1.Start();
             
-        }
-        MainQLTOUR formTOUR;
+        }        
         private void btnTHONGTINTOUR_Click(object sender, EventArgs e)
         {
-            if (formTOUR == null)
+            if (formTOUR == null || formTOUR.IsDisposed)
             {
+                CloseOtherForms(formTOUR);
                 formTOUR = new MainQLTOUR();
-                formTOUR.FormClosed += formQLNV_FormClosed;
+                //formDICHVU.FormClosed += frmQuanLyDichVu_FormClosed;
                 formTOUR.MdiParent = this;
                 formTOUR.Dock = DockStyle.Fill;
                 formTOUR.ControlBox = false;
@@ -405,6 +451,142 @@ namespace QL_tour_LTW
             {
                 formTOUR.Activate();
             }
+        }
+        
+        private void btnTHONGTINKHACHHANG_Click(object sender, EventArgs e)
+        {
+            if (formKH == null || formKH.IsDisposed)
+            {
+                CloseOtherForms(formKH);
+                formKH = new GiaoDienQLThongTInKH();
+                //formDICHVU.FormClosed += frmQuanLyDichVu_FormClosed;
+                formKH.MdiParent = this;
+                formKH.Dock = DockStyle.Fill;
+                formKH.ControlBox = false;
+                formKH.FormBorderStyle = FormBorderStyle.None;
+                formKH.Show();
+            }
+            else
+            {
+                formKH.Activate();
+            }
+        }
+        
+        private void btnTHONGTINDV_Click(object sender, EventArgs e)
+        {
+            if (formDICHVU == null || formDICHVU.IsDisposed)
+            {
+                    CloseOtherForms(formDICHVU);
+                    formDICHVU = new frmQuanLyDichVu();
+                    //formDICHVU.FormClosed += frmQuanLyDichVu_FormClosed;
+                    formDICHVU.MdiParent = this;
+                    formDICHVU.Dock = DockStyle.Fill;
+                    formDICHVU.ControlBox = false;
+                    formDICHVU.FormBorderStyle = FormBorderStyle.None;
+                    formDICHVU.Show();
+            }
+            else
+            {
+                formDICHVU.Activate();
+            }
+        }
+        QLThongTinNV formQLNV;
+        MainQLTOUR formTOUR;
+        GiaoDienQLThongTInKH formKH;
+        frmQuanLyDichVu formDICHVU;
+        private void CloseOtherForms(Form currentForm)
+        {
+            if (formnhanvien != currentForm && formnhanvien != null && !formnhanvien.IsDisposed)
+            {
+                formnhanvien.Close();
+                formnhanvien.Dispose();
+            }
+            if (formTOUR != currentForm && formTOUR != null && !formTOUR.IsDisposed)
+            {
+                formTOUR.Close();
+                formTOUR.Dispose();
+            }
+            if (formKH != currentForm && formKH != null && !formKH.IsDisposed)
+            {
+                formKH.Close();
+                formKH.Dispose();
+            }
+            if (formDICHVU != currentForm && formDICHVU != null && !formDICHVU.IsDisposed)
+            {
+                formDICHVU.Close();
+                formDICHVU.Dispose();
+            }
+            if (formdangkytour != currentForm && formdangkytour != null && !formdangkytour.IsDisposed)
+            {
+                formdangkytour.Close();
+                formdangkytour.Dispose();
+            }
+            if (formtrangchu != currentForm && formtrangchu != null && !formtrangchu.IsDisposed)
+            {
+                formtrangchu.Close();
+                formtrangchu.Dispose();
+            }
+            if (formhoadon != currentForm && formhoadon != null && !formhoadon.IsDisposed)
+            {
+                formhoadon.Close();
+                formhoadon.Dispose();
+            }
+        }
+        DANGKYTOUR formdangkytour;
+        private void btnDKTOUR_Click(object sender, EventArgs e)
+        {
+            if (formdangkytour == null || formdangkytour.IsDisposed)
+            {
+                CloseOtherForms(formdangkytour);
+                formdangkytour = new DANGKYTOUR();
+                //formDICHVU.FormClosed += frmQuanLyDichVu_FormClosed;
+                formdangkytour.MdiParent = this;
+                formdangkytour.Dock = DockStyle.Fill;
+                formdangkytour.ControlBox = false;
+                formdangkytour.FormBorderStyle = FormBorderStyle.None;
+                formdangkytour.Show();
+            }
+            else
+            {
+                formdangkytour.Activate();
+            }
+        }
+        GiaoDienTaiKhoan formthongtintaikhoan;
+        private void btnTHONGTINTK_Click(object sender, EventArgs e)
+        {
+            formthongtintaikhoan = new GiaoDienTaiKhoan(tentaikhoan);
+            formthongtintaikhoan.ShowDialog();
+        }
+        DangKy formdangkytk;
+        private void btnDKTK_Click(object sender, EventArgs e)
+        {
+            formdangkytk = new DangKy();
+            formdangkytk.ShowDialog();
+        }
+        HoaDon formhoadon;
+        private void btnTHONGTINHD_Click(object sender, EventArgs e)
+        {
+            if (formhoadon == null || formhoadon.IsDisposed)
+            {
+                CloseOtherForms(formhoadon);
+                formhoadon = new HoaDon();
+                //formDICHVU.FormClosed += frmQuanLyDichVu_FormClosed;
+                formhoadon.MdiParent = this;
+                formhoadon.Dock = DockStyle.Fill;
+                formhoadon.ControlBox = false;
+                formhoadon.FormBorderStyle = FormBorderStyle.None;
+                formhoadon.Show();
+            }
+            else
+            {
+                formhoadon.Activate();
+            }
+        }
+        DoiMatKhau formdoimk;
+        private void button22_Click(object sender, EventArgs e)
+        {
+            formdoimk = new DoiMatKhau(tentaikhoan);
+            formdoimk.ShowDialog();
         }
     }
 }

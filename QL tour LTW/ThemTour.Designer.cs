@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemTour));
-            this.bunifuiOSSwitch1 = new Bunifu.Framework.UI.BunifuiOSSwitch();
             this.label15 = new System.Windows.Forms.Label();
             this.txttesst = new System.Windows.Forms.TextBox();
-            this.pcboxANH1 = new System.Windows.Forms.PictureBox();
             this.cbbDIEMDEN = new System.Windows.Forms.ComboBox();
             this.cbbMAKS = new System.Windows.Forms.ComboBox();
             this.cbbDIEMDI = new System.Windows.Forms.ComboBox();
@@ -52,8 +50,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lbMOTA = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pcboxANH2 = new System.Windows.Forms.PictureBox();
-            this.pcboxANH3 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -68,33 +64,22 @@
             this.btnUPANH2 = new CustomControls.RJControls.RJButton();
             this.btnUPANH3 = new CustomControls.RJControls.RJButton();
             this.btnUPANH1 = new CustomControls.RJControls.RJButton();
-            this.rjButton1 = new CustomControls.RJControls.RJButton();
-            this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.txtTRANGTHAI = new CustomControls.RJControls.RJTextBox();
             this.txtMOTA = new CustomControls.RJControls.RJTextBox();
             this.txtGIATOUR = new CustomControls.RJControls.RJTextBox();
             this.txtTENTOUR = new CustomControls.RJControls.RJTextBox();
             this.txtMATOUR = new CustomControls.RJControls.RJTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxANH1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxANH2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxANH3)).BeginInit();
+            this.rjButton1 = new CustomControls.RJControls.RJButton();
+            this.rjButton2 = new CustomControls.RJControls.RJButton();
+            this.bunifuiOSSwitch1 = new Bunifu.Framework.UI.BunifuiOSSwitch();
+            this.pcboxANH3 = new System.Windows.Forms.PictureBox();
+            this.pcboxANH2 = new System.Windows.Forms.PictureBox();
+            this.pcboxANH1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcboxANH3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcboxANH2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcboxANH1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bunifuiOSSwitch1
-            // 
-            this.bunifuiOSSwitch1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuiOSSwitch1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuiOSSwitch1.BackgroundImage")));
-            this.bunifuiOSSwitch1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuiOSSwitch1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuiOSSwitch1.Location = new System.Drawing.Point(765, 72);
-            this.bunifuiOSSwitch1.Name = "bunifuiOSSwitch1";
-            this.bunifuiOSSwitch1.OffColor = System.Drawing.Color.Gray;
-            this.bunifuiOSSwitch1.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(54)))), ((int)(((byte)(159)))));
-            this.bunifuiOSSwitch1.Size = new System.Drawing.Size(43, 25);
-            this.bunifuiOSSwitch1.TabIndex = 41;
-            this.bunifuiOSSwitch1.Value = true;
-            this.bunifuiOSSwitch1.OnValueChange += new System.EventHandler(this.bunifuiOSSwitch1_OnValueChange);
             // 
             // label15
             // 
@@ -112,17 +97,6 @@
             this.txttesst.Name = "txttesst";
             this.txttesst.Size = new System.Drawing.Size(100, 20);
             this.txttesst.TabIndex = 39;
-            // 
-            // pcboxANH1
-            // 
-            this.pcboxANH1.BackColor = System.Drawing.Color.White;
-            this.pcboxANH1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcboxANH1.Location = new System.Drawing.Point(28, 349);
-            this.pcboxANH1.Name = "pcboxANH1";
-            this.pcboxANH1.Size = new System.Drawing.Size(324, 148);
-            this.pcboxANH1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcboxANH1.TabIndex = 38;
-            this.pcboxANH1.TabStop = false;
             // 
             // cbbDIEMDEN
             // 
@@ -337,28 +311,6 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Mã tour:";
             // 
-            // pcboxANH2
-            // 
-            this.pcboxANH2.BackColor = System.Drawing.Color.White;
-            this.pcboxANH2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcboxANH2.Location = new System.Drawing.Point(359, 349);
-            this.pcboxANH2.Name = "pcboxANH2";
-            this.pcboxANH2.Size = new System.Drawing.Size(324, 148);
-            this.pcboxANH2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcboxANH2.TabIndex = 38;
-            this.pcboxANH2.TabStop = false;
-            // 
-            // pcboxANH3
-            // 
-            this.pcboxANH3.BackColor = System.Drawing.Color.White;
-            this.pcboxANH3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcboxANH3.Location = new System.Drawing.Point(28, 503);
-            this.pcboxANH3.Name = "pcboxANH3";
-            this.pcboxANH3.Size = new System.Drawing.Size(655, 195);
-            this.pcboxANH3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcboxANH3.TabIndex = 38;
-            this.pcboxANH3.TabStop = false;
-            // 
             // bunifuSeparator1
             // 
             this.bunifuSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -489,9 +441,8 @@
             // 
             // btnUPANH2
             // 
-            this.btnUPANH2.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnUPANH2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnUPANH2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUPANH2.BackgroundImage")));
+            this.btnUPANH2.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnUPANH2.BackgroundColor = System.Drawing.Color.MidnightBlue;
             this.btnUPANH2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUPANH2.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnUPANH2.BorderRadius = 10;
@@ -515,9 +466,8 @@
             // 
             // btnUPANH3
             // 
-            this.btnUPANH3.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnUPANH3.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnUPANH3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUPANH3.BackgroundImage")));
+            this.btnUPANH3.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnUPANH3.BackgroundColor = System.Drawing.Color.MidnightBlue;
             this.btnUPANH3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUPANH3.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnUPANH3.BorderRadius = 10;
@@ -541,9 +491,8 @@
             // 
             // btnUPANH1
             // 
-            this.btnUPANH1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnUPANH1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnUPANH1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUPANH1.BackgroundImage")));
+            this.btnUPANH1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnUPANH1.BackgroundColor = System.Drawing.Color.MidnightBlue;
             this.btnUPANH1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUPANH1.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnUPANH1.BorderRadius = 10;
@@ -565,51 +514,6 @@
             this.btnUPANH1.UseVisualStyleBackColor = false;
             this.btnUPANH1.Click += new System.EventHandler(this.btnUPANH1_Click);
             // 
-            // rjButton1
-            // 
-            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rjButton1.BackgroundImage")));
-            this.rjButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 10;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.rjButton1.Location = new System.Drawing.Point(880, 563);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(114, 40);
-            this.rjButton1.TabIndex = 49;
-            this.rjButton1.Text = "Hủy";
-            this.rjButton1.TextColor = System.Drawing.Color.LavenderBlush;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            // 
-            // rjButton2
-            // 
-            this.rjButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rjButton2.BackgroundImage")));
-            this.rjButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton2.BorderRadius = 10;
-            this.rjButton2.BorderSize = 0;
-            this.rjButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton2.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.rjButton2.Location = new System.Drawing.Point(760, 563);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(114, 40);
-            this.rjButton2.TabIndex = 49;
-            this.rjButton2.Text = "Lưu";
-            this.rjButton2.TextColor = System.Drawing.Color.LavenderBlush;
-            this.rjButton2.UseVisualStyleBackColor = false;
-            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
-            // 
             // txtTRANGTHAI
             // 
             this.txtTRANGTHAI.BackColor = System.Drawing.SystemColors.Window;
@@ -618,6 +522,7 @@
             this.txtTRANGTHAI.BorderFocusColor = System.Drawing.Color.DarkSlateBlue;
             this.txtTRANGTHAI.BorderRadius = 5;
             this.txtTRANGTHAI.BorderSize = 2;
+            this.txtTRANGTHAI.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTRANGTHAI.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txtTRANGTHAI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTRANGTHAI.Location = new System.Drawing.Point(846, 297);
@@ -645,6 +550,7 @@
             this.txtMOTA.BorderFocusColor = System.Drawing.Color.DarkSlateBlue;
             this.txtMOTA.BorderRadius = 5;
             this.txtMOTA.BorderSize = 2;
+            this.txtMOTA.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMOTA.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txtMOTA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMOTA.Location = new System.Drawing.Point(846, 104);
@@ -671,6 +577,7 @@
             this.txtGIATOUR.BorderFocusColor = System.Drawing.Color.DarkSlateBlue;
             this.txtGIATOUR.BorderRadius = 5;
             this.txtGIATOUR.BorderSize = 2;
+            this.txtGIATOUR.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGIATOUR.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txtGIATOUR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtGIATOUR.Location = new System.Drawing.Point(118, 201);
@@ -697,6 +604,7 @@
             this.txtTENTOUR.BorderFocusColor = System.Drawing.Color.DarkSlateBlue;
             this.txtTENTOUR.BorderRadius = 5;
             this.txtTENTOUR.BorderSize = 2;
+            this.txtTENTOUR.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTENTOUR.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txtTENTOUR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTENTOUR.Location = new System.Drawing.Point(118, 150);
@@ -723,6 +631,7 @@
             this.txtMATOUR.BorderFocusColor = System.Drawing.Color.DarkSlateBlue;
             this.txtMATOUR.BorderRadius = 5;
             this.txtMATOUR.BorderSize = 2;
+            this.txtMATOUR.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMATOUR.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txtMATOUR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMATOUR.Location = new System.Drawing.Point(118, 104);
@@ -740,6 +649,104 @@
             this.txtMATOUR.Enter += new System.EventHandler(this.txtMATOUR_Enter);
             this.txtMATOUR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMATOUR_KeyPress);
             this.txtMATOUR.Leave += new System.EventHandler(this.txtMATOUR_Leave);
+            // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rjButton1.BackgroundImage")));
+            this.rjButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 10;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton1.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.rjButton1.Location = new System.Drawing.Point(880, 563);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(114, 40);
+            this.rjButton1.TabIndex = 49;
+            this.rjButton1.Text = "Hủy";
+            this.rjButton1.TextColor = System.Drawing.Color.LavenderBlush;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
+            this.rjButton1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.rjButton1_MouseDown);
+            this.rjButton1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.rjButton2_MouseUp);
+            // 
+            // rjButton2
+            // 
+            this.rjButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rjButton2.BackgroundImage")));
+            this.rjButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton2.BorderRadius = 10;
+            this.rjButton2.BorderSize = 0;
+            this.rjButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rjButton2.FlatAppearance.BorderSize = 0;
+            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton2.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.rjButton2.Location = new System.Drawing.Point(760, 563);
+            this.rjButton2.Name = "rjButton2";
+            this.rjButton2.Size = new System.Drawing.Size(114, 40);
+            this.rjButton2.TabIndex = 49;
+            this.rjButton2.Text = "Lưu";
+            this.rjButton2.TextColor = System.Drawing.Color.LavenderBlush;
+            this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
+            this.rjButton2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.rjButton2_MouseDown);
+            this.rjButton2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.rjButton2_MouseUp);
+            // 
+            // bunifuiOSSwitch1
+            // 
+            this.bunifuiOSSwitch1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuiOSSwitch1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuiOSSwitch1.BackgroundImage")));
+            this.bunifuiOSSwitch1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuiOSSwitch1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuiOSSwitch1.Location = new System.Drawing.Point(765, 72);
+            this.bunifuiOSSwitch1.Name = "bunifuiOSSwitch1";
+            this.bunifuiOSSwitch1.OffColor = System.Drawing.Color.Gray;
+            this.bunifuiOSSwitch1.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(54)))), ((int)(((byte)(159)))));
+            this.bunifuiOSSwitch1.Size = new System.Drawing.Size(43, 25);
+            this.bunifuiOSSwitch1.TabIndex = 41;
+            this.bunifuiOSSwitch1.Value = true;
+            this.bunifuiOSSwitch1.OnValueChange += new System.EventHandler(this.bunifuiOSSwitch1_OnValueChange);
+            // 
+            // pcboxANH3
+            // 
+            this.pcboxANH3.BackColor = System.Drawing.Color.White;
+            this.pcboxANH3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcboxANH3.Location = new System.Drawing.Point(28, 503);
+            this.pcboxANH3.Name = "pcboxANH3";
+            this.pcboxANH3.Size = new System.Drawing.Size(655, 195);
+            this.pcboxANH3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcboxANH3.TabIndex = 38;
+            this.pcboxANH3.TabStop = false;
+            // 
+            // pcboxANH2
+            // 
+            this.pcboxANH2.BackColor = System.Drawing.Color.White;
+            this.pcboxANH2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcboxANH2.Location = new System.Drawing.Point(359, 349);
+            this.pcboxANH2.Name = "pcboxANH2";
+            this.pcboxANH2.Size = new System.Drawing.Size(324, 148);
+            this.pcboxANH2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcboxANH2.TabIndex = 38;
+            this.pcboxANH2.TabStop = false;
+            // 
+            // pcboxANH1
+            // 
+            this.pcboxANH1.BackColor = System.Drawing.Color.White;
+            this.pcboxANH1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcboxANH1.Location = new System.Drawing.Point(28, 349);
+            this.pcboxANH1.Name = "pcboxANH1";
+            this.pcboxANH1.Size = new System.Drawing.Size(324, 148);
+            this.pcboxANH1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcboxANH1.TabIndex = 38;
+            this.pcboxANH1.TabStop = false;
             // 
             // ThemTour
             // 
@@ -794,10 +801,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThemTour";
             this.Load += new System.EventHandler(this.ThemTour_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxANH1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxANH2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxANH3)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcboxANH3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcboxANH2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcboxANH1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

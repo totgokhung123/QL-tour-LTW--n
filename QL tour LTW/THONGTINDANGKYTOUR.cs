@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+using System.Runtime.Remoting.Contexts;
 
 namespace QL_tour_LTW
 {
@@ -233,6 +235,10 @@ namespace QL_tour_LTW
                                     context1.HOADONs.Add(insert);
                                     context1.SaveChanges();
                                     MessageBox.Show("Thanh toán thành công !", "Thông báo");
+                                    QLTOURDBContext context2 = new QLTOURDBContext();
+                                    string maxsohd = context2.HOADONs.Max(s => s.SOHD);
+                                    InHoaDon inHoaDon = new InHoaDon(maxsohd);
+                                    inHoaDon.ShowDialog();
                                 }
 
                             }
@@ -274,7 +280,10 @@ namespace QL_tour_LTW
                             QLTOURDBContext context1 = new QLTOURDBContext();
                             context1.HOADONs.Add(insert);
                             context1.SaveChanges();
-                            MessageBox.Show("Thanh toán thành công !", "Thông báo");
+                             MessageBox.Show("Thanh toán thành công !", "Thông báo");
+                            string maxsohd = context2.HOADONs.Max(s => s.SOHD);
+                            InHoaDon inHoaDon = new InHoaDon(maxsohd);
+                            inHoaDon.ShowDialog();
                         }
                     }
                 }
@@ -330,7 +339,11 @@ namespace QL_tour_LTW
                                         QLTOURDBContext context1 = new QLTOURDBContext();
                                         context1.HOADONs.Add(insert);
                                         context1.SaveChanges();
-                                        MessageBox.Show("Thanh toán thành công !", "Thông báo");
+                                        //  MessageBox.Show("Thanh toán thành công !", "Thông báo");
+                                        QLTOURDBContext context2 = new QLTOURDBContext();
+                                        string maxsohd = context2.HOADONs.Max(s => s.SOHD);
+                                        InHoaDon inHoaDon = new InHoaDon(maxsohd);
+                                        inHoaDon.ShowDialog();
                                     }
 
                                 }
@@ -372,7 +385,10 @@ namespace QL_tour_LTW
                                 QLTOURDBContext context1 = new QLTOURDBContext();
                                 context1.HOADONs.Add(insert);
                                 context1.SaveChanges();
-                                MessageBox.Show("Thanh toán thành công !", "Thông báo");
+                                // MessageBox.Show("Thanh toán thành công !", "Thông báo");
+                                string maxsohd = context2.HOADONs.Max(s => s.SOHD);
+                                InHoaDon inHoaDon = new InHoaDon(maxsohd);
+                                inHoaDon.ShowDialog();
                             }
                         }
                     }
@@ -455,17 +471,22 @@ namespace QL_tour_LTW
 
         private void txtEMAIL_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (IsInvalidCharacter(e.KeyChar))
+            if (ContainsDiacriticOrWhiteSpace(e.KeyChar))
             {
-                // Loại bỏ ký tự không hợp lệ
-                e.Handled = true;
+                e.Handled = true; // Ngăn chặn ký tự có dấu và khoảng trắng được nhập vào
+                return;
             }
-            if (txtTENKH.Texts.Length >= 254 && e.KeyChar != '\b')
+            if (txtEMAIL.Texts.Length >= 254 && e.KeyChar != '\b')
             {
                 e.Handled = true; // Hủy sự kiện KeyPress
                 MessageBox.Show("Email không quá 254 ký tự!", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+        }
+        private bool ContainsDiacriticOrWhiteSpace(char c)
+        {
+            string diacriticsAndWhiteSpace = "ÀÁÂÃẠĂẮẰẤẦẴẶẤẨẪÈÉÊẺẼẸỀẾỂỄỆÌÍỈĨỊÒÓÔÕỌƠỚỜỢỞỠÙÚỦŨỤƯỨỪỬỮỰỲÝỶỸỴàáâãạăắằấầẵặấẩẫèéêẻẽẹềếểễệìíỉĩịòóôõọơớờợởỡùúủũụưứừửữựỳýỷỹỵ ";
+            return diacriticsAndWhiteSpace.Contains(c);
         }
         private bool IsInvalidCharacter(char ch)
         {
@@ -536,6 +557,28 @@ namespace QL_tour_LTW
         private void txtSL_Leave(object sender, EventArgs e)
         {
             txtSL.BackColor = Color.White;
+        }
+
+        private void btnTHANHTIEN_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnTHANHTIEN.BorderSize = 2;
+            btnTHANHTIEN.BorderColor = Color.MidnightBlue;
+        }
+
+        private void btnTHANHTIEN_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnTHANHTIEN.BorderSize = 0;
+        }
+
+        private void btnHUY_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnHUY.BorderSize = 2;
+            btnHUY.BorderColor = Color.MidnightBlue;
+        }
+
+        private void btnHUY_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnHUY.BorderSize = 0;
         }
     }
 }

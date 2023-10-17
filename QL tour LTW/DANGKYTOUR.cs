@@ -369,5 +369,38 @@ namespace QL_tour_LTW
                 return;
             }
         }
+
+        private void btnLOCKQ_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnLOCKQ.BorderSize = 3;
+            btnLOCKQ.BorderColor = Color.MidnightBlue;
+        }
+
+        private void btnLOCKQ_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnRESET.BorderSize = 0;
+        }
+
+        private void btnRESET_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnRESET.BorderSize = 3;
+            btnRESET.BorderColor = Color.MidnightBlue;
+        }
+
+        private void btnRESET_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnRESET.BorderSize = 0;
+        }
+
+        private void btnDATTOUR_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnDATTOUR.BorderSize = 3;
+            btnDATTOUR.BorderColor = Color.MidnightBlue;
+        }
+
+        private void btnDATTOUR_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnDATTOUR.BorderSize = 0;
+        }
     }
 }

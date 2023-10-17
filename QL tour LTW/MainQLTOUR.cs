@@ -25,7 +25,7 @@ namespace QL_tour_LTW
             f.AutoScroll = true;
             f.FormBorderStyle = FormBorderStyle.None;
            // f.Dock = DockStyle.Fill;
-            f.Anchor = AnchorStyles.Top| AnchorStyles.Left | AnchorStyles.Bottom ;
+            f.Anchor = AnchorStyles.Top| AnchorStyles.Left | AnchorStyles.Bottom | AnchorStyles.Right;
             //| AnchorStyles.Right
             this.panelLoadFormTOUR.Controls.Add(f);
             f.Show();
