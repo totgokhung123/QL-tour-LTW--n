@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
@@ -292,33 +293,54 @@ namespace QL_tour_LTW
             context.KHACHSANs.Add(khachSan);
             context.SaveChanges();
         }
-
+        private void xoaks(string maks)
+        {
+            KHACHSAN delete = context.KHACHSANs.FirstOrDefault(p => p.MAKS == maks);
+            context.KHACHSANs.Remove(delete);
+            context.SaveChanges();
+            MessageBox.Show("Xóa thành công!", "Thông báo");
+            resetNullKS();
+        }
         private void btnXoaKS_Click(object sender, EventArgs e)
         {
-            try
+            for (int i = 0; i < dgvDSKS.Rows.Count; i++)
             {
-                int selcetedRow = GetSelectedRowKS(txtMaKS.Texts);
-                if (selcetedRow == -1)
+                if (dgvDSKS.Rows[i].Cells[4].Value != null)
                 {
-                    throw new Exception("Không tìm thấy khách sạn cần xóa!");
-                }
-                else
-                {
-                    if (MessageBox.Show("Bạn có muốn xóa", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    if (MessageBox.Show("Bạn có chắc muốn xóa khách sạn: " + dgvDSKS.Rows[i].Cells[1].Value.ToString() + " ?", "Xác Nhận Xóa !!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        KHACHSAN delete = context.KHACHSANs.FirstOrDefault(p => p.MAKS == txtMaKS.Texts);
-                        dgvDSKS.Rows.RemoveAt(selcetedRow);
-                        context.KHACHSANs.Remove(delete);
-                        context.SaveChanges();
-                        MessageBox.Show("Xóa thành công!", "Thông báo");
-                        resetNullKS();
+                        //dgvDSNV.Rows.RemoveAt(i);
+                        xoaks(dgvDSKS.Rows[i].Cells[0].Value.ToString());
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            QLTOURDBContext context = new QLTOURDBContext();
+            List<KHACHSAN> listNhanVien = context.KHACHSANs.ToList();
+            BindToGridKS(listNhanVien);
+            //try
+            //{
+            //    int selcetedRow = GetSelectedRowKS(txtMaKS.Texts);
+            //    if (selcetedRow == -1)
+            //    {
+            //        throw new Exception("Không tìm thấy khách sạn cần xóa!");
+            //    }
+            //    else
+            //    {
+            //        if (MessageBox.Show("Bạn có muốn xóa", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            //        {
+            //            KHACHSAN delete = context.KHACHSANs.FirstOrDefault(p => p.MAKS == txtMaKS.Texts);
+            //            dgvDSKS.Rows.RemoveAt(selcetedRow);
+            //            context.KHACHSANs.Remove(delete);
+            //            context.SaveChanges();
+            //            MessageBox.Show("Xóa thành công!", "Thông báo");
+            //            resetNullKS();
+            //        }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void btnSuaKS_Click(object sender, EventArgs e)
@@ -519,33 +541,30 @@ namespace QL_tour_LTW
                 context.SaveChanges();
             }
         }
-
+        private void xoapt(string maks)
+        {
+            PHUONGTIEN delete = context.PHUONGTIENs.FirstOrDefault(p => p.MAPT == maks);
+            context.PHUONGTIENs.Remove(delete);
+            context.SaveChanges();
+            MessageBox.Show("Xóa thành công!", "Thông báo");
+            resetNullKS();
+        }
         private void btnXoaPT_Click(object sender, EventArgs e)
         {
-            try
+            for (int i = 0; i < dgvDSKS.Rows.Count; i++)
             {
-                int selcetedRow = GetSelectedRowPT(txtMaPT.Texts);
-                if (selcetedRow == -1)
+                if (dgvDSKS.Rows[i].Cells[3].Value != null)
                 {
-                    throw new Exception("Không tìm thấy phương tiện cần xóa!");
-                }
-                else
-                {
-                    if (MessageBox.Show("Bạn có muốn xóa", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    if (MessageBox.Show("Bạn có chắc muốn xóa Phương tiện: " + dgvDSKS.Rows[i].Cells[1].Value.ToString() + " ?", "Xác Nhận Xóa !!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        PHUONGTIEN delete = context.PHUONGTIENs.FirstOrDefault(p => p.MAPT == txtMaPT.Texts);
-                        dgvDSPT.Rows.RemoveAt(selcetedRow);
-                        context.PHUONGTIENs.Remove(delete);
-                        context.SaveChanges();
-                        MessageBox.Show("Xóa thành công!", "Thông báo");
-                        resetNullPT();
+                        //dgvDSNV.Rows.RemoveAt(i);
+                        xoapt(dgvDSKS.Rows[i].Cells[0].Value.ToString());
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            QLTOURDBContext context = new QLTOURDBContext();
+            List<PHUONGTIEN> listNhanVien = context.PHUONGTIENs.ToList();
+            BindToGridPT(listNhanVien);
         }
 
         private void btnTimPT_Click(object sender, EventArgs e)
@@ -693,33 +712,30 @@ namespace QL_tour_LTW
                 context.SaveChanges();
             }
         }
-
+        private void xoadi(string maks)
+        {
+            DIEMDI delete = context.DIEMDIs.FirstOrDefault(p => p.MADDI == maks);
+            context.DIEMDIs.Remove(delete);
+            context.SaveChanges();
+            MessageBox.Show("Xóa thành công!", "Thông báo");
+            resetNullKS();
+        }
         private void btnXoaDDi_Click(object sender, EventArgs e)
         {
-            try
+            for (int i = 0; i < dgvDSKS.Rows.Count; i++)
             {
-                int selcetedRow = GetSelectedRowDDi(txtMaDDi.Texts);
-                if (selcetedRow == -1)
+                if (dgvDSKS.Rows[i].Cells[3].Value != null)
                 {
-                    throw new Exception("Không tìm thấy phương tiện cần xóa!");
-                }
-                else
-                {
-                    if (MessageBox.Show("Bạn có muốn xóa", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    if (MessageBox.Show("Bạn có chắc muốn xóa điểm đi: " + dgvDSKS.Rows[i].Cells[1].Value.ToString() + " ?", "Xác Nhận Xóa !!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        DIEMDI delete = context.DIEMDIs.FirstOrDefault(p => p.MADDI == txtMaDDi.Texts);
-                        dgvDSDDi.Rows.RemoveAt(selcetedRow);
-                        context.DIEMDIs.Remove(delete);
-                        context.SaveChanges();
-                        MessageBox.Show("Xóa thành công!", "Thông báo");
-                        resetNullDDi();
+                        //dgvDSNV.Rows.RemoveAt(i);
+                        xoadi(dgvDSKS.Rows[i].Cells[0].Value.ToString());
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            QLTOURDBContext context = new QLTOURDBContext();
+            List<DIEMDI> listNhanVien = context.DIEMDIs.ToList();
+            BindToGridDDi(listNhanVien);
         }
 
         private void btnTimDDi_Click(object sender, EventArgs e)
@@ -851,33 +867,30 @@ namespace QL_tour_LTW
                 context.SaveChanges();
             }
         }
-
+        private void xoaden(string maks)
+        {
+            DIEMDEN delete = context.DIEMDENs.FirstOrDefault(p => p.MADDEN == maks);
+            context.DIEMDENs.Remove(delete);
+            context.SaveChanges();
+            MessageBox.Show("Xóa thành công!", "Thông báo");
+            resetNullKS();
+        }
         private void btnXoaDDen_Click(object sender, EventArgs e)
         {
-            try
+            for (int i = 0; i < dgvDSKS.Rows.Count; i++)
             {
-                int selcetedRow = GetSelectedRowDDen(txtMaDDen.Texts);
-                if (selcetedRow == -1)
+                if (dgvDSKS.Rows[i].Cells[3].Value != null)
                 {
-                    throw new Exception("Không tìm thấy phương tiện cần xóa!");
-                }
-                else
-                {
-                    if (MessageBox.Show("Bạn có muốn xóa", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    if (MessageBox.Show("Bạn có chắc muốn xóa điểm đến: " + dgvDSKS.Rows[i].Cells[1].Value.ToString() + " ?", "Xác Nhận Xóa !!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        DIEMDEN delete = context.DIEMDENs.FirstOrDefault(p => p.MADDEN == txtMaDDen.Texts);
-                        dgvDSDDen.Rows.RemoveAt(selcetedRow);
-                        context.DIEMDENs.Remove(delete);
-                        context.SaveChanges();
-                        MessageBox.Show("Xóa thành công!", "Thông báo");
-                        resetNullDDen();
+                        //dgvDSNV.Rows.RemoveAt(i);
+                        xoaden(dgvDSKS.Rows[i].Cells[0].Value.ToString());
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            QLTOURDBContext context = new QLTOURDBContext();
+            List<DIEMDEN> listNhanVien = context.DIEMDENs.ToList();
+            BindToGridDDen(listNhanVien);
         }
 
         private void btnTimDDen_Click(object sender, EventArgs e)
@@ -1139,6 +1152,164 @@ namespace QL_tour_LTW
         private void txtMaDDi__TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtMaKS_Enter(object sender, EventArgs e)
+        {
+            txtMaKS.BackColor = Color.Gainsboro;
+        }
+
+        private void txtMaKS_Leave(object sender, EventArgs e)
+        {
+            txtMaKS.BackColor = Color.White;
+        }
+
+        private void txtTenKS_Enter(object sender, EventArgs e)
+        {
+            txtTenKS.BackColor = Color.Gainsboro;
+        }
+
+        private void txtTenKS_Leave(object sender, EventArgs e)
+        {
+            txtTenKS.BackColor = Color.White;
+        }
+
+        private void txtDiaChiKS_Enter(object sender, EventArgs e)
+        {
+            txtDiaChiKS.BackColor = Color.Gainsboro;
+        }
+
+        private void txtDiaChiKS_Leave(object sender, EventArgs e)
+        {
+            txtDiaChiKS.BackColor = Color.White;
+        }
+
+        private void txtTrangThaiKS_Enter(object sender, EventArgs e)
+        {
+            txtTrangThaiKS.BackColor = Color.Gainsboro;
+        }
+
+        private void txtTrangThaiKS_Leave(object sender, EventArgs e)
+        {
+            txtTrangThaiKS.BackColor = Color.White;
+        }
+
+        private void txtMaPT_Enter(object sender, EventArgs e)
+        {
+            txtMaPT.BackColor = Color.Gainsboro;
+        }
+
+        private void txtMaPT_Leave(object sender, EventArgs e)
+        {
+            txtMaPT.BackColor = Color.White;
+        }
+
+        private void txtTenPT_Enter(object sender, EventArgs e)
+        {
+            txtTenPT.BackColor = Color.Gainsboro;
+        }
+
+        private void txtTenPT_Leave(object sender, EventArgs e)
+        {
+            txtTenPT.BackColor = Color.White;
+        }
+
+        private void txtTrangThaiPT_Enter(object sender, EventArgs e)
+        {
+            txtTrangThaiPT.BackColor = Color.Gainsboro;
+        }
+
+        private void txtTrangThaiPT_Leave(object sender, EventArgs e)
+        {
+            txtTrangThaiPT.BackColor = Color.White;
+        }
+
+        private void txtMaDDi_Enter(object sender, EventArgs e)
+        {
+            txtMaDDi.BackColor = Color.Gainsboro;
+        }
+
+        private void txtMaDDi_Leave(object sender, EventArgs e)
+        {
+            txtMaDDi.BackColor = Color.White;
+        }
+
+        private void txtTenDDi_Enter(object sender, EventArgs e)
+        {
+            txtTenPT.BackColor = Color.Gainsboro;
+        }
+
+        private void txtTenDDi_Leave(object sender, EventArgs e)
+        {
+            txtTenDDi.BackColor = Color.White;
+        }
+
+        private void txtMaDDen_Enter(object sender, EventArgs e)
+        {
+            txtMaDDen.BackColor = Color.Gainsboro;
+        }
+
+        private void txtMaDDen_Leave(object sender, EventArgs e)
+        {
+            txtMaDDen.BackColor = Color.White;
+        }
+
+        private void txtTenDDen_Enter(object sender, EventArgs e)
+        {
+            txtTenDDen.BackColor = Color.Gainsboro;
+        }
+
+        private void txtTenDDen_Leave(object sender, EventArgs e)
+        {
+            txtTenDDen.BackColor = Color.White;
+        }
+
+        private void dgvDSKS_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 4 && e.RowIndex >= 0)
+            {
+                DataGridViewCheckBoxCell cell = (DataGridViewCheckBoxCell)dgvDSKS.Rows[e.RowIndex].Cells[4];
+                bool currentValue = Convert.ToBoolean(cell.Value);
+                cell.Value = !currentValue;
+                dgvDSKS.EndEdit(); // Kết thúc chỉnh sửa ô để cập nhật giá trị
+                // Tiếp tục xử lý logic khác tại đây nếu cần thiết
+            }
+        }
+
+        private void dgvDSPT_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 4 && e.RowIndex >= 0)
+            {
+                DataGridViewCheckBoxCell cell = (DataGridViewCheckBoxCell)dgvDSPT.Rows[e.RowIndex].Cells[4];
+                bool currentValue = Convert.ToBoolean(cell.Value);
+                cell.Value = !currentValue;
+                dgvDSPT.EndEdit(); // Kết thúc chỉnh sửa ô để cập nhật giá trị
+                // Tiếp tục xử lý logic khác tại đây nếu cần thiết
+            }
+        }
+
+        private void dgvDSDDi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 3 && e.RowIndex >= 0)
+            {
+                DataGridViewCheckBoxCell cell = (DataGridViewCheckBoxCell)dgvDSDDi.Rows[e.RowIndex].Cells[3];
+                bool currentValue = Convert.ToBoolean(cell.Value);
+                cell.Value = !currentValue;
+                dgvDSDDi.EndEdit(); // Kết thúc chỉnh sửa ô để cập nhật giá trị
+                // Tiếp tục xử lý logic khác tại đây nếu cần thiết
+            }
+        }
+
+        private void dgvDSDDen_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 3 && e.RowIndex >= 0)
+            {
+                DataGridViewCheckBoxCell cell = (DataGridViewCheckBoxCell)dgvDSDDen.Rows[e.RowIndex].Cells[3];
+                bool currentValue = Convert.ToBoolean(cell.Value);
+                cell.Value = !currentValue;
+                dgvDSDDen.EndEdit(); // Kết thúc chỉnh sửa ô để cập nhật giá trị
+                // Tiếp tục xử lý logic khác tại đây nếu cần thiết
+            }
         }
     }
 }

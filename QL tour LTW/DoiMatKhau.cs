@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,11 @@ namespace QL_tour_LTW
         private void DoiMatKhau_Load(object sender, EventArgs e)
         {
             txtTKNV.Texts = tentaikhoan;
+            if(txtTKNV.Texts == "ADMIN" || txtTKNV.Texts == "admin")
+            {
+                lbVAITRO.Visible = true;
+                cbbVAITRO.Visible = true;
+            }
         }
         private int checktxt()
         {
@@ -69,49 +75,66 @@ namespace QL_tour_LTW
                 if(checkmkcu()== true)
                 {
                     if (checkxacnhanmk() == true)
-                    {
-                        if(tentaikhoan != "ADMIN" || tentaikhoan != "admin")
+                    {                     
+                        if(correctCaptcha != null)
                         {
-                            QLTOURDBContext context = new QLTOURDBContext();
-                            TKUSER capnhat = context.TKUSERs.FirstOrDefault(s => s.TENTAIKHOAN == tentaikhoan && s.VAITRO == null);
-                            if (capnhat != null)
+                            if (txtcapcha.Texts == correctCaptcha)
                             {
-                                capnhat.TENTAIKHOAN = tentaikhoan;
-                                capnhat.MATKHAU = txtMATKHAUMOI.Texts;
-                                capnhat.VAITRO = null;
-                                capnhat.ANH = null;
-                                context.SaveChanges();
-                                MessageBox.Show("Đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                reset();
+                                if (tentaikhoan != "ADMIN" || tentaikhoan != "admin")
+                                {
+                                    QLTOURDBContext context = new QLTOURDBContext();
+                                    TKUSER capnhat = context.TKUSERs.FirstOrDefault(s => s.TENTAIKHOAN == tentaikhoan && s.VAITRO == null);
+                                    if (capnhat != null)
+                                    {
+                                        capnhat.TENTAIKHOAN = tentaikhoan;
+                                        capnhat.MATKHAU = txtMATKHAUMOI.Texts;
+                                        capnhat.VAITRO = null;
+                                        capnhat.ANH = null;
+                                        context.SaveChanges();
+                                        MessageBox.Show("Đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        reset();
+                                    }
+                                }
+                                else
+                                {
+                                    lbVAITRO.Visible = true;
+                                    cbbVAITRO.Visible = true;
+                                    if (cbbVAITRO.Text != "ADMIN")
+                                    {
+                                        MessageBox.Show("Bạn chưa chọn vai trò", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        return;
+                                    }
+                                    else
+                                    {
+                                        QLTOURDBContext context = new QLTOURDBContext();
+                                        TKUSER capnhat = context.TKUSERs.FirstOrDefault(s => s.TENTAIKHOAN == tentaikhoan && s.VAITRO == "ADMIN");
+                                        if (capnhat != null)
+                                        {
+                                            capnhat.TENTAIKHOAN = tentaikhoan;
+                                            capnhat.MATKHAU = txtMATKHAUMOI.Texts;
+                                            capnhat.VAITRO = null;
+                                            capnhat.ANH = null;
+                                            context.SaveChanges();
+                                            MessageBox.Show("Đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                            reset();
+                                        }
+                                    }
+
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Sai mã Captcha mời bạn nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                txtcapcha.Select();
+                                return;
                             }
                         }
                         else
                         {
-                            lbVAITRO.Visible = true;
-                            cbbVAITRO.Visible = true;
-                            if(cbbVAITRO.Text != "ADMIN")
-                            {
-                                MessageBox.Show("Bạn chưa chọn vai trò", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);                              
-                                return;
-                            }
-                            else
-                            {
-                                QLTOURDBContext context = new QLTOURDBContext();
-                                TKUSER capnhat = context.TKUSERs.FirstOrDefault(s => s.TENTAIKHOAN == tentaikhoan && s.VAITRO == "ADMIN");
-                                if (capnhat != null)
-                                {
-                                    capnhat.TENTAIKHOAN = tentaikhoan;
-                                    capnhat.MATKHAU = txtMATKHAUMOI.Texts;
-                                    capnhat.VAITRO = null;
-                                    capnhat.ANH = null;
-                                    context.SaveChanges();
-                                    MessageBox.Show("Đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    reset();
-                                }
-                            }
-                            
+                            MessageBox.Show("Nhập mã xác thực trước khi lưu thông tin!", "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtcapcha.Select();
+                            return;
                         }
-                        
                     }
                     else
                     {
@@ -129,7 +152,7 @@ namespace QL_tour_LTW
             }
             else
             {
-                MessageBox.Show("Thếu thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Thiếu thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             
@@ -157,14 +180,33 @@ namespace QL_tour_LTW
             {
                 e.Handled = true; // Loại bỏ ký tự khoảng trắng
             }
+            if (IsDiacritic(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
-
+        private bool IsDiacritic(char c)
+        {
+            string normalizedText = c.ToString().Normalize(NormalizationForm.FormD);
+            foreach (char ch in normalizedText)
+            {
+                if (CharUnicodeInfo.GetUnicodeCategory(ch) == UnicodeCategory.NonSpacingMark)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
         private void txtMATKHAUCU_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == 22) // 22 là mã ASCII của ký tự Ctrl + V
             {
                 e.Handled = true;
                 return;
+            }
+            if (IsDiacritic(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
 
@@ -175,6 +217,10 @@ namespace QL_tour_LTW
                 e.Handled = true;
                 return;
             }
+            if (IsDiacritic(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtXACNHANMATKHAU_KeyPress(object sender, KeyPressEventArgs e)
@@ -184,11 +230,109 @@ namespace QL_tour_LTW
                 e.Handled = true;
                 return;
             }
+            if (IsDiacritic(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void cbbVAITRO_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void btnLUU_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnLUU.BorderSize = 2;
+            btnLUU.BorderColor = Color.MidnightBlue;
+        }
+
+        private void btnLUU_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnLUU.BorderSize = 0;
+        }
+
+        private void btnHUY_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnHUY.BorderSize = 2;
+            btnHUY.BorderColor = Color.MidnightBlue;
+        }
+
+        private void btnHUY_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnLUU.BorderSize = 0;
+        }
+
+        private void txtTKNV_Enter(object sender, EventArgs e)
+        {
+            txtTKNV.BackColor = Color.Gainsboro;
+        }
+
+        private void txtTKNV_Leave(object sender, EventArgs e)
+        {
+            txtTKNV.BackColor = Color.White;
+        }
+
+        private void txtMATKHAUCU_Enter(object sender, EventArgs e)
+        {
+            txtMATKHAUCU.BackColor = Color.Gainsboro;
+        }
+
+        private void txtMATKHAUCU_Leave(object sender, EventArgs e)
+        {
+            txtMATKHAUCU.BackColor = Color.White;
+        }
+
+        private void txtMATKHAUMOI_Enter(object sender, EventArgs e)
+        {
+            txtMATKHAUMOI.BackColor = Color.Gainsboro;
+        }
+
+        private void txtMATKHAUMOI_Leave(object sender, EventArgs e)
+        {
+            txtMATKHAUMOI.BackColor = Color.White;
+        }
+
+        private void txtXACNHANMATKHAU_Enter(object sender, EventArgs e)
+        {
+            txtXACNHANMATKHAU.BackColor = Color.Gainsboro;
+        }
+
+        private void txtXACNHANMATKHAU_Leave(object sender, EventArgs e)
+        {
+            txtXACNHANMATKHAU.BackColor = Color.White;
+        }
+        private string correctCaptcha;
+        private void GenerateCaptcha()
+        {
+            // Tạo CAPTCHA ngẫu nhiên
+            Random random = new Random();
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            correctCaptcha = new string(Enumerable.Repeat(chars, 6)
+              .Select(s => s[random.Next(s.Length)]).ToArray());
+
+            // Vẽ CAPTCHA lên PictureBox
+            Bitmap bitmap = new Bitmap(picCaptcha.Width, picCaptcha.Height);
+            Graphics graphics = Graphics.FromImage(bitmap);
+            graphics.DrawString(correctCaptcha, new Font("Arial", 24), Brushes.Black, new PointF(0, 0));
+            picCaptcha.Image = bitmap;
+        }
+        private void bntcapcha_Click(object sender, EventArgs e)
+        {
+            GenerateCaptcha();
+        }
+
+        private void bunifuCards1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtcapcha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (IsDiacritic(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

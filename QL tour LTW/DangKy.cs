@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BotDetect.Web.UI;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Globalization;
 
 namespace QL_tour_LTW
 {
@@ -83,17 +84,25 @@ namespace QL_tour_LTW
                 int checktrung = checktrungtk(txtTKMOI.Texts);               
                 if (checktrung == 5)
                 {
-                    if (txtcapcha.Texts.ToLower() == correctCaptcha.ToLower())
+                    if(correctCaptcha != null)
                     {
-                        themtk();
+                        if (txtcapcha.Texts == correctCaptcha)
+                        {
+                            themtk();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sai mã Captcha mời bạn nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtcapcha.Select();
+                            return;
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Sai mã Captcha mời bạn nhập lại!","Thông báo");
+                        MessageBox.Show("Nhập mã xác thực trước khi đăng ký!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         txtcapcha.Select();
                         return;
-                    }
-                       
+                    }   
                 }
                 else
                 {
@@ -159,14 +168,33 @@ namespace QL_tour_LTW
                 e.Handled = true;
                 return;
             }
+            if (IsDiacritic(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
-
+        private bool IsDiacritic(char c)
+        {
+            string normalizedText = c.ToString().Normalize(NormalizationForm.FormD);
+            foreach (char ch in normalizedText)
+            {
+                if (CharUnicodeInfo.GetUnicodeCategory(ch) == UnicodeCategory.NonSpacingMark)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
         private void txtMATKHAUMOI_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == 22) // 22 là mã ASCII của ký tự Ctrl + V
             {
                 e.Handled = true;
                 return;
+            }
+            if (IsDiacritic(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
 
@@ -177,14 +205,22 @@ namespace QL_tour_LTW
                 e.Handled = true;
                 return;
             }
+            if (IsDiacritic(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtcapcha_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == 22) // 22 là mã ASCII của ký tự Ctrl + V
+            if(txtcapcha.Texts.Length > 7)
+            {
+                MessageBox.Show("Mã xác thực tối đa 7 ký tự!", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (IsDiacritic(e.KeyChar))
             {
                 e.Handled = true;
-                return;
             }
         }
     }

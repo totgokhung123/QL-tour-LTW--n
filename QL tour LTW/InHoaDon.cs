@@ -63,7 +63,7 @@ namespace QL_tour_LTW
                 }
                 temp.NgayDi = hd.TOUR.NGAYDI;
                 temp.NgayKetThuc = hd.TOUR.NGAYKETTHUC;
-                temp.ThanhTien = hd.TOUR.GIATOUR;
+                temp.ThanhTien = (decimal)(hd.TOUR.GIATOUR * hd.KHACHHANG.SL);
                 listRPInHD.Add(temp);
             }
 

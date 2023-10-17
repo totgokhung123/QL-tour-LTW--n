@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -358,82 +359,85 @@ namespace QL_tour_LTW
         private void dgvTHONGTINTOUR_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = int.Parse(e.RowIndex.ToString());
-
-            txtMATOUR.Texts = dgvTHONGTINTOUR.Rows[index].Cells[0].Value.ToString();
-            txtTENTOUR.Texts = dgvTHONGTINTOUR.Rows[index].Cells[1].Value.ToString();
-            txtGIATOUR.Texts = dgvTHONGTINTOUR.Rows[index].Cells[2].Value.ToString();
-            dtpNGAYDI.Value = DateTime.Parse(dgvTHONGTINTOUR.Rows[index].Cells[3].Value.ToString());
-            dtpKETTHUC.Value = DateTime.Parse(dgvTHONGTINTOUR.Rows[index].Cells[4].Value.ToString());
-            if(dgvTHONGTINTOUR.Rows[index].Cells[5].Value == null)
+            if (e.RowIndex >= 0)
             {
-                txtMOTA.Texts = "";
-            }
-            else
-            {
-                txtMOTA.Texts = dgvTHONGTINTOUR.Rows[index].Cells[5].Value.ToString();
-            }
-            if (dgvTHONGTINTOUR.Rows[index].Cells[6].Value == null)
-            {
-                txtTRANGTHAI.Texts = "";
-            }
-            else
-            {
-                txtTRANGTHAI.Texts = dgvTHONGTINTOUR.Rows[index].Cells[6].Value.ToString();
-            }            
-            cbbMALTOUR.Text = dgvTHONGTINTOUR.Rows[index].Cells[7].Value.ToString();
-            cbbDIEMDI.Text = dgvTHONGTINTOUR.Rows[index].Cells[8].Value.ToString();
-            cbbDIEMDEN.Text = dgvTHONGTINTOUR.Rows[index].Cells[9].Value.ToString();
-            if (dgvTHONGTINTOUR.Rows[index].Cells[10].Value == null)
-            {
-                cbbMAPT.Text = "";
-            }
-            else
-            {
-                cbbMAPT.Text = dgvTHONGTINTOUR.Rows[index].Cells[10].Value.ToString();
-            }
-            if (dgvTHONGTINTOUR.Rows[index].Cells[11].Value == null)
-            {
-                cbbMAKS.Text = "";
-            }
-            else
-            {
-                cbbMAKS.Text = dgvTHONGTINTOUR.Rows[index].Cells[11].Value.ToString();
-            }            
-            byte[] imageBytes = dgvTHONGTINTOUR.Rows[index].Cells[12].Value as byte[];
-            if (imageBytes != null)
-            {
-                using (MemoryStream ms1 = new MemoryStream(imageBytes))
+               // dgvTHONGTINTOUR.Rows[index].Cells[15].Value = true ;
+                txtMATOUR.Texts = dgvTHONGTINTOUR.Rows[index].Cells[0].Value.ToString();
+                txtTENTOUR.Texts = dgvTHONGTINTOUR.Rows[index].Cells[1].Value.ToString();
+                txtGIATOUR.Texts = dgvTHONGTINTOUR.Rows[index].Cells[2].Value.ToString();
+                dtpNGAYDI.Value = DateTime.Parse(dgvTHONGTINTOUR.Rows[index].Cells[3].Value.ToString());
+                dtpKETTHUC.Value = DateTime.Parse(dgvTHONGTINTOUR.Rows[index].Cells[4].Value.ToString());
+                if (dgvTHONGTINTOUR.Rows[index].Cells[5].Value == null)
                 {
-                    pcboxANH1.Image = Image.FromStream(ms1);
+                    txtMOTA.Texts = "";
                 }
-            }
-            else
-            {
-                pcboxANH1.Image = null;
-            }
-            byte[] imageBytes2 = dgvTHONGTINTOUR.Rows[index].Cells[13].Value as byte[];
-            if (imageBytes2 != null)
-            {
-                using (MemoryStream ms2 = new MemoryStream(imageBytes2))
+                else
                 {
-                    pcboxANH2.Image = Image.FromStream(ms2);
+                    txtMOTA.Texts = dgvTHONGTINTOUR.Rows[index].Cells[5].Value.ToString();
                 }
-            }
-            else
-            {
-                pcboxANH2.Image = null;
-            }
-            byte[] imageBytes3 = dgvTHONGTINTOUR.Rows[index].Cells[14].Value as byte[];
-            if (imageBytes3 != null)
-            {
-                using (MemoryStream ms3 = new MemoryStream(imageBytes3))
+                if (dgvTHONGTINTOUR.Rows[index].Cells[6].Value == null)
                 {
-                    pcboxANH3.Image = Image.FromStream(ms3);
+                    txtTRANGTHAI.Texts = "";
                 }
-            }
-            else
-            {
-                pcboxANH3.Image = null;
+                else
+                {
+                    txtTRANGTHAI.Texts = dgvTHONGTINTOUR.Rows[index].Cells[6].Value.ToString();
+                }
+                cbbMALTOUR.Text = dgvTHONGTINTOUR.Rows[index].Cells[7].Value.ToString();
+                cbbDIEMDI.Text = dgvTHONGTINTOUR.Rows[index].Cells[8].Value.ToString();
+                cbbDIEMDEN.Text = dgvTHONGTINTOUR.Rows[index].Cells[9].Value.ToString();
+                if (dgvTHONGTINTOUR.Rows[index].Cells[10].Value == null)
+                {
+                    cbbMAPT.Text = "";
+                }
+                else
+                {
+                    cbbMAPT.Text = dgvTHONGTINTOUR.Rows[index].Cells[10].Value.ToString();
+                }
+                if (dgvTHONGTINTOUR.Rows[index].Cells[11].Value == null)
+                {
+                    cbbMAKS.Text = "";
+                }
+                else
+                {
+                    cbbMAKS.Text = dgvTHONGTINTOUR.Rows[index].Cells[11].Value.ToString();
+                }
+                byte[] imageBytes = dgvTHONGTINTOUR.Rows[index].Cells[12].Value as byte[];
+                if (imageBytes != null)
+                {
+                    using (MemoryStream ms1 = new MemoryStream(imageBytes))
+                    {
+                        pcboxANH1.Image = Image.FromStream(ms1);
+                    }
+                }
+                else
+                {
+                    pcboxANH1.Image = null;
+                }
+                byte[] imageBytes2 = dgvTHONGTINTOUR.Rows[index].Cells[13].Value as byte[];
+                if (imageBytes2 != null)
+                {
+                    using (MemoryStream ms2 = new MemoryStream(imageBytes2))
+                    {
+                        pcboxANH2.Image = Image.FromStream(ms2);
+                    }
+                }
+                else
+                {
+                    pcboxANH2.Image = null;
+                }
+                byte[] imageBytes3 = dgvTHONGTINTOUR.Rows[index].Cells[14].Value as byte[];
+                if (imageBytes3 != null)
+                {
+                    using (MemoryStream ms3 = new MemoryStream(imageBytes3))
+                    {
+                        pcboxANH3.Image = Image.FromStream(ms3);
+                    }
+                }
+                else
+                {
+                    pcboxANH3.Image = null;
+                }
             }
             
         }
@@ -457,7 +461,6 @@ namespace QL_tour_LTW
             }
             context.TOURs.Remove(delete);
             context.SaveChanges();
-
         }
         private int checkMAtour(string matour)
         {
@@ -470,31 +473,68 @@ namespace QL_tour_LTW
             }
             return -1;
         }
-        private void btnXOA_Click(object sender, EventArgs e)
+        private void delete(string matour)
         {
-            try
+            QLTOURDBContext context = new QLTOURDBContext();
+            List<HOADON> hoadonlist = context.HOADONs.ToList();
+            TOUR delete = context.TOURs.FirstOrDefault(p => p.MATOUR.ToString() == matour);
+            foreach (var hoadon in hoadonlist)
             {
-                int row = checkMAtour(txtMATOUR.Texts);
-                if (row == -1)
+                if (hoadon.MATOUR.ToString() == matour)
                 {
-                    throw new Exception("Không tìm thấy tour cần xóa!");
-                }
-                else
-                {
-                    DialogResult dr = MessageBox.Show("Bạn có chắc muốn xóa !", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (dr == DialogResult.Yes)
+                    HOADON deletehoadonFKTOUR = context.HOADONs.FirstOrDefault(s => s.MATOUR.ToString() == matour);
+                    if (delete != null)
                     {
-                        dgvTHONGTINTOUR.Rows.RemoveAt(row);
-                        xoa();
-                        resetnull();
-                        MessageBox.Show("Xóa tour thành công!", "Thông báo", MessageBoxButtons.OK);
+                        context.HOADONs.Remove(deletehoadonFKTOUR);
+
+                        context.SaveChanges();
                     }
                 }
             }
-            catch (Exception ex)
+            context.TOURs.Remove(delete);
+            context.SaveChanges();
+        }
+        private void btnXOA_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvTHONGTINTOUR.Rows.Count; i++)
             {
-                MessageBox.Show(ex.Message);
+                if (dgvTHONGTINTOUR.Rows[i].Cells[15].Value != null)
+                {
+                    if (MessageBox.Show("Bạn có chắc muốn xóa Tour: " + dgvTHONGTINTOUR.Rows[i].Cells[1].Value.ToString() + " ?", "Xác Nhận Xóa !!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        //dgvTHONGTINTOUR.Rows.RemoveAt(i);
+                        delete(dgvTHONGTINTOUR.Rows[i].Cells[0].Value.ToString());
+                    }
+                }
+
             }
+            
+            QLTOURDBContext context = new QLTOURDBContext();
+            List<TOUR> tourlist = context.TOURs.ToList();
+            Bindinggrid(tourlist);
+            //try
+            //{
+            //    int row = checkMAtour(txtMATOUR.Texts);
+            //    if (row == -1)
+            //    {
+            //        throw new Exception("Không tìm thấy tour cần xóa!");
+            //    }
+            //    else
+            //    {
+            //        DialogResult dr = MessageBox.Show("Bạn có chắc muốn xóa !", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //        if (dr == DialogResult.Yes)
+            //        {
+            //            dgvTHONGTINTOUR.Rows.RemoveAt(row);
+            //            xoa();
+            //            resetnull();
+            //            MessageBox.Show("Xóa tour thành công!", "Thông báo", MessageBoxButtons.OK);
+            //        }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
         private bool ContainsDiacriticOrWhiteSpace(char c)
         {
@@ -653,6 +693,18 @@ namespace QL_tour_LTW
         {
             btnTROVE.BorderSize = 2;
             btnTROVE.BorderColor = Color.MidnightBlue;
+        }
+
+        private void dgvTHONGTINTOUR_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 15 && e.RowIndex >= 0)
+            {
+                DataGridViewCheckBoxCell cell = (DataGridViewCheckBoxCell)dgvTHONGTINTOUR.Rows[e.RowIndex].Cells[15];
+                bool currentValue = Convert.ToBoolean(cell.Value);
+                cell.Value = !currentValue;
+                dgvTHONGTINTOUR.EndEdit(); // Kết thúc chỉnh sửa ô để cập nhật giá trị
+                // Tiếp tục xử lý logic khác tại đây nếu cần thiết
+            }
         }
     }
 }

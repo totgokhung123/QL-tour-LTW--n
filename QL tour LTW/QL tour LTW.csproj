@@ -289,6 +289,7 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UIcustom\RJTextBox.Designer.cs" />
+    <Compile Include="UserCredentials.cs" />
     <EmbeddedResource Include="DangKy.resx">
       <DependentUpon>DangKy.cs</DependentUpon>
     </EmbeddedResource>

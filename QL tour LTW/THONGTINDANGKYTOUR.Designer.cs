@@ -78,8 +78,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnHUY = new CustomControls.RJControls.RJButton();
-            this.btnTHANHTIEN = new CustomControls.RJControls.RJButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -102,13 +100,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.txtSL = new CustomControls.RJControls.RJTextBox();
             this.txtCCCD = new CustomControls.RJControls.RJTextBox();
             this.txtTENKH = new CustomControls.RJControls.RJTextBox();
             this.txtEMAIL = new CustomControls.RJControls.RJTextBox();
             this.txtSDT = new CustomControls.RJControls.RJTextBox();
             this.txtHODEMKH = new CustomControls.RJControls.RJTextBox();
-            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.btnHUY = new CustomControls.RJControls.RJButton();
+            this.btnTHANHTIEN = new CustomControls.RJControls.RJButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxANH1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -756,55 +756,6 @@
             this.panel5.Size = new System.Drawing.Size(428, 70);
             this.panel5.TabIndex = 126;
             // 
-            // btnHUY
-            // 
-            this.btnHUY.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnHUY.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnHUY.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHUY.BackgroundImage")));
-            this.btnHUY.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHUY.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnHUY.BorderRadius = 10;
-            this.btnHUY.BorderSize = 0;
-            this.btnHUY.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHUY.FlatAppearance.BorderSize = 0;
-            this.btnHUY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHUY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHUY.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.btnHUY.Location = new System.Drawing.Point(251, 5);
-            this.btnHUY.Name = "btnHUY";
-            this.btnHUY.Size = new System.Drawing.Size(116, 57);
-            this.btnHUY.TabIndex = 52;
-            this.btnHUY.Text = "Hủy";
-            this.btnHUY.TextColor = System.Drawing.Color.LavenderBlush;
-            this.btnHUY.UseVisualStyleBackColor = false;
-            this.btnHUY.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnHUY_MouseDown);
-            this.btnHUY.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnHUY_MouseUp);
-            // 
-            // btnTHANHTIEN
-            // 
-            this.btnTHANHTIEN.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnTHANHTIEN.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnTHANHTIEN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTHANHTIEN.BackgroundImage")));
-            this.btnTHANHTIEN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTHANHTIEN.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnTHANHTIEN.BorderRadius = 10;
-            this.btnTHANHTIEN.BorderSize = 0;
-            this.btnTHANHTIEN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTHANHTIEN.FlatAppearance.BorderSize = 0;
-            this.btnTHANHTIEN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTHANHTIEN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTHANHTIEN.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.btnTHANHTIEN.Location = new System.Drawing.Point(68, 5);
-            this.btnTHANHTIEN.Name = "btnTHANHTIEN";
-            this.btnTHANHTIEN.Size = new System.Drawing.Size(116, 57);
-            this.btnTHANHTIEN.TabIndex = 51;
-            this.btnTHANHTIEN.Text = "Thanh toán";
-            this.btnTHANHTIEN.TextColor = System.Drawing.Color.LavenderBlush;
-            this.btnTHANHTIEN.UseVisualStyleBackColor = false;
-            this.btnTHANHTIEN.Click += new System.EventHandler(this.btnTHANHTIEN_Click);
-            this.btnTHANHTIEN.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnTHANHTIEN_MouseDown);
-            this.btnTHANHTIEN.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnTHANHTIEN_MouseUp);
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label10);
@@ -1069,6 +1020,18 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "Họ tên đệm:";
             // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(153)))));
+            this.bunifuSeparator1.LineThickness = 5;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(3, 16);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Size = new System.Drawing.Size(753, 35);
+            this.bunifuSeparator1.TabIndex = 67;
+            this.bunifuSeparator1.Transparency = 255;
+            this.bunifuSeparator1.Vertical = false;
+            // 
             // txtSL
             // 
             this.txtSL.BackColor = System.Drawing.SystemColors.Window;
@@ -1225,17 +1188,55 @@
             this.txtHODEMKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHODEMKH_KeyPress);
             this.txtHODEMKH.Leave += new System.EventHandler(this.txtHODEMKH_Leave);
             // 
-            // bunifuSeparator1
+            // btnHUY
             // 
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(153)))));
-            this.bunifuSeparator1.LineThickness = 5;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(3, 16);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(753, 35);
-            this.bunifuSeparator1.TabIndex = 67;
-            this.bunifuSeparator1.Transparency = 255;
-            this.bunifuSeparator1.Vertical = false;
+            this.btnHUY.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnHUY.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnHUY.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHUY.BackgroundImage")));
+            this.btnHUY.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHUY.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnHUY.BorderRadius = 10;
+            this.btnHUY.BorderSize = 0;
+            this.btnHUY.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHUY.FlatAppearance.BorderSize = 0;
+            this.btnHUY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHUY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHUY.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.btnHUY.Location = new System.Drawing.Point(251, 5);
+            this.btnHUY.Name = "btnHUY";
+            this.btnHUY.Size = new System.Drawing.Size(116, 57);
+            this.btnHUY.TabIndex = 52;
+            this.btnHUY.Text = "Hủy";
+            this.btnHUY.TextColor = System.Drawing.Color.LavenderBlush;
+            this.btnHUY.UseVisualStyleBackColor = false;
+            this.btnHUY.Click += new System.EventHandler(this.btnHUY_Click);
+            this.btnHUY.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnHUY_MouseDown);
+            this.btnHUY.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnHUY_MouseUp);
+            // 
+            // btnTHANHTIEN
+            // 
+            this.btnTHANHTIEN.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnTHANHTIEN.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnTHANHTIEN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTHANHTIEN.BackgroundImage")));
+            this.btnTHANHTIEN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTHANHTIEN.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTHANHTIEN.BorderRadius = 10;
+            this.btnTHANHTIEN.BorderSize = 0;
+            this.btnTHANHTIEN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTHANHTIEN.FlatAppearance.BorderSize = 0;
+            this.btnTHANHTIEN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTHANHTIEN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTHANHTIEN.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.btnTHANHTIEN.Location = new System.Drawing.Point(68, 5);
+            this.btnTHANHTIEN.Name = "btnTHANHTIEN";
+            this.btnTHANHTIEN.Size = new System.Drawing.Size(116, 57);
+            this.btnTHANHTIEN.TabIndex = 51;
+            this.btnTHANHTIEN.Text = "Thanh toán";
+            this.btnTHANHTIEN.TextColor = System.Drawing.Color.LavenderBlush;
+            this.btnTHANHTIEN.UseVisualStyleBackColor = false;
+            this.btnTHANHTIEN.Click += new System.EventHandler(this.btnTHANHTIEN_Click);
+            this.btnTHANHTIEN.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnTHANHTIEN_MouseDown);
+            this.btnTHANHTIEN.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnTHANHTIEN_MouseUp);
             // 
             // THONGTINDANGKYTOUR
             // 

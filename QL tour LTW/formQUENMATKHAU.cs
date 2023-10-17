@@ -12,6 +12,8 @@ using System.Windows.Forms;
 using QL_tour_LTW.ModelQLTOUR;
 using ZXing;
 using Microsoft.Reporting.WinForms;
+using CustomControls.RJControls;
+using System.Globalization;
 
 namespace QL_tour_LTW
 {
@@ -216,13 +218,89 @@ namespace QL_tour_LTW
                 e.Handled = true; // Loại bỏ ký tự khoảng trắng
             }
         }
-
+        private bool IsDiacritic(char c)
+        {
+            string normalizedText = c.ToString().Normalize(NormalizationForm.FormD);
+            foreach (char ch in normalizedText)
+            {
+                if (CharUnicodeInfo.GetUnicodeCategory(ch) == UnicodeCategory.NonSpacingMark)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
         private void txtXACNHANMATKHAU_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == 22) // 22 là mã ASCII của ký tự Ctrl + V
             {
                 e.Handled = true;
                 return;
+            }
+            if (IsDiacritic(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnLUU_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnLUU.BorderSize = 2;
+            btnLUU.BorderColor = Color.MidnightBlue;
+        }
+
+        private void btnLUU_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnLUU.BorderSize = 0;
+        }
+
+        private void btnHUY_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnHUY.BorderSize = 2;
+            btnHUY.BorderColor = Color.MidnightBlue;
+        }
+
+        private void btnHUY_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnHUY.BorderSize = 0;
+        }
+
+        private void txtTKNV_Enter(object sender, EventArgs e)
+        {
+            txtTKNV.BackColor = Color.Gainsboro;
+        }
+
+        private void txtTKNV_Leave(object sender, EventArgs e)
+        {
+            txtTKNV.BackColor = Color.White;
+        }
+
+        private void txtMATKHAUMOI_Enter(object sender, EventArgs e)
+        {
+            txtMATKHAUMOI.BackColor = Color.Gainsboro;
+        }
+
+        private void txtMATKHAUMOI_Leave(object sender, EventArgs e)
+        {
+            txtMATKHAUMOI.BackColor = Color.White;
+
+        }
+
+        private void txtXACNHANMATKHAU_Enter(object sender, EventArgs e)
+        {
+            txtXACNHANMATKHAU.BackColor = Color.Gainsboro;
+        }
+
+        private void txtXACNHANMATKHAU_Leave(object sender, EventArgs e)
+        {
+            txtXACNHANMATKHAU.BackColor = Color.White;
+        }
+
+        private void txtcapcha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (IsDiacritic(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

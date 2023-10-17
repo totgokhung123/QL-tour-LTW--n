@@ -31,25 +31,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(THONGTINTOUR));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(THONGTINTOUR));
             this.dgvTHONGTINTOUR = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -69,26 +54,41 @@
             this.label14 = new System.Windows.Forms.Label();
             this.cbbDIEMDI = new System.Windows.Forms.ComboBox();
             this.cbbDIEMDEN = new System.Windows.Forms.ComboBox();
-            this.txttesst = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.txtTRANGTHAI = new CustomControls.RJControls.RJTextBox();
-            this.txtMOTA = new CustomControls.RJControls.RJTextBox();
-            this.txtGIATOUR = new CustomControls.RJControls.RJTextBox();
-            this.txtTENTOUR = new CustomControls.RJControls.RJTextBox();
-            this.txtMATOUR = new CustomControls.RJControls.RJTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pcboxANH1 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.pcboxANH3 = new System.Windows.Forms.PictureBox();
             this.pcboxANH2 = new System.Windows.Forms.PictureBox();
+            this.bunifuiOSSwitch1 = new Bunifu.Framework.UI.BunifuiOSSwitch();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.txtTRANGTHAI = new CustomControls.RJControls.RJTextBox();
+            this.txtMOTA = new CustomControls.RJControls.RJTextBox();
+            this.txtGIATOUR = new CustomControls.RJControls.RJTextBox();
+            this.txtTENTOUR = new CustomControls.RJControls.RJTextBox();
+            this.txtMATOUR = new CustomControls.RJControls.RJTextBox();
             this.btnTROVE = new CustomControls.RJControls.RJButton();
             this.btnXOA = new CustomControls.RJControls.RJButton();
             this.btnSUA = new CustomControls.RJControls.RJButton();
             this.btnTHEM = new CustomControls.RJControls.RJButton();
             this.btnTIMKIEM = new CustomControls.RJControls.RJButton();
             this.btnReset = new CustomControls.RJControls.RJButton();
-            this.bunifuiOSSwitch1 = new Bunifu.Framework.UI.BunifuiOSSwitch();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTHONGTINTOUR)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcboxANH1)).BeginInit();
@@ -131,7 +131,8 @@
             this.Column12,
             this.Column13,
             this.Column14,
-            this.Column15});
+            this.Column15,
+            this.Column16});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -154,110 +155,7 @@
             this.dgvTHONGTINTOUR.Size = new System.Drawing.Size(1189, 303);
             this.dgvTHONGTINTOUR.TabIndex = 0;
             this.dgvTHONGTINTOUR.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTHONGTINTOUR_CellClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Mã tour";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tên tour";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Giá tour";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column4.HeaderText = "Ngày đi";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            dataGridViewCellStyle4.Format = "d";
-            dataGridViewCellStyle4.NullValue = null;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column5.HeaderText = "Ngày kết thúc";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Mô tả";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Visible = false;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Trạng thái";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Visible = false;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Loại tour";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Visible = false;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Điểm đi";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Điểm đến";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Phương tiện";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Visible = false;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Khách sạn";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.Visible = false;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "ANH";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            this.Column13.Visible = false;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "ANH2";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            this.Column14.Visible = false;
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "ANH3";
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
-            this.Column15.Visible = false;
+            this.dgvTHONGTINTOUR.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTHONGTINTOUR_CellContentClick);
             // 
             // label1
             // 
@@ -476,13 +374,6 @@
             this.cbbDIEMDEN.TabIndex = 7;
             this.cbbDIEMDEN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbbMALTOUR_KeyPress);
             // 
-            // txttesst
-            // 
-            this.txttesst.Location = new System.Drawing.Point(694, 37);
-            this.txttesst.Name = "txttesst";
-            this.txttesst.Size = new System.Drawing.Size(100, 20);
-            this.txttesst.TabIndex = 10;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -492,6 +383,202 @@
             this.label15.Size = new System.Drawing.Size(116, 16);
             this.label15.TabIndex = 12;
             this.label15.Text = "Tìm kiếm bổ sung:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label2.Location = new System.Drawing.Point(12, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(189, 32);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Thông Tin Tour";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pcboxANH1);
+            this.panel1.Location = new System.Drawing.Point(656, 204);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(296, 150);
+            this.panel1.TabIndex = 18;
+            // 
+            // pcboxANH1
+            // 
+            this.pcboxANH1.BackColor = System.Drawing.Color.White;
+            this.pcboxANH1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcboxANH1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pcboxANH1.Location = new System.Drawing.Point(2, 2);
+            this.pcboxANH1.Name = "pcboxANH1";
+            this.pcboxANH1.Size = new System.Drawing.Size(293, 147);
+            this.pcboxANH1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcboxANH1.TabIndex = 9;
+            this.pcboxANH1.TabStop = false;
+            // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(139)))));
+            this.bunifuSeparator1.LineThickness = 6;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(12, 43);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Size = new System.Drawing.Size(1138, 35);
+            this.bunifuSeparator1.TabIndex = 19;
+            this.bunifuSeparator1.Transparency = 255;
+            this.bunifuSeparator1.Vertical = false;
+            // 
+            // pcboxANH3
+            // 
+            this.pcboxANH3.BackColor = System.Drawing.Color.White;
+            this.pcboxANH3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcboxANH3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pcboxANH3.Location = new System.Drawing.Point(958, 282);
+            this.pcboxANH3.Name = "pcboxANH3";
+            this.pcboxANH3.Size = new System.Drawing.Size(219, 72);
+            this.pcboxANH3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcboxANH3.TabIndex = 21;
+            this.pcboxANH3.TabStop = false;
+            // 
+            // pcboxANH2
+            // 
+            this.pcboxANH2.BackColor = System.Drawing.Color.White;
+            this.pcboxANH2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcboxANH2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pcboxANH2.Location = new System.Drawing.Point(958, 204);
+            this.pcboxANH2.Name = "pcboxANH2";
+            this.pcboxANH2.Size = new System.Drawing.Size(219, 72);
+            this.pcboxANH2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcboxANH2.TabIndex = 20;
+            this.pcboxANH2.TabStop = false;
+            // 
+            // bunifuiOSSwitch1
+            // 
+            this.bunifuiOSSwitch1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuiOSSwitch1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuiOSSwitch1.BackgroundImage")));
+            this.bunifuiOSSwitch1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuiOSSwitch1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuiOSSwitch1.Location = new System.Drawing.Point(672, 75);
+            this.bunifuiOSSwitch1.Name = "bunifuiOSSwitch1";
+            this.bunifuiOSSwitch1.OffColor = System.Drawing.Color.Gray;
+            this.bunifuiOSSwitch1.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(54)))), ((int)(((byte)(159)))));
+            this.bunifuiOSSwitch1.Size = new System.Drawing.Size(43, 25);
+            this.bunifuiOSSwitch1.TabIndex = 13;
+            this.bunifuiOSSwitch1.Value = true;
+            this.bunifuiOSSwitch1.OnValueChange += new System.EventHandler(this.bunifuiOSSwitch1_OnValueChange);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Mã tour";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Tên tour";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Giá tour";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column4.HeaderText = "Ngày đi";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            dataGridViewCellStyle4.Format = "d";
+            dataGridViewCellStyle4.NullValue = null;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column5.HeaderText = "Ngày kết thúc";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Mô tả";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Visible = false;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Trạng thái";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Visible = false;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Loại tour";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Visible = false;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Điểm đi";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Điểm đến";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Phương tiện";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Visible = false;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Khách sạn";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Visible = false;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "ANH";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Visible = false;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "ANH2";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            this.Column14.Visible = false;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "ANH3";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            this.Column15.Visible = false;
+            // 
+            // Column16
+            // 
+            this.Column16.FillWeight = 40F;
+            this.Column16.HeaderText = "Xóa";
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
             // 
             // txtTRANGTHAI
             // 
@@ -627,76 +714,6 @@
             this.txtMATOUR.Enter += new System.EventHandler(this.rjTextBox1_Enter);
             this.txtMATOUR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMATOUR_KeyPress);
             this.txtMATOUR.Leave += new System.EventHandler(this.rjTextBox1_Leave);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label2.Location = new System.Drawing.Point(12, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 32);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Thông Tin Tour";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pcboxANH1);
-            this.panel1.Location = new System.Drawing.Point(656, 204);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(296, 150);
-            this.panel1.TabIndex = 18;
-            // 
-            // pcboxANH1
-            // 
-            this.pcboxANH1.BackColor = System.Drawing.Color.White;
-            this.pcboxANH1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcboxANH1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pcboxANH1.Location = new System.Drawing.Point(2, 2);
-            this.pcboxANH1.Name = "pcboxANH1";
-            this.pcboxANH1.Size = new System.Drawing.Size(293, 147);
-            this.pcboxANH1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcboxANH1.TabIndex = 9;
-            this.pcboxANH1.TabStop = false;
-            // 
-            // bunifuSeparator1
-            // 
-            this.bunifuSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(139)))));
-            this.bunifuSeparator1.LineThickness = 6;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(12, 43);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(1138, 35);
-            this.bunifuSeparator1.TabIndex = 19;
-            this.bunifuSeparator1.Transparency = 255;
-            this.bunifuSeparator1.Vertical = false;
-            // 
-            // pcboxANH3
-            // 
-            this.pcboxANH3.BackColor = System.Drawing.Color.White;
-            this.pcboxANH3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcboxANH3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pcboxANH3.Location = new System.Drawing.Point(958, 282);
-            this.pcboxANH3.Name = "pcboxANH3";
-            this.pcboxANH3.Size = new System.Drawing.Size(219, 72);
-            this.pcboxANH3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcboxANH3.TabIndex = 21;
-            this.pcboxANH3.TabStop = false;
-            // 
-            // pcboxANH2
-            // 
-            this.pcboxANH2.BackColor = System.Drawing.Color.White;
-            this.pcboxANH2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcboxANH2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pcboxANH2.Location = new System.Drawing.Point(958, 204);
-            this.pcboxANH2.Name = "pcboxANH2";
-            this.pcboxANH2.Size = new System.Drawing.Size(219, 72);
-            this.pcboxANH2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcboxANH2.TabIndex = 20;
-            this.pcboxANH2.TabStop = false;
             // 
             // btnTROVE
             // 
@@ -853,21 +870,6 @@
             this.btnReset.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnReset_MouseClick);
             this.btnReset.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnReset_MouseUp);
             // 
-            // bunifuiOSSwitch1
-            // 
-            this.bunifuiOSSwitch1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuiOSSwitch1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuiOSSwitch1.BackgroundImage")));
-            this.bunifuiOSSwitch1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuiOSSwitch1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuiOSSwitch1.Location = new System.Drawing.Point(672, 75);
-            this.bunifuiOSSwitch1.Name = "bunifuiOSSwitch1";
-            this.bunifuiOSSwitch1.OffColor = System.Drawing.Color.Gray;
-            this.bunifuiOSSwitch1.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(54)))), ((int)(((byte)(159)))));
-            this.bunifuiOSSwitch1.Size = new System.Drawing.Size(43, 25);
-            this.bunifuiOSSwitch1.TabIndex = 13;
-            this.bunifuiOSSwitch1.Value = true;
-            this.bunifuiOSSwitch1.OnValueChange += new System.EventHandler(this.bunifuiOSSwitch1_OnValueChange);
-            // 
             // THONGTINTOUR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -890,7 +892,6 @@
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.bunifuiOSSwitch1);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.txttesst);
             this.Controls.Add(this.cbbDIEMDEN);
             this.Controls.Add(this.cbbMAKS);
             this.Controls.Add(this.cbbDIEMDI);
@@ -950,7 +951,6 @@
         private System.Windows.Forms.ComboBox cbbDIEMDI;
         private System.Windows.Forms.ComboBox cbbDIEMDEN;
         private System.Windows.Forms.PictureBox pcboxANH1;
-        private System.Windows.Forms.TextBox txttesst;
         private System.Windows.Forms.Label label15;
         private Bunifu.Framework.UI.BunifuiOSSwitch bunifuiOSSwitch1;
         private CustomControls.RJControls.RJButton btnReset;
@@ -967,6 +967,8 @@
         private CustomControls.RJControls.RJButton btnTROVE;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
+        private System.Windows.Forms.PictureBox pcboxANH2;
+        private System.Windows.Forms.PictureBox pcboxANH3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -982,7 +984,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.PictureBox pcboxANH2;
-        private System.Windows.Forms.PictureBox pcboxANH3;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column16;
     }
 }

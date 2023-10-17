@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Runtime.Remoting.Contexts;
+using System.Xml;
 
 namespace QL_tour_LTW
 {
@@ -175,7 +176,7 @@ namespace QL_tour_LTW
             context.KHACHHANGs.Add(insert);
             context.SaveChanges();
             MessageBox.Show("Thêm khách hàng thành công !", "Thông báo");
-        }
+        }      
         private void themkhachhang()
         {
             int kiemtratxt = checktxt();
@@ -185,12 +186,8 @@ namespace QL_tour_LTW
             }
             else
             {
-                if (rbCHUYENKHOAN.Checked == false && rbKHONGCHUYENKHOAN.Checked == false)
-                {
-                    MessageBox.Show("Hãy chọn hình thức thanh toán trước khi thanh toán", "Thông báo");
-                    return;
-                }
-                else if (rbKHONGCHUYENKHOAN.Checked == true)
+                
+                if (rbKHONGCHUYENKHOAN.Checked == true)
                 {
                     lbSL.Text = txtSL.Texts;
                     decimal giatour = decimal.Parse(lbTHANHTIEN.Text.Replace("/đ Khách", string.Empty).Replace(",", string.Empty));
@@ -467,6 +464,18 @@ namespace QL_tour_LTW
                 e.Handled = true;
                 return;
             }
+            if (txtSDT.Texts.Length >= 13 && e.KeyChar != '\b')
+            {
+                e.Handled = true; // Hủy sự kiện KeyPress
+                MessageBox.Show("Số điện thoại không quá 13 ký tự!", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtCCCD.Texts.Length >= 13 && e.KeyChar != '\b')
+            {
+                e.Handled = true; // Hủy sự kiện KeyPress
+                MessageBox.Show("Căn cước không quá 13 ký tự!", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
         }
 
         private void txtEMAIL_KeyPress(object sender, KeyPressEventArgs e)
@@ -579,6 +588,11 @@ namespace QL_tour_LTW
         private void btnHUY_MouseUp(object sender, MouseEventArgs e)
         {
             btnHUY.BorderSize = 0;
+        }
+
+        private void btnHUY_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

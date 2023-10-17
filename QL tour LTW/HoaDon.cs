@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -73,6 +74,18 @@ namespace QL_tour_LTW
             // Kiểm tra xem ký tự có thuộc tiếng Anh (a-z, A-Z) không
             return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
         }
+        private bool IsDiacritic(char c)
+        {
+            string normalizedText = c.ToString().Normalize(NormalizationForm.FormD);
+            foreach (char ch in normalizedText)
+            {
+                if (CharUnicodeInfo.GetUnicodeCategory(ch) == UnicodeCategory.NonSpacingMark)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
         private void txtSoHD_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)3 || e.KeyChar == (char)22 || e.KeyChar == ' ')
@@ -83,6 +96,10 @@ namespace QL_tour_LTW
             {
                 e.Handled = true;
                 return;
+            }
+            if (IsDiacritic(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
 
@@ -128,10 +145,24 @@ namespace QL_tour_LTW
                 DataGridViewRow selectedRow = dgvDSHD.SelectedRows[0];
                 string MaNV = cbbMaNV.Text;
                 string soHD = txtSoHD.Texts;
+                using (var context = new QLTOURDBContext())
+                {
+                    var selectedSoHD = selectedRow.Cells[0].Value.ToString();
+
+                    // Kiểm tra xem 'SoHD' mới đã tồn tại trong cơ sở dữ liệu hoặc không
+                    var duplicateSoHD = context.HOADONs.FirstOrDefault(hd => hd.SOHD == soHD && hd.SOHD != selectedSoHD);
+
+                    if (duplicateSoHD != null)
+                    {
+                        MessageBox.Show("Số hóa đơn đã tồn tại. Vui lòng chọn một số hóa đơn khác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtSoHD.Select();
+                        return;
+                    }
+                }
                 string thanhTien = txtThanhTien.Texts;
                 string ngayLap = dpkNgayLap.Text;
                 DateTime NgayLap = dpkNgayLap.Value;
-                string maTour = cbbMaTour.Text;
+                string maTour = cbbMaTour.Text;               
                 string maNV = cbbMaNV.Text;
                 string maKH = cbbMaKH.Text;
                 string trangThai = txtTrangThai.Texts;
@@ -269,7 +300,7 @@ namespace QL_tour_LTW
         {
             if (dgvDSHD.SelectedRows.Count > 0)
             {
-                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
                 {
@@ -312,6 +343,10 @@ namespace QL_tour_LTW
                 e.Handled = true;
                 return;
             }
+            if (IsDiacritic(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void cbbMaKH_KeyPress(object sender, KeyPressEventArgs e)
@@ -325,6 +360,10 @@ namespace QL_tour_LTW
                 e.Handled = true;
                 return;
             }
+            if (IsDiacritic(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void cbbMaNV_KeyPress(object sender, KeyPressEventArgs e)
@@ -337,6 +376,10 @@ namespace QL_tour_LTW
             {
                 e.Handled = true;
                 return;
+            }
+            if (IsDiacritic(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
 
@@ -402,6 +445,41 @@ namespace QL_tour_LTW
         {
             btThoat.BorderSize = 2;
             btThoat.BorderColor = Color.MidnightBlue;
+        }
+
+        private void btTim_Click(object sender, EventArgs e)
+        {
+            List<HOADON> listHoaDon = context.HOADONs.ToList();
+
+            if (!string.IsNullOrEmpty(txtSoHD.Texts))
+            {
+                listHoaDon = listHoaDon.Where(s => s.SOHD.Equals(txtSoHD.Texts)).ToList();
+            }
+            else if (!string.IsNullOrEmpty(txtThanhTien.Texts))
+            {
+                listHoaDon = listHoaDon.Where(s => s.THANHTIEN.Equals(txtThanhTien.Texts)).ToList();
+            }
+            else if (!string.IsNullOrEmpty(cbbMaTour.Text))
+            {
+                listHoaDon = listHoaDon.Where(s => s.MATOUR.Equals(cbbMaTour.Text)).ToList();
+            }
+            else if (!string.IsNullOrEmpty(dpkNgayLap.Text))
+            {
+                listHoaDon = listHoaDon.Where(s => s.NGAYLAP.Equals(dpkNgayLap.Text)).ToList();
+            }
+            else if (!string.IsNullOrEmpty(cbbMaKH.Text))
+            {
+                listHoaDon = listHoaDon.Where(s => s.MAKH.Equals(cbbMaKH.Text)).ToList();
+            }
+            else if (!string.IsNullOrEmpty(cbbMaNV.Text))
+            {
+                listHoaDon = listHoaDon.Where(s => s.MANV.Equals(cbbMaNV.Text)).ToList();
+            }
+            else if (!string.IsNullOrEmpty(txtTrangThai.Texts))
+            {
+                listHoaDon = listHoaDon.Where(s => s.TRANGTHAI.Equals(txtTrangThai.Texts)).ToList();
+            }
+            BindGridView(listHoaDon);
         }
     }
 }

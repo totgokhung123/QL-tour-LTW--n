@@ -30,9 +30,16 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HoaDon));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HoaDon));
             this.dgvDSHD = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.ColumnSoHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMaTour = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,13 +75,7 @@
             this.btSua = new CustomControls.RJControls.RJButton();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.ColumnSoHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMaTour = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btTim = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSHD)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -122,6 +123,58 @@
             this.dgvDSHD.Size = new System.Drawing.Size(735, 210);
             this.dgvDSHD.TabIndex = 3;
             this.dgvDSHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSHD_CellClick);
+            // 
+            // ColumnSoHD
+            // 
+            this.ColumnSoHD.HeaderText = "Số HD";
+            this.ColumnSoHD.MinimumWidth = 6;
+            this.ColumnSoHD.Name = "ColumnSoHD";
+            this.ColumnSoHD.ReadOnly = true;
+            // 
+            // ColumnNgayLap
+            // 
+            dataGridViewCellStyle3.NullValue = "true";
+            this.ColumnNgayLap.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ColumnNgayLap.HeaderText = "Ngày lập";
+            this.ColumnNgayLap.MinimumWidth = 6;
+            this.ColumnNgayLap.Name = "ColumnNgayLap";
+            this.ColumnNgayLap.ReadOnly = true;
+            // 
+            // ColumnThanhTien
+            // 
+            this.ColumnThanhTien.HeaderText = "Thành tiền";
+            this.ColumnThanhTien.MinimumWidth = 6;
+            this.ColumnThanhTien.Name = "ColumnThanhTien";
+            this.ColumnThanhTien.ReadOnly = true;
+            // 
+            // ColumnMaTour
+            // 
+            this.ColumnMaTour.HeaderText = "Mã Tour";
+            this.ColumnMaTour.MinimumWidth = 6;
+            this.ColumnMaTour.Name = "ColumnMaTour";
+            this.ColumnMaTour.ReadOnly = true;
+            // 
+            // ColumnMaKH
+            // 
+            this.ColumnMaKH.HeaderText = "Mã KH";
+            this.ColumnMaKH.MinimumWidth = 6;
+            this.ColumnMaKH.Name = "ColumnMaKH";
+            this.ColumnMaKH.ReadOnly = true;
+            // 
+            // ColumnMaNV
+            // 
+            this.ColumnMaNV.HeaderText = "Mã NV";
+            this.ColumnMaNV.MinimumWidth = 6;
+            this.ColumnMaNV.Name = "ColumnMaNV";
+            this.ColumnMaNV.ReadOnly = true;
+            // 
+            // ColumnTrangThai
+            // 
+            this.ColumnTrangThai.HeaderText = "Trạng thái";
+            this.ColumnTrangThai.MinimumWidth = 6;
+            this.ColumnTrangThai.Name = "ColumnTrangThai";
+            this.ColumnTrangThai.ReadOnly = true;
+            this.ColumnTrangThai.Visible = false;
             // 
             // Column7
             // 
@@ -256,6 +309,7 @@
             this.bunifuGradientPanel1.Controls.Add(this.txtSoHD);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomLabel3);
             this.bunifuGradientPanel1.Controls.Add(this.btThoat);
+            this.bunifuGradientPanel1.Controls.Add(this.btTim);
             this.bunifuGradientPanel1.Controls.Add(this.btXoa);
             this.bunifuGradientPanel1.Controls.Add(this.btReset);
             this.bunifuGradientPanel1.Controls.Add(this.btSua);
@@ -492,7 +546,7 @@
             this.btThoat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btThoat.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btThoat.ForeColor = System.Drawing.Color.White;
-            this.btThoat.Location = new System.Drawing.Point(530, 291);
+            this.btThoat.Location = new System.Drawing.Point(584, 291);
             this.btThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btThoat.Name = "btThoat";
             this.btThoat.Size = new System.Drawing.Size(101, 34);
@@ -517,7 +571,7 @@
             this.btXoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btXoa.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btXoa.ForeColor = System.Drawing.Color.White;
-            this.btXoa.Location = new System.Drawing.Point(241, 291);
+            this.btXoa.Location = new System.Drawing.Point(469, 291);
             this.btXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(101, 34);
@@ -542,7 +596,7 @@
             this.btReset.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btReset.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btReset.ForeColor = System.Drawing.Color.White;
-            this.btReset.Location = new System.Drawing.Point(399, 291);
+            this.btReset.Location = new System.Drawing.Point(36, 291);
             this.btReset.Margin = new System.Windows.Forms.Padding(2);
             this.btReset.Name = "btReset";
             this.btReset.Size = new System.Drawing.Size(101, 34);
@@ -567,7 +621,7 @@
             this.btSua.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btSua.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btSua.ForeColor = System.Drawing.Color.White;
-            this.btSua.Location = new System.Drawing.Point(97, 291);
+            this.btSua.Location = new System.Drawing.Point(364, 291);
             this.btSua.Margin = new System.Windows.Forms.Padding(2);
             this.btSua.Name = "btSua";
             this.btSua.Size = new System.Drawing.Size(101, 34);
@@ -589,7 +643,7 @@
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(64, 20);
             this.bunifuCustomLabel2.TabIndex = 0;
-            this.bunifuCustomLabel2.Text = "Số DH : ";
+            this.bunifuCustomLabel2.Text = "Số HĐ : ";
             // 
             // bunifuCustomLabel1
             // 
@@ -604,57 +658,30 @@
             this.bunifuCustomLabel1.TabIndex = 0;
             this.bunifuCustomLabel1.Text = "Thông tin hóa đơn :";
             // 
-            // ColumnSoHD
+            // btTim
             // 
-            this.ColumnSoHD.HeaderText = "Số HD";
-            this.ColumnSoHD.MinimumWidth = 6;
-            this.ColumnSoHD.Name = "ColumnSoHD";
-            this.ColumnSoHD.ReadOnly = true;
-            // 
-            // ColumnNgayLap
-            // 
-            dataGridViewCellStyle3.NullValue = "true";
-            this.ColumnNgayLap.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ColumnNgayLap.HeaderText = "Ngày lập";
-            this.ColumnNgayLap.MinimumWidth = 6;
-            this.ColumnNgayLap.Name = "ColumnNgayLap";
-            this.ColumnNgayLap.ReadOnly = true;
-            // 
-            // ColumnThanhTien
-            // 
-            this.ColumnThanhTien.HeaderText = "Thành tiền";
-            this.ColumnThanhTien.MinimumWidth = 6;
-            this.ColumnThanhTien.Name = "ColumnThanhTien";
-            this.ColumnThanhTien.ReadOnly = true;
-            // 
-            // ColumnMaTour
-            // 
-            this.ColumnMaTour.HeaderText = "Mã Tour";
-            this.ColumnMaTour.MinimumWidth = 6;
-            this.ColumnMaTour.Name = "ColumnMaTour";
-            this.ColumnMaTour.ReadOnly = true;
-            // 
-            // ColumnMaKH
-            // 
-            this.ColumnMaKH.HeaderText = "Mã KH";
-            this.ColumnMaKH.MinimumWidth = 6;
-            this.ColumnMaKH.Name = "ColumnMaKH";
-            this.ColumnMaKH.ReadOnly = true;
-            // 
-            // ColumnMaNV
-            // 
-            this.ColumnMaNV.HeaderText = "Mã NV";
-            this.ColumnMaNV.MinimumWidth = 6;
-            this.ColumnMaNV.Name = "ColumnMaNV";
-            this.ColumnMaNV.ReadOnly = true;
-            // 
-            // ColumnTrangThai
-            // 
-            this.ColumnTrangThai.HeaderText = "Trạng thái";
-            this.ColumnTrangThai.MinimumWidth = 6;
-            this.ColumnTrangThai.Name = "ColumnTrangThai";
-            this.ColumnTrangThai.ReadOnly = true;
-            this.ColumnTrangThai.Visible = false;
+            this.btTim.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btTim.BackgroundColor = System.Drawing.Color.MidnightBlue;
+            this.btTim.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btTim.BackgroundImage")));
+            this.btTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btTim.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btTim.BorderRadius = 10;
+            this.btTim.BorderSize = 0;
+            this.btTim.FlatAppearance.BorderSize = 0;
+            this.btTim.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btTim.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btTim.ForeColor = System.Drawing.Color.White;
+            this.btTim.Location = new System.Drawing.Point(145, 291);
+            this.btTim.Margin = new System.Windows.Forms.Padding(2);
+            this.btTim.Name = "btTim";
+            this.btTim.Size = new System.Drawing.Size(101, 34);
+            this.btTim.TabIndex = 1;
+            this.btTim.Text = "Tìm Kiếm";
+            this.btTim.TextColor = System.Drawing.Color.White;
+            this.btTim.UseVisualStyleBackColor = false;
+            this.btTim.Click += new System.EventHandler(this.btTim_Click);
+            this.btTim.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btXoa_MouseDown);
+            this.btTim.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btSua_MouseUp);
             // 
             // HoaDon
             // 
@@ -718,5 +745,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMaKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMaNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTrangThai;
+        private CustomControls.RJControls.RJButton btTim;
     }
 }

@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemTour));
             this.label15 = new System.Windows.Forms.Label();
-            this.txttesst = new System.Windows.Forms.TextBox();
             this.cbbDIEMDEN = new System.Windows.Forms.ComboBox();
             this.cbbMAKS = new System.Windows.Forms.ComboBox();
             this.cbbDIEMDI = new System.Windows.Forms.ComboBox();
@@ -90,13 +89,6 @@
             this.label15.Size = new System.Drawing.Size(111, 16);
             this.label15.TabIndex = 40;
             this.label15.Text = "Bổ sung thông tin:";
-            // 
-            // txttesst
-            // 
-            this.txttesst.Location = new System.Drawing.Point(697, 36);
-            this.txttesst.Name = "txttesst";
-            this.txttesst.Size = new System.Drawing.Size(100, 20);
-            this.txttesst.TabIndex = 39;
             // 
             // cbbDIEMDEN
             // 
@@ -772,7 +764,6 @@
             this.Controls.Add(this.txtMATOUR);
             this.Controls.Add(this.bunifuiOSSwitch1);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.txttesst);
             this.Controls.Add(this.pcboxANH3);
             this.Controls.Add(this.pcboxANH2);
             this.Controls.Add(this.pcboxANH1);
@@ -819,7 +810,6 @@
         private CustomControls.RJControls.RJTextBox txtMATOUR;
         private Bunifu.Framework.UI.BunifuiOSSwitch bunifuiOSSwitch1;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txttesst;
         private System.Windows.Forms.PictureBox pcboxANH1;
         private System.Windows.Forms.ComboBox cbbDIEMDEN;
         private System.Windows.Forms.ComboBox cbbMAKS;

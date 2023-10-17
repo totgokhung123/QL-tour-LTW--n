@@ -275,6 +275,7 @@ namespace QL_tour_LTW
                                 context.KHACHHANGs.Add(kh);
                                 context.SaveChanges();
                                 MessageBox.Show("thêm mới khách hàng thành công !");
+                                loadfrm();
                                 clearTextBox();
                             }
                             else
@@ -292,6 +293,7 @@ namespace QL_tour_LTW
                                 context.KHACHHANGs.Add(kh);
                                 context.SaveChanges();
                                 MessageBox.Show("thêm mới khách hàng thành công !");
+                                loadfrm();
                                 clearTextBox();
                             }
                         }
@@ -308,40 +310,41 @@ namespace QL_tour_LTW
 
             }
         }
-
-        private void btnXOA_Click(object sender, EventArgs e)
+        private void xoa(string makh)
         {
-            int seledtedRow = GetSelectedRow(txtMAKH.Texts);
-            if (seledtedRow == -1)
+            QLTOURDBContext context = new QLTOURDBContext();
+            List<HOADON> hoadonlist = context.HOADONs.ToList();
+            KHACHHANG delete = context.KHACHHANGs.FirstOrDefault(p => p.MAKH.ToString() == makh);
+            foreach (var hoadon in hoadonlist)
             {
-                MessageBox.Show("Không có sinh viên!", "thông báo");
-            }
-            else
-            {
-                if (MessageBox.Show("Bạn có muốn xóa ?", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (hoadon.MAKH.ToString() == makh)
                 {
-                    dgvDSKHACHHANG.Rows.RemoveAt(seledtedRow);
-                    QLTOURDBContext context = new QLTOURDBContext();
-                    List<HOADON> hoadonlist = context.HOADONs.ToList();
-                    KHACHHANG delete = context.KHACHHANGs.FirstOrDefault(p => p.MAKH.ToString() == txtMAKH.Texts);
-                    foreach (var hoadon in hoadonlist)
+                    HOADON deletehoadonFKTOUR = context.HOADONs.FirstOrDefault(s => s.MAKH.ToString() == makh);
+                    if (delete != null)
                     {
-                        if (hoadon.MAKH.ToString() == txtMAKH.Texts)
-                        {
-                            HOADON deletehoadonFKTOUR = context.HOADONs.FirstOrDefault(s => s.MAKH.ToString() == txtMAKH.Texts);
-                            if (delete != null)
-                            {
-                                context.HOADONs.Remove(deletehoadonFKTOUR);
+                        context.HOADONs.Remove(deletehoadonFKTOUR);
 
-                                context.SaveChanges();
-                            }
-                        }
+                        context.SaveChanges();
                     }
-                    context.KHACHHANGs.Remove(delete);
-                    context.SaveChanges();
                 }
             }
-            clearTextBox();
+            context.KHACHHANGs.Remove(delete);
+            context.SaveChanges();
+        }
+        private void btnXOA_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvDSKHACHHANG.Rows.Count; i++)
+            {
+                if (dgvDSKHACHHANG.Rows[i].Cells[7].Value != null)
+                {
+                    if (MessageBox.Show("Bạn có chắc muốn xóa khách hàng: " + dgvDSKHACHHANG.Rows[i].Cells[0].Value.ToString() + " ?", "Xác Nhận Xóa !!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                       // dgvDSKHACHHANG.Rows.RemoveAt(i);
+                        xoa(dgvDSKHACHHANG.Rows[i].Cells[0].Value.ToString());
+                    }
+                }
+            }
+            loadfrm();
         }
 
         private void btnCAPNHAT_Click(object sender, EventArgs e)
@@ -383,6 +386,7 @@ namespace QL_tour_LTW
                             context.SaveChanges();
                             MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK);
                             clearTextBox();
+                            loadfrm();
                         }
                         
                         else if (tim != null)
@@ -423,6 +427,7 @@ namespace QL_tour_LTW
                                 context.SaveChanges();
                                 MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK);
                                 clearTextBox();
+                                loadfrm();
                             }
                         }
                         /// ham update
@@ -475,16 +480,11 @@ namespace QL_tour_LTW
                 e.Handled = true;
                 return;
             }
-            if (txtCCCD.Texts.Length > 13 && e.KeyChar != '\b')
+            
+            if (txtSODT.Texts.Length > 12 && e.KeyChar != '\b')
             {
                 e.Handled = true;
-                MessageBox.Show("căn cước không quá 13 ký tự!", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (txtSODT.Texts.Length > 13 && e.KeyChar != '\b')
-            {
-                e.Handled = true;
-                MessageBox.Show("Số điện thoại không quá 13 ký tự!", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Số điện thoại không quá 12 ký tự!", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -569,6 +569,13 @@ namespace QL_tour_LTW
         private void txtSODT_Leave(object sender, EventArgs e)
         {
             txtSODT.BackColor = Color.White;
+            var checkSDT = context.KHACHHANGs.FirstOrDefault(s => s.SDT == txtSODT.Texts);
+            if (checkSDT != null)
+            {
+                MessageBox.Show("Số điện thoại đã tồn tại!", "thông báo");
+                txtSODT.Texts = "";
+                return;
+            }
         }
 
         private void txtCCCD_Enter(object sender, EventArgs e)
@@ -579,6 +586,13 @@ namespace QL_tour_LTW
         private void txtCCCD_Leave(object sender, EventArgs e)
         {
             txtCCCD.BackColor = Color.White;
+            var checkcccd = context.KHACHHANGs.FirstOrDefault(s => s.CCCD == txtCCCD.Texts);
+            if (checkcccd != null)
+            {
+                MessageBox.Show("CCCD đã tồn tại!", "thông báo");
+
+                return;
+            }
         }
 
         private void txtEMAIL_Enter(object sender, EventArgs e)
@@ -589,6 +603,13 @@ namespace QL_tour_LTW
         private void txtEMAIL_Leave(object sender, EventArgs e)
         {
             txtEMAIL.BackColor = Color.White;
+            var checkEmail = context.KHACHHANGs.FirstOrDefault(s => s.EMAIL == txtEMAIL.Texts);
+            if (checkEmail != null)
+            {
+                MessageBox.Show("CCCD đã tồn tại!", "thông báo");
+
+                return;
+            }
         }
 
         private void txtSLTV_Enter(object sender, EventArgs e)
@@ -659,12 +680,6 @@ namespace QL_tour_LTW
                 e.Handled = true;
                 return;
             }
-            if (!char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-                MessageBox.Show("Chỉ Nhập chữ", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
             if (txtMAKH.Texts.Length >= 11 && e.KeyChar != '\b')
             {
                 e.Handled = true; 
@@ -722,6 +737,39 @@ namespace QL_tour_LTW
             }
 
             return false;
+        }
+
+        private void dgvDSKHACHHANG_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 7 && e.RowIndex >= 0)
+            {
+                DataGridViewCheckBoxCell cell = (DataGridViewCheckBoxCell)dgvDSKHACHHANG.Rows[e.RowIndex].Cells[7];
+                bool currentValue = Convert.ToBoolean(cell.Value);
+                cell.Value = !currentValue;
+                dgvDSKHACHHANG.EndEdit(); // Kết thúc chỉnh sửa ô để cập nhật giá trị
+                // Tiếp tục xử lý logic khác tại đây nếu cần thiết
+            }
+        }
+
+        private void txtCCCD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Chỉ Nhập số", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (e.KeyChar == 22)
+            {
+                e.Handled = true;
+                return;
+            }
+            if (txtCCCD.Texts.Length > 12 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+                MessageBox.Show("căn cước không quá 12 ký tự!", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
         }
     }
 }

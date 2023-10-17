@@ -122,91 +122,94 @@ namespace QL_tour_LTW
         private void dgvTHONGTINTOUR_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = int.Parse(e.RowIndex.ToString());
-            lbMATOUR.Text = dgvDATTOUR.Rows[index].Cells[0].Value.ToString();
-            lblTENTOUR.Text = "[" + dgvDATTOUR.Rows[index].Cells[0].Value.ToString() + "] " + dgvDATTOUR.Rows[index].Cells[1].Value.ToString();
-            txtTENTOUR.Texts = dgvDATTOUR.Rows[index].Cells[1].Value.ToString();
-            lblTIEN.Text = string.Format("{0:#,##0}", dgvDATTOUR.Rows[index].Cells[2].Value) +"/đ Khách";//.Replace(".", string.Empty)     
-            dtpNGAYDI.Value = DateTime.Parse(dgvDATTOUR.Rows[index].Cells[3].Value.ToString());
-            lbTGkhoihanh.Text = DateTime.Parse(dgvDATTOUR.Rows[index].Cells[3].Value.ToString()).ToShortDateString();
-            dtpNGAYKETTHUC.Value = DateTime.Parse(dgvDATTOUR.Rows[index].Cells[4].Value.ToString());
-            if (dgvDATTOUR.Rows[index].Cells[5].Value == null)
+            if (e.RowIndex >= 0)
             {
-                lbMOTA.Text = "";
-            }
-            else
-            {
-                lbMOTA.Text = dgvDATTOUR.Rows[index].Cells[5].Value.ToString();
-            }
-            //if (dgvTHONGTINTOUR.Rows[index].Cells[6].Value == null)
-            //{
-            //    txtTRANGTHAI.Texts = "";
-            //}
-            //else
-            //{
-            //    txtTRANGTHAI.Texts = dgvTHONGTINTOUR.Rows[index].Cells[6].Value.ToString();
-            //}
-            DateTime ngayDi = DateTime.Parse(dgvDATTOUR.Rows[index].Cells[3].Value.ToString());
-            DateTime ngayKetThuc = DateTime.Parse(dgvDATTOUR.Rows[index].Cells[4].Value.ToString());
-            TimeSpan khoangThoiGian = ngayKetThuc.Date - ngayDi.Date;
-            int soNgay = khoangThoiGian.Days;
-            lblTGnho.Text =  lbKhoangTG.Text = soNgay.ToString()+ " ngày";
-            lbLMATOUR.Text =  dgvDATTOUR.Rows[index].Cells[7].Value.ToString();
-            lbDiemDI.Text = cbbDIEMDI.Text = dgvDATTOUR.Rows[index].Cells[8].Value.ToString();
-            lblDiemDen.Text = cbbDIEMDEN.Text = dgvDATTOUR.Rows[index].Cells[9].Value.ToString();           
-            if (dgvDATTOUR.Rows[index].Cells[10].Value == null)
-            {
-                cbbPT.Text = "";
-                lblPT.Text = "chưa có";
-            }
-            else
-            {
-                lblPT.Text =  cbbPT.Text = dgvDATTOUR.Rows[index].Cells[10].Value.ToString();
-                
-            }
-            if (dgvDATTOUR.Rows[index].Cells[11].Value == null)
-            {
-                cbbKS.Text = "";
-                lblKS.Text = "chưa có";
-            }
-            else
-            {
-                lblKS.Text = cbbKS.Text = dgvDATTOUR.Rows[index].Cells[11].Value.ToString();
-            }
-            byte[] imageBytes = dgvDATTOUR.Rows[index].Cells[12].Value as byte[];
-            if (imageBytes != null)
-            {
-                using (MemoryStream ms1 = new MemoryStream(imageBytes))
+                lbMATOUR.Text = dgvDATTOUR.Rows[index].Cells[0].Value.ToString();
+                lblTENTOUR.Text = "[" + dgvDATTOUR.Rows[index].Cells[0].Value.ToString() + "] " + dgvDATTOUR.Rows[index].Cells[1].Value.ToString();
+                txtTENTOUR.Texts = dgvDATTOUR.Rows[index].Cells[1].Value.ToString();
+                lblTIEN.Text = string.Format("{0:#,##0}", dgvDATTOUR.Rows[index].Cells[2].Value) + "/đ Khách";//.Replace(".", string.Empty)     
+                dtpNGAYDI.Value = DateTime.Parse(dgvDATTOUR.Rows[index].Cells[3].Value.ToString());
+                lbTGkhoihanh.Text = DateTime.Parse(dgvDATTOUR.Rows[index].Cells[3].Value.ToString()).ToShortDateString();
+                dtpNGAYKETTHUC.Value = DateTime.Parse(dgvDATTOUR.Rows[index].Cells[4].Value.ToString());
+                if (dgvDATTOUR.Rows[index].Cells[5].Value == null)
                 {
-                    pcboxANH1.Image = Image.FromStream(ms1);
+                    lbMOTA.Text = "";
                 }
-            }
-            else
-            {
-                pcboxANH1.Image = null;
-            }
-            byte[] imageBytes2 = dgvDATTOUR.Rows[index].Cells[13].Value as byte[];
-            if (imageBytes2 != null)
-            {
-                using (MemoryStream ms2 = new MemoryStream(imageBytes2))
+                else
                 {
-                    pcboxANH2.Image = Image.FromStream(ms2);
+                    lbMOTA.Text = dgvDATTOUR.Rows[index].Cells[5].Value.ToString();
                 }
-            }
-            else
-            {
-                pcboxANH2.Image = null;
-            }
-            byte[] imageBytes3 = dgvDATTOUR.Rows[index].Cells[14].Value as byte[];
-            if (imageBytes3 != null)
-            {
-                using (MemoryStream ms3 = new MemoryStream(imageBytes3))
+                //if (dgvTHONGTINTOUR.Rows[index].Cells[6].Value == null)
+                //{
+                //    txtTRANGTHAI.Texts = "";
+                //}
+                //else
+                //{
+                //    txtTRANGTHAI.Texts = dgvTHONGTINTOUR.Rows[index].Cells[6].Value.ToString();
+                //}
+                DateTime ngayDi = DateTime.Parse(dgvDATTOUR.Rows[index].Cells[3].Value.ToString());
+                DateTime ngayKetThuc = DateTime.Parse(dgvDATTOUR.Rows[index].Cells[4].Value.ToString());
+                TimeSpan khoangThoiGian = ngayKetThuc.Date - ngayDi.Date;
+                int soNgay = khoangThoiGian.Days;
+                lblTGnho.Text = lbKhoangTG.Text = soNgay.ToString() + " ngày";
+                lbLMATOUR.Text = dgvDATTOUR.Rows[index].Cells[7].Value.ToString();
+                lbDiemDI.Text = cbbDIEMDI.Text = dgvDATTOUR.Rows[index].Cells[8].Value.ToString();
+                lblDiemDen.Text = cbbDIEMDEN.Text = dgvDATTOUR.Rows[index].Cells[9].Value.ToString();
+                if (dgvDATTOUR.Rows[index].Cells[10].Value == null)
                 {
-                    pcboxANH3.Image = Image.FromStream(ms3);
+                    cbbPT.Text = "";
+                    lblPT.Text = "chưa có";
                 }
-            }
-            else
-            {
-                pcboxANH3.Image = null;
+                else
+                {
+                    lblPT.Text = cbbPT.Text = dgvDATTOUR.Rows[index].Cells[10].Value.ToString();
+
+                }
+                if (dgvDATTOUR.Rows[index].Cells[11].Value == null)
+                {
+                    cbbKS.Text = "";
+                    lblKS.Text = "chưa có";
+                }
+                else
+                {
+                    lblKS.Text = cbbKS.Text = dgvDATTOUR.Rows[index].Cells[11].Value.ToString();
+                }
+                byte[] imageBytes = dgvDATTOUR.Rows[index].Cells[12].Value as byte[];
+                if (imageBytes != null)
+                {
+                    using (MemoryStream ms1 = new MemoryStream(imageBytes))
+                    {
+                        pcboxANH1.Image = Image.FromStream(ms1);
+                    }
+                }
+                else
+                {
+                    pcboxANH1.Image = null;
+                }
+                byte[] imageBytes2 = dgvDATTOUR.Rows[index].Cells[13].Value as byte[];
+                if (imageBytes2 != null)
+                {
+                    using (MemoryStream ms2 = new MemoryStream(imageBytes2))
+                    {
+                        pcboxANH2.Image = Image.FromStream(ms2);
+                    }
+                }
+                else
+                {
+                    pcboxANH2.Image = null;
+                }
+                byte[] imageBytes3 = dgvDATTOUR.Rows[index].Cells[14].Value as byte[];
+                if (imageBytes3 != null)
+                {
+                    using (MemoryStream ms3 = new MemoryStream(imageBytes3))
+                    {
+                        pcboxANH3.Image = Image.FromStream(ms3);
+                    }
+                }
+                else
+                {
+                    pcboxANH3.Image = null;
+                }
             }
         }
         private void checkmaubtnTRONGNUOC()
@@ -259,7 +262,7 @@ namespace QL_tour_LTW
             //txttesst.Text = dtpNGAYDI.Value.ToString();
             DateTime ngayketthuc = DateTime.Parse(dtpNGAYKETTHUC.Value.ToString());
             string loaitour = checkbtnLTOUR();
-            txttesst.Text = checkbtnLTOUR();
+           // txttesst.Text = checkbtnLTOUR();
             string diemdi = cbbDIEMDI.Text != "" ? cbbDIEMDI.SelectedValue.ToString() : "";
             string diemden = cbbDIEMDEN.Text != "" ? cbbDIEMDEN.SelectedValue.ToString() : "";
             string phuongtien = cbbPT.Text != "" ? cbbPT.SelectedValue.ToString() : "";

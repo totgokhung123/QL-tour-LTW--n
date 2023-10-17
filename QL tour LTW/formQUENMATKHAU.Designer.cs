@@ -42,14 +42,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.pictureBoxQR = new System.Windows.Forms.PictureBox();
             this.bntcapcha = new CustomControls.RJControls.RJButton();
             this.txtcapcha = new CustomControls.RJControls.RJTextBox();
-            this.pictureBoxQR = new System.Windows.Forms.PictureBox();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnresetCAPTCHA = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.bunifuCards1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuImageButton2
@@ -90,6 +91,8 @@
             this.btnHUY.TextColor = System.Drawing.Color.White;
             this.btnHUY.UseVisualStyleBackColor = false;
             this.btnHUY.Click += new System.EventHandler(this.btnHUY_Click);
+            this.btnHUY.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnHUY_MouseDown);
+            this.btnHUY.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnHUY_MouseUp);
             // 
             // btnLUU
             // 
@@ -113,6 +116,8 @@
             this.btnLUU.TextColor = System.Drawing.Color.White;
             this.btnLUU.UseVisualStyleBackColor = false;
             this.btnLUU.Click += new System.EventHandler(this.btnLUU_Click);
+            this.btnLUU.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnLUU_MouseDown);
+            this.btnLUU.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnLUU_MouseUp);
             // 
             // txtXACNHANMATKHAU
             // 
@@ -136,7 +141,9 @@
             this.txtXACNHANMATKHAU.TabIndex = 1;
             this.txtXACNHANMATKHAU.Texts = "";
             this.txtXACNHANMATKHAU.UnderlinedStyle = false;
+            this.txtXACNHANMATKHAU.Enter += new System.EventHandler(this.txtXACNHANMATKHAU_Enter);
             this.txtXACNHANMATKHAU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtXACNHANMATKHAU_KeyPress);
+            this.txtXACNHANMATKHAU.Leave += new System.EventHandler(this.txtXACNHANMATKHAU_Leave);
             // 
             // label1
             // 
@@ -171,7 +178,9 @@
             this.txtMATKHAUMOI.TabIndex = 1;
             this.txtMATKHAUMOI.Texts = "";
             this.txtMATKHAUMOI.UnderlinedStyle = false;
+            this.txtMATKHAUMOI.Enter += new System.EventHandler(this.txtMATKHAUMOI_Enter);
             this.txtMATKHAUMOI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtXACNHANMATKHAU_KeyPress);
+            this.txtMATKHAUMOI.Leave += new System.EventHandler(this.txtMATKHAUMOI_Leave);
             // 
             // label2
             // 
@@ -206,7 +215,9 @@
             this.txtTKNV.TabIndex = 1;
             this.txtTKNV.Texts = "";
             this.txtTKNV.UnderlinedStyle = false;
+            this.txtTKNV.Enter += new System.EventHandler(this.txtTKNV_Enter);
             this.txtTKNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTKNV_KeyPress);
+            this.txtTKNV.Leave += new System.EventHandler(this.txtTKNV_Leave);
             // 
             // label6
             // 
@@ -241,6 +252,7 @@
             this.bunifuCards1.BorderRadius = 35;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.LightSkyBlue;
+            this.bunifuCards1.Controls.Add(this.btnresetCAPTCHA);
             this.bunifuCards1.Controls.Add(this.pictureBoxQR);
             this.bunifuCards1.Controls.Add(this.bntcapcha);
             this.bunifuCards1.Controls.Add(this.txtcapcha);
@@ -262,21 +274,16 @@
             this.bunifuCards1.Size = new System.Drawing.Size(471, 435);
             this.bunifuCards1.TabIndex = 16;
             // 
-            // bunifuImageButton1
+            // pictureBoxQR
             // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(629, 11);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(33, 28);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 18;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            this.pictureBoxQR.BackColor = System.Drawing.Color.White;
+            this.pictureBoxQR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxQR.Location = new System.Drawing.Point(264, 234);
+            this.pictureBoxQR.Name = "pictureBoxQR";
+            this.pictureBoxQR.Size = new System.Drawing.Size(149, 110);
+            this.pictureBoxQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxQR.TabIndex = 8;
+            this.pictureBoxQR.TabStop = false;
             // 
             // bntcapcha
             // 
@@ -290,7 +297,7 @@
             this.bntcapcha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntcapcha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntcapcha.ForeColor = System.Drawing.Color.White;
-            this.bntcapcha.Location = new System.Drawing.Point(43, 276);
+            this.bntcapcha.Location = new System.Drawing.Point(21, 268);
             this.bntcapcha.Margin = new System.Windows.Forms.Padding(2);
             this.bntcapcha.Name = "bntcapcha";
             this.bntcapcha.Size = new System.Drawing.Size(105, 37);
@@ -310,7 +317,7 @@
             this.txtcapcha.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtcapcha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcapcha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtcapcha.Location = new System.Drawing.Point(153, 279);
+            this.txtcapcha.Location = new System.Drawing.Point(132, 271);
             this.txtcapcha.Margin = new System.Windows.Forms.Padding(4);
             this.txtcapcha.Multiline = false;
             this.txtcapcha.Name = "txtcapcha";
@@ -318,21 +325,49 @@
             this.txtcapcha.PasswordChar = false;
             this.txtcapcha.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtcapcha.PlaceholderText = "";
-            this.txtcapcha.Size = new System.Drawing.Size(118, 34);
+            this.txtcapcha.Size = new System.Drawing.Size(125, 34);
             this.txtcapcha.TabIndex = 5;
             this.txtcapcha.Texts = "";
             this.txtcapcha.UnderlinedStyle = false;
+            this.txtcapcha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcapcha_KeyPress);
             // 
-            // pictureBoxQR
+            // bunifuImageButton1
             // 
-            this.pictureBoxQR.BackColor = System.Drawing.Color.White;
-            this.pictureBoxQR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxQR.Location = new System.Drawing.Point(278, 242);
-            this.pictureBoxQR.Name = "pictureBoxQR";
-            this.pictureBoxQR.Size = new System.Drawing.Size(149, 110);
-            this.pictureBoxQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxQR.TabIndex = 8;
-            this.pictureBoxQR.TabStop = false;
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(629, 11);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(33, 28);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 18;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            // 
+            // btnresetCAPTCHA
+            // 
+            this.btnresetCAPTCHA.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnresetCAPTCHA.BackgroundColor = System.Drawing.Color.MidnightBlue;
+            this.btnresetCAPTCHA.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnresetCAPTCHA.BackgroundImage")));
+            this.btnresetCAPTCHA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnresetCAPTCHA.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnresetCAPTCHA.BorderRadius = 10;
+            this.btnresetCAPTCHA.BorderSize = 0;
+            this.btnresetCAPTCHA.FlatAppearance.BorderSize = 0;
+            this.btnresetCAPTCHA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnresetCAPTCHA.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnresetCAPTCHA.ForeColor = System.Drawing.Color.White;
+            this.btnresetCAPTCHA.Location = new System.Drawing.Point(418, 268);
+            this.btnresetCAPTCHA.Margin = new System.Windows.Forms.Padding(2);
+            this.btnresetCAPTCHA.Name = "btnresetCAPTCHA";
+            this.btnresetCAPTCHA.Size = new System.Drawing.Size(36, 37);
+            this.btnresetCAPTCHA.TabIndex = 9;
+            this.btnresetCAPTCHA.TextColor = System.Drawing.Color.White;
+            this.btnresetCAPTCHA.UseVisualStyleBackColor = false;
+            this.btnresetCAPTCHA.Click += new System.EventHandler(this.bntcapcha_Click);
             // 
             // formQUENMATKHAU
             // 
@@ -352,8 +387,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -375,5 +410,6 @@
         private CustomControls.RJControls.RJButton bntcapcha;
         private CustomControls.RJControls.RJTextBox txtcapcha;
         private System.Windows.Forms.PictureBox pictureBoxQR;
+        private CustomControls.RJControls.RJButton btnresetCAPTCHA;
     }
 }

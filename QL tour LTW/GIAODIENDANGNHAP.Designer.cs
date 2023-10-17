@@ -124,6 +124,7 @@
             this.linkLblQUENMATKHAU.TabIndex = 19;
             this.linkLblQUENMATKHAU.TabStop = true;
             this.linkLblQUENMATKHAU.Text = "Quên mật khẩu";
+            this.linkLblQUENMATKHAU.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLblQUENMATKHAU_LinkClicked);
             // 
             // label1
             // 
@@ -181,6 +182,8 @@
             this.ckbNHOMATKHAU.TabIndex = 16;
             this.ckbNHOMATKHAU.Text = "Nhớ mật khẩu";
             this.ckbNHOMATKHAU.UseVisualStyleBackColor = false;
+            this.ckbNHOMATKHAU.CheckedChanged += new System.EventHandler(this.ckbNHOMATKHAU_CheckedChanged);
+            this.ckbNHOMATKHAU.Click += new System.EventHandler(this.ckbNHOMATKHAU_Click);
             // 
             // panel1
             // 
@@ -205,11 +208,10 @@
             this.txtTAIKHOAN.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTAIKHOAN.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTAIKHOAN.ForeColor = System.Drawing.Color.White;
-            this.txtTAIKHOAN.Location = new System.Drawing.Point(673, 155);
+            this.txtTAIKHOAN.Location = new System.Drawing.Point(673, 158);
             this.txtTAIKHOAN.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTAIKHOAN.Multiline = true;
             this.txtTAIKHOAN.Name = "txtTAIKHOAN";
-            this.txtTAIKHOAN.Size = new System.Drawing.Size(224, 36);
+            this.txtTAIKHOAN.Size = new System.Drawing.Size(224, 22);
             this.txtTAIKHOAN.TabIndex = 10;
             this.txtTAIKHOAN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTAIKHOAN_KeyPress);
             // 
@@ -220,12 +222,11 @@
             this.txtMATKHAU.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMATKHAU.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMATKHAU.ForeColor = System.Drawing.Color.White;
-            this.txtMATKHAU.Location = new System.Drawing.Point(673, 215);
+            this.txtMATKHAU.Location = new System.Drawing.Point(673, 218);
             this.txtMATKHAU.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMATKHAU.Multiline = true;
             this.txtMATKHAU.Name = "txtMATKHAU";
             this.txtMATKHAU.PasswordChar = '*';
-            this.txtMATKHAU.Size = new System.Drawing.Size(224, 36);
+            this.txtMATKHAU.Size = new System.Drawing.Size(224, 22);
             this.txtMATKHAU.TabIndex = 11;
             this.txtMATKHAU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMATKHAU_KeyPress);
             // 

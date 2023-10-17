@@ -58,7 +58,7 @@ namespace QL_tour_LTW
             {
                 foreach (var item in tim)
                 {
-                    txttesst.Text = matour;
+                   // txttesst.Text = matour;
                     txtMATOUR.Texts = item.MATOUR;
                     txtTENTOUR.Texts = item.TENTOUR;
                     txtGIATOUR.Texts = item.GIATOUR.ToString();
@@ -85,10 +85,10 @@ namespace QL_tour_LTW
                     {
                         cbbMAKS.Text = item.KHACHSAN.TENKS;
                     }
-                    byte[] imageBytes = item.ANH1 as byte[];
-                    if (imageBytes != null)
+                     imageBytes1 = item.ANH1 as byte[];
+                    if (imageBytes1 != null)
                     {
-                        using (MemoryStream ms1 = new MemoryStream(imageBytes))
+                        using (MemoryStream ms1 = new MemoryStream(imageBytes1))
                         {
                             pcboxANH1.Image = Image.FromStream(ms1);
                         }
@@ -97,7 +97,7 @@ namespace QL_tour_LTW
                     {
                         pcboxANH1.Image = null;
                     }
-                    byte[] imageBytes2 = item.ANH2 as byte[];
+                     imageBytes2 = item.ANH2 as byte[];
                     if (imageBytes2 != null)
                     {
                         using (MemoryStream ms2 = new MemoryStream(imageBytes2))
@@ -109,7 +109,7 @@ namespace QL_tour_LTW
                     {
                         pcboxANH2.Image = null;
                     }
-                    byte[] imageBytes3 = item.ANH3 as byte[];
+                    imageBytes3 = item.ANH3 as byte[];
                     if (imageBytes3 != null)
                     {
                         using (MemoryStream ms3 = new MemoryStream(imageBytes3))
@@ -136,9 +136,9 @@ namespace QL_tour_LTW
             bindingtxt();
             bunifuiOSSwitch1.Value = true;
         }
-        private byte[] selectedImageBytes1;
-        private byte[] selectedImageBytes2;
-        private byte[] selectedImageBytes3;
+        private byte[] imageBytes1;
+        private byte[] imageBytes2;
+        private byte[] imageBytes3;
         private void them()
         {
             string mota = txtMOTA.Texts;
@@ -161,9 +161,9 @@ namespace QL_tour_LTW
                     MADDEN = cbbDIEMDEN.SelectedValue.ToString(),
                     MAPT = mapt,
                     MAKS = maks,
-                    ANH1 = selectedImageBytes1 ?? null,
-                    ANH2 = selectedImageBytes2 ?? null,
-                    ANH3 = selectedImageBytes3 ?? null
+                    ANH1 = imageBytes1 ?? null,
+                    ANH2 = imageBytes2 ?? null,
+                    ANH3 = imageBytes3 ?? null
 
                 };
                 QLTOURDBContext context = new QLTOURDBContext();
@@ -195,25 +195,25 @@ namespace QL_tour_LTW
                 update.MADDEN = cbbDIEMDEN.SelectedValue.ToString();
                 update.MAPT = mapt;
                 update.MAKS = maks;
-                if (selectedImageBytes1 != null)
+                if (imageBytes1 != null)
                 {
-                    update.ANH1 = selectedImageBytes1;
+                    update.ANH1 = imageBytes1;
                 }
                 else
                 {
                     update.ANH1 = null;
                 }
-                if (selectedImageBytes2 != null)
+                if (imageBytes2 != null)
                 {
-                    update.ANH2 = selectedImageBytes2;
+                    update.ANH2 = imageBytes2;
                 }
                 else
                 {
                     update.ANH2 = null;
                 }
-                if (selectedImageBytes3 != null)
+                if (imageBytes3 != null)
                 {
-                    update.ANH3 = selectedImageBytes3;
+                    update.ANH3 = imageBytes3;
                 }
                 else
                 {
@@ -235,7 +235,7 @@ namespace QL_tour_LTW
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string imagePath = openFileDialog.FileName;
-                selectedImageBytes1 = File.ReadAllBytes(imagePath);
+                imageBytes1 = File.ReadAllBytes(imagePath);
 
                 // Hiển thị ảnh lên PictureBox
 
@@ -302,7 +302,7 @@ namespace QL_tour_LTW
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string imagePath = openFileDialog.FileName;
-                selectedImageBytes2 = File.ReadAllBytes(imagePath);
+                imageBytes2 = File.ReadAllBytes(imagePath);
 
                 // Hiển thị ảnh lên PictureBox
                 pcboxANH2.Image = Image.FromFile(imagePath);
@@ -317,7 +317,7 @@ namespace QL_tour_LTW
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string imagePath = openFileDialog.FileName;
-                selectedImageBytes3 = File.ReadAllBytes(imagePath);
+                imageBytes3 = File.ReadAllBytes(imagePath);
 
                 // Hiển thị ảnh lên PictureBox
                 pcboxANH3.Image = Image.FromFile(imagePath);

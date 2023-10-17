@@ -32,6 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoiMatKhau));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.picCaptcha = new System.Windows.Forms.PictureBox();
+            this.btnresetCAPTCHA = new CustomControls.RJControls.RJButton();
+            this.bntcapcha = new CustomControls.RJControls.RJButton();
+            this.txtcapcha = new CustomControls.RJControls.RJTextBox();
             this.cbbVAITRO = new System.Windows.Forms.ComboBox();
             this.btnHUY = new CustomControls.RJControls.RJButton();
             this.btnLUU = new CustomControls.RJControls.RJButton();
@@ -49,6 +53,7 @@
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuCards1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCaptcha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +69,10 @@
             this.bunifuCards1.BorderRadius = 35;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.LightSkyBlue;
+            this.bunifuCards1.Controls.Add(this.picCaptcha);
+            this.bunifuCards1.Controls.Add(this.btnresetCAPTCHA);
+            this.bunifuCards1.Controls.Add(this.bntcapcha);
+            this.bunifuCards1.Controls.Add(this.txtcapcha);
             this.bunifuCards1.Controls.Add(this.cbbVAITRO);
             this.bunifuCards1.Controls.Add(this.btnHUY);
             this.bunifuCards1.Controls.Add(this.btnLUU);
@@ -83,8 +92,89 @@
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(454, 399);
+            this.bunifuCards1.Size = new System.Drawing.Size(454, 422);
             this.bunifuCards1.TabIndex = 13;
+            this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
+            // 
+            // picCaptcha
+            // 
+            this.picCaptcha.BackColor = System.Drawing.Color.White;
+            this.picCaptcha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picCaptcha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picCaptcha.Location = new System.Drawing.Point(279, 279);
+            this.picCaptcha.Name = "picCaptcha";
+            this.picCaptcha.Size = new System.Drawing.Size(121, 50);
+            this.picCaptcha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCaptcha.TabIndex = 8;
+            this.picCaptcha.TabStop = false;
+            // 
+            // btnresetCAPTCHA
+            // 
+            this.btnresetCAPTCHA.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnresetCAPTCHA.BackgroundColor = System.Drawing.Color.MidnightBlue;
+            this.btnresetCAPTCHA.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnresetCAPTCHA.BackgroundImage")));
+            this.btnresetCAPTCHA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnresetCAPTCHA.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnresetCAPTCHA.BorderRadius = 10;
+            this.btnresetCAPTCHA.BorderSize = 0;
+            this.btnresetCAPTCHA.FlatAppearance.BorderSize = 0;
+            this.btnresetCAPTCHA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnresetCAPTCHA.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnresetCAPTCHA.ForeColor = System.Drawing.Color.White;
+            this.btnresetCAPTCHA.Location = new System.Drawing.Point(405, 283);
+            this.btnresetCAPTCHA.Margin = new System.Windows.Forms.Padding(2);
+            this.btnresetCAPTCHA.Name = "btnresetCAPTCHA";
+            this.btnresetCAPTCHA.Size = new System.Drawing.Size(36, 37);
+            this.btnresetCAPTCHA.TabIndex = 7;
+            this.btnresetCAPTCHA.TextColor = System.Drawing.Color.White;
+            this.btnresetCAPTCHA.UseVisualStyleBackColor = false;
+            this.btnresetCAPTCHA.Click += new System.EventHandler(this.bntcapcha_Click);
+            // 
+            // bntcapcha
+            // 
+            this.bntcapcha.BackColor = System.Drawing.Color.MidnightBlue;
+            this.bntcapcha.BackgroundColor = System.Drawing.Color.MidnightBlue;
+            this.bntcapcha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bntcapcha.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.bntcapcha.BorderRadius = 10;
+            this.bntcapcha.BorderSize = 0;
+            this.bntcapcha.FlatAppearance.BorderSize = 0;
+            this.bntcapcha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntcapcha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntcapcha.ForeColor = System.Drawing.Color.White;
+            this.bntcapcha.Location = new System.Drawing.Point(21, 283);
+            this.bntcapcha.Margin = new System.Windows.Forms.Padding(2);
+            this.bntcapcha.Name = "bntcapcha";
+            this.bntcapcha.Size = new System.Drawing.Size(105, 37);
+            this.bntcapcha.TabIndex = 7;
+            this.bntcapcha.Text = "Lấy mã";
+            this.bntcapcha.TextColor = System.Drawing.Color.White;
+            this.bntcapcha.UseVisualStyleBackColor = false;
+            this.bntcapcha.Click += new System.EventHandler(this.bntcapcha_Click);
+            // 
+            // txtcapcha
+            // 
+            this.txtcapcha.BackColor = System.Drawing.SystemColors.Window;
+            this.txtcapcha.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.txtcapcha.BorderFocusColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtcapcha.BorderRadius = 10;
+            this.txtcapcha.BorderSize = 2;
+            this.txtcapcha.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtcapcha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcapcha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtcapcha.Location = new System.Drawing.Point(130, 283);
+            this.txtcapcha.Margin = new System.Windows.Forms.Padding(4);
+            this.txtcapcha.Multiline = false;
+            this.txtcapcha.Name = "txtcapcha";
+            this.txtcapcha.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.txtcapcha.PasswordChar = false;
+            this.txtcapcha.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtcapcha.PlaceholderText = "";
+            this.txtcapcha.Size = new System.Drawing.Size(143, 34);
+            this.txtcapcha.TabIndex = 6;
+            this.txtcapcha.Texts = "";
+            this.txtcapcha.UnderlinedStyle = false;
+            this.txtcapcha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcapcha_KeyPress);
             // 
             // cbbVAITRO
             // 
@@ -92,7 +182,7 @@
             this.cbbVAITRO.FormattingEnabled = true;
             this.cbbVAITRO.Items.AddRange(new object[] {
             "ADMIN"});
-            this.cbbVAITRO.Location = new System.Drawing.Point(334, 262);
+            this.cbbVAITRO.Location = new System.Drawing.Point(334, 56);
             this.cbbVAITRO.Name = "cbbVAITRO";
             this.cbbVAITRO.Size = new System.Drawing.Size(66, 21);
             this.cbbVAITRO.TabIndex = 4;
@@ -112,7 +202,7 @@
             this.btnHUY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHUY.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHUY.ForeColor = System.Drawing.Color.White;
-            this.btnHUY.Location = new System.Drawing.Point(265, 306);
+            this.btnHUY.Location = new System.Drawing.Point(266, 358);
             this.btnHUY.Margin = new System.Windows.Forms.Padding(2);
             this.btnHUY.Name = "btnHUY";
             this.btnHUY.Size = new System.Drawing.Size(102, 42);
@@ -121,6 +211,8 @@
             this.btnHUY.TextColor = System.Drawing.Color.White;
             this.btnHUY.UseVisualStyleBackColor = false;
             this.btnHUY.Click += new System.EventHandler(this.btnHUY_Click);
+            this.btnHUY.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnHUY_MouseDown);
+            this.btnHUY.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnHUY_MouseUp);
             // 
             // btnLUU
             // 
@@ -135,7 +227,7 @@
             this.btnLUU.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLUU.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLUU.ForeColor = System.Drawing.Color.White;
-            this.btnLUU.Location = new System.Drawing.Point(82, 306);
+            this.btnLUU.Location = new System.Drawing.Point(83, 358);
             this.btnLUU.Margin = new System.Windows.Forms.Padding(2);
             this.btnLUU.Name = "btnLUU";
             this.btnLUU.Size = new System.Drawing.Size(102, 42);
@@ -144,6 +236,8 @@
             this.btnLUU.TextColor = System.Drawing.Color.White;
             this.btnLUU.UseVisualStyleBackColor = false;
             this.btnLUU.Click += new System.EventHandler(this.btnLUU_Click);
+            this.btnLUU.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnLUU_MouseDown);
+            this.btnLUU.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnLUU_MouseUp);
             // 
             // txtXACNHANMATKHAU
             // 
@@ -167,7 +261,9 @@
             this.txtXACNHANMATKHAU.TabIndex = 1;
             this.txtXACNHANMATKHAU.Texts = "";
             this.txtXACNHANMATKHAU.UnderlinedStyle = false;
+            this.txtXACNHANMATKHAU.Enter += new System.EventHandler(this.txtXACNHANMATKHAU_Enter);
             this.txtXACNHANMATKHAU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtXACNHANMATKHAU_KeyPress);
+            this.txtXACNHANMATKHAU.Leave += new System.EventHandler(this.txtXACNHANMATKHAU_Leave);
             // 
             // label1
             // 
@@ -202,13 +298,15 @@
             this.txtMATKHAUMOI.TabIndex = 1;
             this.txtMATKHAUMOI.Texts = "";
             this.txtMATKHAUMOI.UnderlinedStyle = false;
+            this.txtMATKHAUMOI.Enter += new System.EventHandler(this.txtMATKHAUMOI_Enter);
             this.txtMATKHAUMOI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMATKHAUMOI_KeyPress);
+            this.txtMATKHAUMOI.Leave += new System.EventHandler(this.txtMATKHAUMOI_Leave);
             // 
             // lbVAITRO
             // 
             this.lbVAITRO.AutoSize = true;
             this.lbVAITRO.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbVAITRO.Location = new System.Drawing.Point(276, 265);
+            this.lbVAITRO.Location = new System.Drawing.Point(276, 59);
             this.lbVAITRO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbVAITRO.Name = "lbVAITRO";
             this.lbVAITRO.Size = new System.Drawing.Size(53, 17);
@@ -249,7 +347,9 @@
             this.txtMATKHAUCU.TabIndex = 1;
             this.txtMATKHAUCU.Texts = "";
             this.txtMATKHAUCU.UnderlinedStyle = false;
+            this.txtMATKHAUCU.Enter += new System.EventHandler(this.txtMATKHAUCU_Enter);
             this.txtMATKHAUCU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMATKHAUCU_KeyPress);
+            this.txtMATKHAUCU.Leave += new System.EventHandler(this.txtMATKHAUCU_Leave);
             // 
             // txtTKNV
             // 
@@ -270,11 +370,13 @@
             this.txtTKNV.PasswordChar = false;
             this.txtTKNV.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtTKNV.PlaceholderText = "";
-            this.txtTKNV.Size = new System.Drawing.Size(216, 32);
+            this.txtTKNV.Size = new System.Drawing.Size(216, 34);
             this.txtTKNV.TabIndex = 1;
             this.txtTKNV.Texts = "";
             this.txtTKNV.UnderlinedStyle = false;
+            this.txtTKNV.Enter += new System.EventHandler(this.txtTKNV_Enter);
             this.txtTKNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTKNV_KeyPress);
+            this.txtTKNV.Leave += new System.EventHandler(this.txtTKNV_Leave);
             // 
             // label4
             // 
@@ -352,7 +454,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(701, 508);
+            this.ClientSize = new System.Drawing.Size(701, 517);
             this.Controls.Add(this.bunifuCards1);
             this.Controls.Add(this.bunifuImageButton2);
             this.Controls.Add(this.bunifuImageButton1);
@@ -363,6 +465,7 @@
             this.Load += new System.EventHandler(this.DoiMatKhau_Load);
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCaptcha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
@@ -389,5 +492,9 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private System.Windows.Forms.ComboBox cbbVAITRO;
         private System.Windows.Forms.Label lbVAITRO;
+        private System.Windows.Forms.PictureBox picCaptcha;
+        private CustomControls.RJControls.RJButton bntcapcha;
+        private CustomControls.RJControls.RJTextBox txtcapcha;
+        private CustomControls.RJControls.RJButton btnresetCAPTCHA;
     }
 }

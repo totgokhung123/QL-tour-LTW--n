@@ -162,7 +162,23 @@
   <metadata name="Column15.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="Column16.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuiOSSwitch1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAAA4CAYAAAALrl3YAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF4SURBVHhe7dFbisMwEETRrGpgVpulznzkggiuxC+pI+Jb
+        cP5aslx9MxfI78/97wr43TmTHnwl1PD5pMddGbXUJz1GDTXVJD1AS9Q1LumjWkd9fZM+pO2osU/SB7Qf
+        dZ5LuljHUeuxpAt1HvXuT7pM51HvvqSL1A81b0u6QP1R93rSYfVH3e+TDmocan+ddEjjUHtOOqDxqH+Z
+        NKzxqP85aVA1WMFz0qDqsIaWNKQ6rKElDakOa2hJQ6rDGh5JA6rFKh5JA6rHOlzILFiHC5kF63Ahs2Ad
+        LmQWrMOFzIJ1uJAZsIqWNKQ6rKElDakOa2hJQ6rDGlrSkOqwhpY0pBqsYJk0rPGof5k0rPGoPycd0DjU
+        /jrpkMah9vdJB9Ufda8nHVZ/1L0t6QL1Q837ki7SedS7P+kynUe9x5Iu1HHUei7pYu1HnX2SPqDtqLFv
+        0oe0jvrGJX1US9RVk/QANdRUn/SYK6OWzyc97kqoYc6kB38jftd8b263f/N+iAhUeT4hAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
   <data name="btnTROVE.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA8wAAADICAYAAAA9UWjlAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -4529,19 +4545,6 @@
         42GL5X6HGUgUDwcklvsdZuDBHOh3mJvmddHvMHsg8355EFfluCyTsS5L5N60MEvkaiTDn/c7zFyWNwtz
         v8OMBZkOlMsynUEU9zvMc1leQRz3O8xHEMX9DvMehHG/w7wDMUxjOQ5OzEU5IRFMI477HeYFX5b7HeYd
         Fsb9DnPTNPflt3z5/wP3s2pSyCV7tgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="bunifuiOSSwitch1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGQAAAA4CAYAAAALrl3YAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF4SURBVHhe7dFbisMwEETRrGpgVpulznzkggiuxC+pI+Jb
-        cP5aslx9MxfI78/97wr43TmTHnwl1PD5pMddGbXUJz1GDTXVJD1AS9Q1LumjWkd9fZM+pO2osU/SB7Qf
-        dZ5LuljHUeuxpAt1HvXuT7pM51HvvqSL1A81b0u6QP1R93rSYfVH3e+TDmocan+ddEjjUHtOOqDxqH+Z
-        NKzxqP85aVA1WMFz0qDqsIaWNKQ6rKElDakOa2hJQ6rDGh5JA6rFKh5JA6rHOlzILFiHC5kF63Ahs2Ad
-        LmQWrMOFzIJ1uJAZsIqWNKQ6rKElDakOa2hJQ6rDGlrSkOqwhpY0pBqsYJk0rPGof5k0rPGoPycd0DjU
-        /jrpkMah9vdJB9Ufda8nHVZ/1L0t6QL1Q837ki7SedS7P+kynUe9x5Iu1HHUei7pYu1HnX2SPqDtqLFv
-        0oe0jvrGJX1US9RVk/QANdRUn/SYK6OWzyc97kqoYc6kB38jftd8b263f/N+iAhUeT4hAAAAAElFTkSu
-        QmCC
 </value>
   </data>
 </root>
