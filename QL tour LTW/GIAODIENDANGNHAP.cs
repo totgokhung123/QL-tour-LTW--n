@@ -98,7 +98,7 @@ namespace QL_tour_LTW
 
                 }
             }
-            ckbNHOMATKHAU.Checked = false;
+           // ckbNHOMATKHAU.Checked = false;
         }
 
         private void btnDANGNHAP_Click(object sender, EventArgs e)
@@ -205,7 +205,7 @@ namespace QL_tour_LTW
 
         private void linkLblQUENMATKHAU_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            QuenMATKHAU f = new QuenMATKHAU();
+            formQUENMATKHAU f = new formQUENMATKHAU();
             f.ShowDialog();
         }
 

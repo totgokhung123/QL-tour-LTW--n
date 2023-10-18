@@ -447,17 +447,21 @@ namespace QL_tour_LTW
 
         private void txtTenKS_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != ' ')
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
             {
                 e.Handled = true;
+                MessageBox.Show("Chỉ Nhập chữ", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
         }
 
         private void txtDiaChiKS_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != (char)Keys.Back)
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
             {
                 e.Handled = true;
+                MessageBox.Show("Chỉ Nhập chữ", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
         }
 
@@ -625,9 +629,11 @@ namespace QL_tour_LTW
 
         private void txtTenPT_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != ' ')
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
             {
                 e.Handled = true;
+                MessageBox.Show("Chỉ Nhập chữ", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
         }
 
@@ -788,9 +794,11 @@ namespace QL_tour_LTW
 
         private void txtTenDDi_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != ' ')
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
             {
                 e.Handled = true;
+                MessageBox.Show("Chỉ Nhập chữ", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
         }
 
@@ -947,9 +955,11 @@ namespace QL_tour_LTW
 
         private void txtTenDDen_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != ' ')
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
             {
                 e.Handled = true;
+                MessageBox.Show("Chỉ Nhập chữ", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
         }
 
@@ -1310,6 +1320,11 @@ namespace QL_tour_LTW
                 dgvDSDDen.EndEdit(); // Kết thúc chỉnh sửa ô để cập nhật giá trị
                 // Tiếp tục xử lý logic khác tại đây nếu cần thiết
             }
+        }
+
+        private void txtTenDDi__TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

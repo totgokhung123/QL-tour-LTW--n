@@ -284,7 +284,7 @@ namespace QL_tour_LTW
                         return;
                     }
                 }
-                string Email = txtCCCD.Texts;
+                string Email =txtEmail.Texts;
                 using (var context = new QLTOURDBContext())
                 {
                     var selectedSoHD = selectedRow.Cells[6].Value.ToString();
