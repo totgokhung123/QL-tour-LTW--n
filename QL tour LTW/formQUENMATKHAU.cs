@@ -61,17 +61,6 @@ namespace QL_tour_LTW
                 MessageBox.Show($"Lỗi gửi email: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //private string GetPasswordFromDatabase(string email)
-        //{
-        //    // Thực hiện truy vấn cơ sở dữ liệu để lấy mật khẩu dựa trên địa chỉ email
-        //    // Trả về mật khẩu nếu tìm thấy, hoặc null nếu không tìm thấy
-        //    // Thêm mã logic của bạn ở đây
-        //    QLTOURDBContext context = new QLTOURDBContext();
-        //    TKUSER timmk = context.TKUSERs.FirstOrDefault(s => s.TENTAIKHOAN == email);
-        //    string tk = timmk.TENTAIKHOAN;
-        //    return tk;
-        //}
-
         private void bntcapcha_Click(object sender, EventArgs e)
         {
             // đọc mã QR ra kết quả result

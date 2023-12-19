@@ -78,6 +78,8 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnHUY = new CustomControls.RJControls.RJButton();
+            this.btnTHANHTIEN = new CustomControls.RJControls.RJButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -100,15 +102,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.txtSL = new CustomControls.RJControls.RJTextBox();
             this.txtCCCD = new CustomControls.RJControls.RJTextBox();
             this.txtTENKH = new CustomControls.RJControls.RJTextBox();
             this.txtEMAIL = new CustomControls.RJControls.RJTextBox();
             this.txtSDT = new CustomControls.RJControls.RJTextBox();
             this.txtHODEMKH = new CustomControls.RJControls.RJTextBox();
-            this.btnHUY = new CustomControls.RJControls.RJButton();
-            this.btnTHANHTIEN = new CustomControls.RJControls.RJButton();
+            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxANH1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -239,7 +239,7 @@
             // lbPT
             // 
             this.lbPT.AutoSize = true;
-            this.lbPT.BackColor = System.Drawing.Color.White;
+            this.lbPT.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbPT.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPT.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lbPT.Location = new System.Drawing.Point(853, 184);
@@ -252,7 +252,7 @@
             // lbLoaitour
             // 
             this.lbLoaitour.AutoSize = true;
-            this.lbLoaitour.BackColor = System.Drawing.Color.White;
+            this.lbLoaitour.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbLoaitour.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLoaitour.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lbLoaitour.Location = new System.Drawing.Point(853, 120);
@@ -265,7 +265,7 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.White;
+            this.label31.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label31.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label31.Location = new System.Drawing.Point(418, 121);
@@ -278,7 +278,7 @@
             // lbGIATOUR
             // 
             this.lbGIATOUR.AutoSize = true;
-            this.lbGIATOUR.BackColor = System.Drawing.Color.White;
+            this.lbGIATOUR.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbGIATOUR.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGIATOUR.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lbGIATOUR.Location = new System.Drawing.Point(853, 163);
@@ -291,7 +291,7 @@
             // lbDiemDi
             // 
             this.lbDiemDi.AutoSize = true;
-            this.lbDiemDi.BackColor = System.Drawing.Color.White;
+            this.lbDiemDi.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbDiemDi.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDiemDi.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lbDiemDi.Location = new System.Drawing.Point(554, 166);
@@ -304,7 +304,7 @@
             // lbKS
             // 
             this.lbKS.AutoSize = true;
-            this.lbKS.BackColor = System.Drawing.Color.White;
+            this.lbKS.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbKS.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbKS.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lbKS.Location = new System.Drawing.Point(853, 140);
@@ -317,7 +317,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.White;
+            this.label32.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label32.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label32.Location = new System.Drawing.Point(418, 144);
@@ -330,7 +330,7 @@
             // lbSoNgay
             // 
             this.lbSoNgay.AutoSize = true;
-            this.lbSoNgay.BackColor = System.Drawing.Color.White;
+            this.lbSoNgay.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbSoNgay.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSoNgay.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lbSoNgay.Location = new System.Drawing.Point(555, 144);
@@ -343,7 +343,7 @@
             // lbDIEMDEN
             // 
             this.lbDIEMDEN.AutoSize = true;
-            this.lbDIEMDEN.BackColor = System.Drawing.Color.White;
+            this.lbDIEMDEN.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbDIEMDEN.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDIEMDEN.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lbDIEMDEN.Location = new System.Drawing.Point(554, 186);
@@ -356,7 +356,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.BackColor = System.Drawing.Color.White;
+            this.label33.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label33.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label33.Location = new System.Drawing.Point(418, 166);
@@ -369,7 +369,7 @@
             // lbTGkhoihanh
             // 
             this.lbTGkhoihanh.AutoSize = true;
-            this.lbTGkhoihanh.BackColor = System.Drawing.Color.White;
+            this.lbTGkhoihanh.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbTGkhoihanh.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTGkhoihanh.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lbTGkhoihanh.Location = new System.Drawing.Point(555, 121);
@@ -382,7 +382,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.White;
+            this.label34.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label34.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label34.Location = new System.Drawing.Point(721, 120);
@@ -756,6 +756,56 @@
             this.panel5.Size = new System.Drawing.Size(428, 70);
             this.panel5.TabIndex = 126;
             // 
+            // btnHUY
+            // 
+            this.btnHUY.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnHUY.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnHUY.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHUY.BackgroundImage")));
+            this.btnHUY.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHUY.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnHUY.BorderRadius = 10;
+            this.btnHUY.BorderSize = 0;
+            this.btnHUY.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHUY.FlatAppearance.BorderSize = 0;
+            this.btnHUY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHUY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHUY.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.btnHUY.Location = new System.Drawing.Point(251, 5);
+            this.btnHUY.Name = "btnHUY";
+            this.btnHUY.Size = new System.Drawing.Size(116, 57);
+            this.btnHUY.TabIndex = 52;
+            this.btnHUY.Text = "Hủy";
+            this.btnHUY.TextColor = System.Drawing.Color.LavenderBlush;
+            this.btnHUY.UseVisualStyleBackColor = false;
+            this.btnHUY.Click += new System.EventHandler(this.btnHUY_Click);
+            this.btnHUY.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnHUY_MouseDown);
+            this.btnHUY.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnHUY_MouseUp);
+            // 
+            // btnTHANHTIEN
+            // 
+            this.btnTHANHTIEN.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnTHANHTIEN.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnTHANHTIEN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTHANHTIEN.BackgroundImage")));
+            this.btnTHANHTIEN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTHANHTIEN.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTHANHTIEN.BorderRadius = 10;
+            this.btnTHANHTIEN.BorderSize = 0;
+            this.btnTHANHTIEN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTHANHTIEN.FlatAppearance.BorderSize = 0;
+            this.btnTHANHTIEN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTHANHTIEN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTHANHTIEN.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.btnTHANHTIEN.Location = new System.Drawing.Point(68, 5);
+            this.btnTHANHTIEN.Name = "btnTHANHTIEN";
+            this.btnTHANHTIEN.Size = new System.Drawing.Size(116, 57);
+            this.btnTHANHTIEN.TabIndex = 51;
+            this.btnTHANHTIEN.Text = "Thanh toán";
+            this.btnTHANHTIEN.TextColor = System.Drawing.Color.LavenderBlush;
+            this.btnTHANHTIEN.UseVisualStyleBackColor = false;
+            this.btnTHANHTIEN.Click += new System.EventHandler(this.btnTHANHTIEN_Click);
+            this.btnTHANHTIEN.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnTHANHTIEN_MouseDown);
+            this.btnTHANHTIEN.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnTHANHTIEN_MouseUp);
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label10);
@@ -1020,18 +1070,6 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "Họ tên đệm:";
             // 
-            // bunifuSeparator1
-            // 
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(153)))));
-            this.bunifuSeparator1.LineThickness = 5;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(3, 16);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(753, 35);
-            this.bunifuSeparator1.TabIndex = 67;
-            this.bunifuSeparator1.Transparency = 255;
-            this.bunifuSeparator1.Vertical = false;
-            // 
             // txtSL
             // 
             this.txtSL.BackColor = System.Drawing.SystemColors.Window;
@@ -1188,55 +1226,17 @@
             this.txtHODEMKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHODEMKH_KeyPress);
             this.txtHODEMKH.Leave += new System.EventHandler(this.txtHODEMKH_Leave);
             // 
-            // btnHUY
+            // bunifuSeparator1
             // 
-            this.btnHUY.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnHUY.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnHUY.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHUY.BackgroundImage")));
-            this.btnHUY.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHUY.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnHUY.BorderRadius = 10;
-            this.btnHUY.BorderSize = 0;
-            this.btnHUY.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHUY.FlatAppearance.BorderSize = 0;
-            this.btnHUY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHUY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHUY.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.btnHUY.Location = new System.Drawing.Point(251, 5);
-            this.btnHUY.Name = "btnHUY";
-            this.btnHUY.Size = new System.Drawing.Size(116, 57);
-            this.btnHUY.TabIndex = 52;
-            this.btnHUY.Text = "Hủy";
-            this.btnHUY.TextColor = System.Drawing.Color.LavenderBlush;
-            this.btnHUY.UseVisualStyleBackColor = false;
-            this.btnHUY.Click += new System.EventHandler(this.btnHUY_Click);
-            this.btnHUY.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnHUY_MouseDown);
-            this.btnHUY.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnHUY_MouseUp);
-            // 
-            // btnTHANHTIEN
-            // 
-            this.btnTHANHTIEN.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnTHANHTIEN.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnTHANHTIEN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTHANHTIEN.BackgroundImage")));
-            this.btnTHANHTIEN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTHANHTIEN.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnTHANHTIEN.BorderRadius = 10;
-            this.btnTHANHTIEN.BorderSize = 0;
-            this.btnTHANHTIEN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTHANHTIEN.FlatAppearance.BorderSize = 0;
-            this.btnTHANHTIEN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTHANHTIEN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTHANHTIEN.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.btnTHANHTIEN.Location = new System.Drawing.Point(68, 5);
-            this.btnTHANHTIEN.Name = "btnTHANHTIEN";
-            this.btnTHANHTIEN.Size = new System.Drawing.Size(116, 57);
-            this.btnTHANHTIEN.TabIndex = 51;
-            this.btnTHANHTIEN.Text = "Thanh toán";
-            this.btnTHANHTIEN.TextColor = System.Drawing.Color.LavenderBlush;
-            this.btnTHANHTIEN.UseVisualStyleBackColor = false;
-            this.btnTHANHTIEN.Click += new System.EventHandler(this.btnTHANHTIEN_Click);
-            this.btnTHANHTIEN.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnTHANHTIEN_MouseDown);
-            this.btnTHANHTIEN.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnTHANHTIEN_MouseUp);
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(153)))));
+            this.bunifuSeparator1.LineThickness = 5;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(3, 16);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Size = new System.Drawing.Size(753, 35);
+            this.bunifuSeparator1.TabIndex = 67;
+            this.bunifuSeparator1.Transparency = 255;
+            this.bunifuSeparator1.Vertical = false;
             // 
             // THONGTINDANGKYTOUR
             // 
