@@ -11,7 +11,7 @@ namespace QL_tour_LTW
 {
     public class database
     {
-        private string connectionString = @"Data Source=DESKTOP-4OLCV0I\KTEAM;Initial Catalog=QLTOURLTW;Integrated Security=True";
+        private string connectionString = @"Data Source=LAPTOP-L98STJU3;Initial Catalog=QLTOURLTW;Integrated Security=True";
        // string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
         private SqlConnection conn;
         // private string sql;
