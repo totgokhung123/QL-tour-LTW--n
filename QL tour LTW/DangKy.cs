@@ -52,25 +52,41 @@ namespace QL_tour_LTW
             QLTOURDBContext context = new QLTOURDBContext();
             NHANVIEN laysdt = context.NHANVIENs.FirstOrDefault(s => s.SDT == txtTKMOI.Texts);
             NHANVIEN layemail = context.NHANVIENs.FirstOrDefault(s => s.EMAIL == txtTKMOI.Texts);
-            if(laysdt != null || layemail != null)
+
+
+            //Phần mới dùng để TEST ĐĂNG KÝ
+            TKUSER insert = new TKUSER
             {
-                TKUSER insert = new TKUSER
-                {
-                    TENTAIKHOAN = txtTKMOI.Texts,
-                    MATKHAU = txtMATKHAUMOI.Texts,
-                    VAITRO = null,
-                    ANH = null
-                };
-                context.TKUSERs.Add(insert);
-                context.SaveChanges();
-                MessageBox.Show("Thêm tài khoản thành công !", "Thông báo");
-                cleartxt();
-            }
-            else
-            {
-                MessageBox.Show("Chưa có thông tin của Nhân viên trong hệ thống!", "Thông báo");
-                return;
-            }
+                TENTAIKHOAN = txtTKMOI.Texts,
+                MATKHAU = txtMATKHAUMOI.Texts,
+                MAVAITRO = "CUSTOMER",
+                ANH = null
+            };
+            context.TKUSERs.Add(insert);
+            context.SaveChanges();
+            MessageBox.Show("Thêm tài khoản thành công !", "Thông báo");
+            cleartxt();
+
+
+            //if(laysdt != null || layemail != null)
+            //{
+            //    TKUSER insert = new TKUSER
+            //    {
+            //        TENTAIKHOAN = txtTKMOI.Texts,
+            //        MATKHAU = txtMATKHAUMOI.Texts,
+            //        MAVAITRO = "CUSTOMER",
+            //        ANH = null
+            //    };
+            //    context.TKUSERs.Add(insert);
+            //    context.SaveChanges();
+            //    MessageBox.Show("Thêm tài khoản thành công !", "Thông báo");
+            //    cleartxt();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Chưa có thông tin của Nhân viên trong hệ thống!", "Thông báo");
+            //    return;
+            //}
         }
         private void cleartxt()
         {

@@ -25,6 +25,7 @@ namespace QL_tour_LTW.ModelQLTOUR
         public virtual DbSet<TAIKHOANEMAIL> TAIKHOANEMAILs { get; set; }
         public virtual DbSet<TKUSER> TKUSERs { get; set; }
         public virtual DbSet<TOUR> TOURs { get; set; }
+        public virtual DbSet<VAITRO> VAITROs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -164,7 +165,7 @@ namespace QL_tour_LTW.ModelQLTOUR
                 .IsUnicode(false);
 
             modelBuilder.Entity<TKUSER>()
-                .Property(e => e.VAITRO)
+                .Property(e => e.MAVAITRO)
                 .IsUnicode(false);
 
             modelBuilder.Entity<TOUR>()

@@ -134,7 +134,7 @@ namespace QL_tour_LTW
         private bool Authenticate(string username, string password)
         {
             QLTOURDBContext context = new QLTOURDBContext();
-            TKUSER timtkADMIN = context.TKUSERs.FirstOrDefault(s => s.TENTAIKHOAN == username && s.MATKHAU == password && s.VAITRO=="ADMIN");
+            TKUSER timtkADMIN = context.TKUSERs.FirstOrDefault(s => s.TENTAIKHOAN == username && s.MATKHAU == password && s.MAVAITRO == "ADMIN");
             if (timtkADMIN != null)
             {
                 return true;
@@ -148,7 +148,7 @@ namespace QL_tour_LTW
         {
             // Kiểm tra tài khoản đăng nhập (username và password)
             QLTOURDBContext context = new QLTOURDBContext();            
-            TKUSER timtk = context.TKUSERs.FirstOrDefault(s => s.TENTAIKHOAN== username && s.MATKHAU== password && s.VAITRO== null);
+            TKUSER timtk = context.TKUSERs.FirstOrDefault(s => s.TENTAIKHOAN == username && s.MATKHAU == password && s.MAVAITRO == "CUSTOMER");
             if (timtk != null)
             {
                 return true;

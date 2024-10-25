@@ -107,7 +107,7 @@ namespace QL_tour_LTW
                                     else
                                     {
                                         QLTOURDBContext context = new QLTOURDBContext();
-                                        TKUSER capnhat = context.TKUSERs.FirstOrDefault(s => s.TENTAIKHOAN == tentaikhoan && s.VAITRO == "ADMIN");
+                                        TKUSER capnhat = context.TKUSERs.FirstOrDefault(s => s.TENTAIKHOAN == tentaikhoan && s.MAVAITRO == "ADMIN");
                                         if (capnhat != null)
                                         {
                                             capnhat.TENTAIKHOAN = tentaikhoan;

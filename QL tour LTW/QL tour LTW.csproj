@@ -235,6 +235,7 @@
     <Compile Include="ModelQLTOUR\TAIKHOANEMAIL.cs" />
     <Compile Include="ModelQLTOUR\TKUSER.cs" />
     <Compile Include="ModelQLTOUR\TOUR.cs" />
+    <Compile Include="ModelQLTOUR\VAITRO.cs" />
     <Compile Include="QLNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
